@@ -1,0 +1,71 @@
+# 티칭 아카이브 · Teaching Archive
+
+유준오(Junoh Yu) · 성균관대학교 영상학과 · **2026년 1학기**
+
+세 개 수업(캡스톤 디자인 / 몰입형 내러티브 & 인터랙션 디자인 / AI 기반 인터랙티브 영상)과
+**1st N.I.M.A 전시**의 학생 결과물을 모은 한 장짜리 아카이브 웹사이트입니다.
+한국어·영어 전환을 지원하며, 빌드 도구 없이 브라우저에서 바로 열립니다.
+
+---
+
+## 구조
+
+```
+.
+├── index.html          # 사이트 전체 (HTML · CSS · JS 인라인, 약 120KB)
+├── assets/
+│   └── img/            # 썸네일·스틸컷 105장 (JPEG, 약 2.8MB)
+├── .nojekyll           # GitHub Pages가 Jekyll 처리를 건너뛰도록
+├── LICENSE             # 사이트 코드에 대한 라이선스 (MIT)
+├── NOTICE.md           # 학생 작품·이미지 저작권 및 공개 관련 안내
+└── README.md
+```
+
+의존성이 없습니다. 외부에서 불러오는 것은 **Google Fonts**(Gowun Batang, IBM Plex Sans KR,
+IBM Plex Mono)뿐이며, 연결이 안 되면 시스템 폰트로 대체됩니다.
+자료 원본은 각 항목의 링크를 통해 **Google Drive**로 연결됩니다.
+
+## 로컬에서 보기
+
+`index.html`을 브라우저로 열면 끝입니다. 로컬 서버가 필요하다면:
+
+```bash
+# Python이 있는 경우
+python -m http.server 8000
+# Node가 있는 경우
+npx serve .
+```
+
+## GitHub에 올리고 공개하기
+
+```bash
+cd teaching-archive-site
+git init
+git add .
+git commit -m "티칭 아카이브 초기 커밋"
+git branch -M main
+git remote add origin https://github.com/<사용자명>/<저장소명>.git
+git push -u origin main
+```
+
+그다음 저장소 **Settings → Pages** 에서
+**Source: Deploy from a branch**, **Branch: `main` / `/ (root)`** 를 선택하고 저장합니다.
+1~2분 뒤 `https://<사용자명>.github.io/<저장소명>/` 에서 공개됩니다.
+
+> 저장소를 **Public** 으로 만들어야 무료 계정에서 Pages를 쓸 수 있습니다.
+> Private 저장소로 두고 싶다면 GitHub Pro 이상이 필요합니다.
+
+## 내용 수정
+
+모든 텍스트와 마크업은 `index.html` 안에 있습니다.
+
+- 언어 전환: `<span class="ko">` / `<span class="en">` 쌍으로 관리됩니다. 둘 다 채워야 양쪽 언어에서 보입니다.
+- 이미지 교체: `assets/img/` 에 파일을 넣고 `index.html`의 `<img src="...">`를 바꿉니다.
+- 자료 링크: Google Drive `href` 를 직접 수정합니다. 링크가 **"링크가 있는 모든 사용자"** 로 공유되어 있어야 방문자가 열 수 있습니다.
+
+## 공개 전 체크리스트
+
+- [ ] 학생 이름·얼굴·작품이 포함되어 있습니다 — **공개 전 당사자 동의**를 확인하세요 (`NOTICE.md` 참고)
+- [ ] Google Drive 링크 공유 범위 확인 (기본값이 "제한됨"이면 방문자가 열 수 없습니다)
+- [ ] 미기재 작품명 3건 보완 (몰입형 2팀·7팀, AI 5팀)
+- [ ] 저장소 이름과 Pages URL 확정

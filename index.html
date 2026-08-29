@@ -1,0 +1,1452 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>티칭 아카이브 · Teaching Archive — 유준오</title>
+<meta name="description" content="유준오 · 성균관대학교 영상학과 2026년 1학기 교육 아카이브 — 캡스톤 디자인, 몰입형 내러티브 & 인터랙션 디자인, AI 기반 인터랙티브 영상, 1st N.I.M.A 전시.">
+<meta name="author" content="Junoh Yu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="티칭 아카이브 · Teaching Archive">
+<meta property="og:description" content="유준오 · 성균관대학교 영상학과 2026년 1학기 교육 아카이브.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%8E%9E%EF%B8%8F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@300;400;500;600&display=swap">
+<style>:root{color-scheme:light dark}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#F1F0F4;color:#191922}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) body{background:#131319;color:#EAE9F1}}img{max-width:100%}</style>
+</head>
+<body>
+
+<style>
+  :root {
+    --paper: #F1F0F4;
+    --surface: #FBFAFD;
+    --surface-2: #E7E6EE;
+    --ink: #191922;
+    --ink-2: #4B4B5D;
+    --ink-3: #7B7A8E;
+    --rule: #DCDAE5;
+    --rule-2: #C7C4D6;
+    --accent: #2B3A9E;
+    --accent-soft: #E3E5F5;
+    --accent-line: #B7BCE3;
+    --shadow: 0 1px 2px rgba(25,25,34,.05), 0 8px 24px -16px rgba(25,25,34,.28);
+
+    --display: "Gowun Batang", "Nanum Myeongjo", Georgia, serif;
+    --body: "IBM Plex Sans KR", "Malgun Gothic", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+    --measure: 64ch;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #131319;
+      --surface: #1B1B24;
+      --surface-2: #22222D;
+      --ink: #EAE9F1;
+      --ink-2: #AEADC1;
+      --ink-3: #79788D;
+      --rule: #2C2C3A;
+      --rule-2: #3C3C4F;
+      --accent: #949FF5;
+      --accent-soft: #222440;
+      --accent-line: #3A3D68;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #131319;
+    --surface: #1B1B24;
+    --surface-2: #22222D;
+    --ink: #EAE9F1;
+    --ink-2: #AEADC1;
+    --ink-3: #79788D;
+    --rule: #2C2C3A;
+    --rule-2: #3C3C4F;
+    --accent: #949FF5;
+    --accent-soft: #222440;
+    --accent-line: #3A3D68;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  img { max-width: 100%; display: block; }
+  [hidden] { display: none !important; }
+
+  /* ── language switch ────────────────────── */
+  /* Korean is the default, including before the script runs or with JS off */
+  :root:not([data-lang="en"]) .en { display: none !important; }
+  :root[data-lang="en"] .ko { display: none !important; }
+  :root[data-lang="en"] { --measure: 70ch; }
+  :root[data-lang="en"] body { word-break: normal; overflow-wrap: break-word; }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(1.1rem, 3.5vw, 3rem); }
+
+  /* ── masthead ───────────────────────────── */
+  .masthead { padding: clamp(2rem,4.5vw,3.5rem) 0 1.5rem; display: flex; flex-direction: column; gap: 1.1rem; }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: .71rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--ink-3); margin: 0;
+  }
+
+  .masthead h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(2.1rem,5.4vw,3.4rem); line-height: 1.2;
+    letter-spacing: -.01em; margin: 0; text-wrap: balance;
+  }
+
+  .subtitle {
+    font-family: var(--display); font-size: clamp(1.02rem,2vw,1.3rem);
+    color: var(--ink-2); margin: 0; max-width: 46ch; line-height: 1.55; text-wrap: balance;
+  }
+  .subtitle b { font-weight: 700; color: var(--accent); }
+
+  .byline {
+    display: flex; flex-wrap: wrap; gap: .3rem 1.15rem; align-items: baseline;
+    font-size: .92rem; color: var(--ink-2); margin: .35rem 0 0;
+    padding-top: 1rem; border-top: 1px solid var(--rule);
+  }
+  .byline b { font-weight: 600; color: var(--ink); }
+  .byline i {
+    font-style: normal; font-family: var(--mono); font-size: .74rem;
+    letter-spacing: .09em; color: var(--ink-3);
+  }
+
+  /* ── tabs ───────────────────────────────── */
+  .tabbar {
+    position: sticky; top: 0; z-index: 30;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+  .tabrow {
+    max-width: 1240px; margin: 0 auto; padding: 0 clamp(1.1rem,3.5vw,3rem);
+    display: flex; align-items: stretch; gap: 1rem;
+  }
+  .tablist { display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: thin; flex: 1; min-width: 0; }
+
+  .tab {
+    appearance: none; background: none; border: 0; cursor: pointer;
+    font-family: var(--body); font-size: .92rem; font-weight: 500; color: var(--ink-3);
+    padding: .95rem .8rem .8rem; white-space: nowrap;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    display: flex; align-items: baseline; gap: .4rem;
+    transition: color .15s, border-color .15s;
+  }
+  .tab i {
+    font-style: normal; font-family: var(--mono); font-size: .69rem;
+    color: var(--ink-3); font-variant-numeric: tabular-nums;
+    background: var(--surface-2); border-radius: 2px; padding: .05rem .34rem;
+  }
+  .tab:hover { color: var(--ink); }
+  .tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab[aria-selected="true"] i { background: var(--accent-soft); color: var(--accent); }
+
+  .langbtn {
+    align-self: center; flex: none; appearance: none; cursor: pointer;
+    font-family: var(--mono); font-size: .72rem; letter-spacing: .1em;
+    color: var(--accent); background: var(--accent-soft);
+    border: 1px solid var(--accent-line); border-radius: 2px;
+    padding: .38rem .72rem; display: flex; align-items: center; gap: .4rem;
+    transition: background .15s, border-color .15s;
+  }
+  .langbtn:hover { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+  .langbtn svg { flex: none; }
+
+  /* ── panels ─────────────────────────────── */
+  .panel { padding: clamp(2.25rem,5vw,3.75rem) 0 5rem; display: flex; flex-direction: column; gap: clamp(2.5rem,5vw,3.75rem); }
+
+  .lede { display: flex; flex-direction: column; gap: 1.1rem; }
+  .lede h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.5rem,3.2vw,2.15rem); margin: 0; line-height: 1.3; text-wrap: balance; }
+  .lede p { margin: 0; max-width: var(--measure); font-size: 1.01rem; color: var(--ink-2); }
+  .lede p b { font-weight: 600; color: var(--ink); }
+
+  .facts {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+    border-top: 1px solid var(--rule); margin-top: .35rem;
+  }
+  .facts div { padding: .95rem 1.35rem .95rem 0; border-bottom: 1px solid var(--rule); }
+  .facts dt { font-family: var(--mono); font-size: .68rem; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 .1rem; }
+  .facts dd { margin: 0; font-size: .92rem; color: var(--ink); line-height: 1.55; }
+
+  h3.block {
+    font-family: var(--mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin: 0 0 1.25rem;
+    display: flex; align-items: center; gap: .8rem;
+  }
+  h3.block::after { content: ""; height: 1px; background: var(--accent-line); flex: 1; }
+
+  /* ── grading bars ───────────────────────── */
+  .grades { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px,1fr)); gap: 1rem; }
+  .grade { display: flex; flex-direction: column; gap: .45rem; }
+  .grade .top { display: flex; align-items: baseline; justify-content: space-between; gap: .6rem; }
+  .grade b { font-weight: 500; font-size: .89rem; color: var(--ink); }
+  .grade em {
+    font-style: normal; font-family: var(--mono); font-size: .9rem; color: var(--accent);
+    font-variant-numeric: tabular-nums; flex: none;
+  }
+  .grade .bar { height: 5px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+  .grade .bar i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+
+  /* ── curriculum ─────────────────────────── */
+  .curriculum { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--rule); }
+  @media (min-width: 780px) { .curriculum { grid-template-columns: 1fr 1fr; column-gap: 2.5rem; } }
+
+  .wk {
+    display: grid; grid-template-columns: 3.4rem 1fr; gap: .9rem;
+    padding: .72rem 0; border-bottom: 1px solid var(--rule); align-items: baseline;
+  }
+  .wk > span {
+    font-family: var(--mono); font-size: .73rem; color: var(--ink-3);
+    font-variant-numeric: tabular-nums; letter-spacing: .02em;
+  }
+  .wk p { margin: 0; font-size: .9rem; color: var(--ink-2); line-height: 1.5; }
+  .wk.key p { color: var(--ink); font-weight: 500; }
+  .wk.key > span { color: var(--accent); }
+
+  /* ── work cards ─────────────────────────── */
+  .works { display: flex; flex-direction: column; gap: 1.6rem; }
+
+  .work {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 4px;
+    padding: clamp(1.15rem,2.2vw,1.7rem); display: flex; flex-direction: column; gap: 1.25rem;
+    box-shadow: var(--shadow);
+  }
+
+  .work-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem 1rem; }
+  .tag {
+    font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; color: var(--accent);
+    border: 1px solid var(--accent-line); background: var(--accent-soft);
+    padding: .1rem .45rem; border-radius: 2px; flex: none;
+  }
+  .work h4 { font-family: var(--display); font-weight: 700; font-size: clamp(1.2rem,2.2vw,1.45rem); margin: 0; line-height: 1.35; }
+  .people { font-size: .88rem; color: var(--ink-3); margin: 0; }
+  .note-in { font-size: .87rem; color: var(--ink-3); margin: 0; }
+  .note-in b { color: var(--accent); font-weight: 500; }
+
+  .blurb {
+    margin: -.35rem 0 0; font-size: .95rem; color: var(--ink-2);
+    max-width: var(--measure); padding-left: .85rem; border-left: 2px solid var(--accent-line);
+  }
+
+  /* big stills */
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: .6rem; }
+  .shot {
+    appearance: none; padding: 0; border: 1px solid var(--rule); background: var(--surface-2);
+    border-radius: 3px; overflow: hidden; cursor: zoom-in; display: block; width: 100%;
+    transition: border-color .15s, transform .15s;
+  }
+  .shot img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .shot:hover, .shot:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+
+  /* media cards (pdf / video) */
+  .media { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: .7rem; }
+  .mcard {
+    display: flex; flex-direction: column; gap: .55rem; text-decoration: none; color: inherit;
+    border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; background: var(--paper);
+    transition: border-color .15s, transform .15s;
+  }
+  .mcard:hover, .mcard:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+  .mthumb { position: relative; display: block; background: var(--surface-2); }
+  .mthumb img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+  .mthumb.pdf img { object-fit: contain; background: #fff; }
+  .mcard .play {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    background: linear-gradient(180deg, rgba(10,10,16,0) 45%, rgba(10,10,16,.45));
+  }
+  .mcard .play::after {
+    content: ""; width: 46px; height: 46px; border-radius: 50%;
+    background: rgba(255,255,255,.92); box-shadow: 0 2px 10px rgba(0,0,0,.3); display: block;
+  }
+  .mcard .play span {
+    position: absolute; width: 0; height: 0;
+    border-left: 15px solid #1B1B24; border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+    margin-left: 4px;
+  }
+  .mmeta { padding: 0 .7rem .65rem; display: flex; flex-direction: column; gap: .1rem; }
+  .mmeta b { font-weight: 500; font-size: .86rem; line-height: 1.4; }
+  .mmeta em {
+    font-style: normal; font-family: var(--mono); font-size: .66rem; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+
+  .files { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .chip {
+    display: inline-flex; align-items: center; gap: .45rem;
+    font-size: .83rem; text-decoration: none; color: var(--ink-2);
+    border: 1px solid var(--rule-2); background: var(--paper);
+    padding: .32rem .7rem; border-radius: 2px; line-height: 1.4;
+    transition: color .14s, border-color .14s, background .14s;
+  }
+  .chip:hover, .chip:focus-visible { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+  .chip::before {
+    font-family: var(--mono); font-size: .6rem; letter-spacing: .07em;
+    padding: .05rem .3rem; border-radius: 2px; flex: none;
+    background: var(--surface-2); color: var(--ink-3);
+  }
+  .chip.ppt::before { content: "PPT"; }
+  .chip.doc::before { content: "DOC"; }
+  .chip.dir::before { content: "DIR"; }
+  .chip.img::before { content: "MOV"; }
+
+  /* ── exhibition ─────────────────────────── */
+  .exhibit-top { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start; }
+  @media (min-width: 860px) { .exhibit-top { grid-template-columns: minmax(0,330px) minmax(0,1fr); gap: 3rem; } }
+  .poster { border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; box-shadow: var(--shadow); cursor: zoom-in; appearance: none; padding: 0; background: none; width: 100%; }
+  .poster img { width: 100%; }
+
+  .pieces { display: flex; flex-direction: column; gap: 2.75rem; }
+  .piece { display: flex; flex-direction: column; gap: .9rem; }
+  .piece-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1rem; }
+  .piece h4 { font-family: var(--display); font-weight: 700; font-size: clamp(1.25rem,2.4vw,1.55rem); margin: 0; }
+  .piece-shots { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
+  .piece-shots .shot:first-child { grid-column: 1 / -1; }
+  .piece-shots .shot:first-child img { aspect-ratio: 21/9; }
+
+  /* ── notes / footer ─────────────────────── */
+  .notes { display: grid; grid-template-columns: 1fr; gap: 1.15rem; }
+  @media (min-width: 820px) { .notes { grid-template-columns: 1fr 1fr; } }
+  .note {
+    background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 3px; padding: 1.3rem 1.4rem; display: flex; flex-direction: column; gap: .75rem;
+  }
+  .note h4 { font-family: var(--body); font-weight: 600; font-size: .97rem; margin: 0; }
+  .note ul { margin: 0; padding-left: 1.05rem; display: flex; flex-direction: column; gap: .4rem; color: var(--ink-2); font-size: .89rem; }
+  .note li::marker { color: var(--accent); }
+  .note p { margin: 0; color: var(--ink-2); font-size: .89rem; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding: 1.25rem 0 3.5rem;
+    font-family: var(--mono); font-size: .71rem; letter-spacing: .07em; color: var(--ink-3);
+    display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between;
+  }
+
+  /* ── lightbox ───────────────────────────── */
+  .lb { display: none; }
+  .lb[open] {
+    position: fixed; inset: 0; z-index: 100; border: 0; padding: 0; margin: 0;
+    width: 100%; height: 100%; max-width: none; max-height: none;
+    background: rgba(9,9,14,.94); display: grid; place-items: center;
+  }
+  .lb::backdrop { background: rgba(9,9,14,.94); }
+  .lb img { max-width: min(96vw, 1500px); max-height: 92vh; width: auto; object-fit: contain; border-radius: 2px; }
+  .lb button {
+    position: absolute; top: 1rem; right: 1rem; appearance: none; cursor: pointer;
+    background: rgba(255,255,255,.1); color: #EFEEF6; border: 1px solid rgba(255,255,255,.25);
+    border-radius: 3px; padding: .35rem .7rem; font-family: var(--mono); font-size: .74rem; letter-spacing: .1em;
+  }
+  .lb button:hover { background: rgba(255,255,255,.2); }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">Sungkyunkwan University · Film, Television and Multimedia · 2026 Spring</p>
+    <h1><span class="ko">티칭 아카이브</span><span class="en">Teaching Archive</span></h1>
+    <p class="subtitle">
+      <span class="ko">수업계획서에서 전시장까지 — 세 과목 <b>스물한 팀</b>이 남긴 2026년 1학기의 기록</span>
+      <span class="en">From syllabus to gallery floor — one semester, three courses, <b>twenty-one teams</b>, and the record they left behind</span>
+    </p>
+    <p class="byline">
+      <b><span class="ko">유준오</span><span class="en">Junoh Yu</span></b>
+      <span class="ko">성균관대학교 영상학과</span><span class="en">Dept. of Film, Television and Multimedia</span>
+      <i>2026.03 – 07 · 3 COURSES · 21 TEAMS · 41 STUDENTS · 1 EXHIBITION</i>
+    </p>
+  </header>
+</div>
+
+<nav class="tabbar">
+  <div class="tabrow">
+    <div class="tablist" role="tablist" aria-label="Course tabs">
+      <button class="tab" role="tab" id="tab-capstone" aria-controls="p-capstone" aria-selected="false"><span class="ko">캡스톤 디자인</span><span class="en">Capstone Design</span> <i>5</i></button>
+      <button class="tab" role="tab" id="tab-immersive" aria-controls="p-immersive" aria-selected="false"><span class="ko">몰입형 내러티브 &amp; 인터랙션</span><span class="en">Immersive Narrative &amp; Interaction</span> <i>9</i></button>
+      <button class="tab" role="tab" id="tab-ai" aria-controls="p-ai" aria-selected="false"><span class="ko">AI 기반 인터랙티브 영상</span><span class="en">AI-Driven Interactive Video</span> <i>7</i></button>
+      <button class="tab" role="tab" id="tab-nima" aria-controls="p-nima" aria-selected="false"><span class="ko">1st N.I.M.A 전시</span><span class="en">1st N.I.M.A</span> <i>10</i></button>
+    </div>
+    <button class="langbtn" id="lang" type="button" aria-label="Switch language">
+      <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1a6 6 0 100 12A6 6 0 007 1zM1.4 7h11.2M7 1.2c1.5 1.6 2.3 3.6 2.3 5.8S8.5 11.2 7 12.8C5.5 11.2 4.7 9.2 4.7 7S5.5 2.8 7 1.2z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="ko">ENGLISH</span><span class="en">한국어</span>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════ 캡스톤 ══════════ -->
+<section class="panel" id="p-capstone" role="tabpanel" aria-labelledby="tab-capstone" tabindex="-1" hidden>
+
+  <div class="lede">
+    <h2><span class="ko">캡스톤 디자인</span><span class="en">Capstone Design</span></h2>
+    <p class="ko">Unreal Engine · Twinmotion · Arduino · 프로젝션 매핑(MadMapper)을 중심으로, <b>공간 · 서사 · 상호작용을 결합한 몰입형 경험</b>을 기획하고 구현하는 프로젝트 기반 수업입니다. 2–3인 팀으로 시작해 “힐링·자연·몰입·기억·감각·시간”을 주제로 한 중간 프로젝트에서 환경 연출과 내러티브 설계, UE 상호작용(트리거·시퀀서·메타휴먼)을 통합적으로 익히고, 3D 스캐닝 리서치 트립과 Arduino(센서)–UE 연동, 실시간 송출(Spout/OSC)과 맵핑 워크플로우를 거쳐 <b>현장 설치 가능한 프로토타입</b>으로 확장합니다. 기말에는 자유주제 프로젝트를 외부 심사위원 앞에서 발표합니다.</p>
+    <p class="en">A project-based course built around Unreal Engine, Twinmotion, Arduino and projection mapping (MadMapper), in which students plan and build <b>immersive experiences that fuse space, narrative and interaction</b>. Working in teams of two or three, they develop a mid-term project on the themes of healing, nature, immersion, memory, sensation and time — learning environment art direction, narrative design and UE interaction (triggers, Sequencer, MetaHumans) as one continuous pipeline. A 3D-scanning research trip, Arduino-to-UE sensor integration, real-time output via Spout/OSC and a mapping workflow then push the work toward <b>a prototype that can actually be installed on site</b>. For the final, each student presents a self-directed project to an external review panel.</p>
+    <dl class="facts">
+      <div><dt><span class="ko">기간</span><span class="en">Dates</span></dt><dd><span class="ko">2026.6.22 – 7.10 · 15일차 집중</span><span class="en">22 Jun – 10 Jul 2026 · 15 sessions</span></dd></div>
+      <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">2–3인 1팀 · 5개 팀 · 18명</span><span class="en">Teams of 2–3 · 5 teams · 18 students</span></dd></div>
+      <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Unreal Engine · Twinmotion · Arduino · MadMapper · Spout/OSC</dd></div>
+      <div><dt><span class="ko">발표</span><span class="en">Reviews</span></dt><dd><span class="ko">중간 7.1 · 기말 7.9–7.10 (외부 심사위원)</span><span class="en">Mid-term 1 Jul · Final 9–10 Jul (external panel)</span></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">평가 구조</span><span class="en">Assessment</span></h3>
+    <div class="grades">
+      <div class="grade"><div class="top"><b><span class="ko">출석 · 참여</span><span class="en">Attendance &amp; participation</span></b><em>20%</em></div><div class="bar"><i style="width:20%"></i></div></div>
+      <div class="grade"><div class="top"><b><span class="ko">과정 산출물</span><span class="en">Process deliverables</span></b><em>20%</em></div><div class="bar"><i style="width:20%"></i></div></div>
+      <div class="grade"><div class="top"><b><span class="ko">중간발표 (팀)</span><span class="en">Mid-term (team)</span></b><em>30%</em></div><div class="bar"><i style="width:30%"></i></div></div>
+      <div class="grade"><div class="top"><b><span class="ko">기말발표 (외부 심사)</span><span class="en">Final (external review)</span></b><em>30%</em></div><div class="bar"><i style="width:30%"></i></div></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">일별 수업 계획</span><span class="en">Session plan</span></h3>
+    <div class="curriculum">
+      <div class="wk"><span>6/22</span><p class="ko">오리엔테이션 · 몰입형 콘텐츠의 범주 · 팀 빌딩</p><p class="en">Orientation · what counts as immersive content · team building</p></div>
+      <div class="wk"><span>6/23</span><p class="ko">예술적 방향성 · 웹 기반 AI로 내러티브 씨앗 만들기 · Twinmotion 시작</p><p class="en">Artistic direction · seeding a narrative with web-based AI · starting Twinmotion</p></div>
+      <div class="wk"><span>6/24</span><p class="ko">Twinmotion — 재질 · 날씨 · 환경으로 Healing/Nature 톤 만들기</p><p class="en">Twinmotion — building a healing/nature tone through material, weather and environment</p></div>
+      <div class="wk"><span>6/25</span><p class="ko">Twinmotion 애니메이션 구성 · Unreal Engine 기본 세팅 진입</p><p class="en">Twinmotion animation · entering Unreal Engine setup</p></div>
+      <div class="wk"><span>6/26</span><p class="ko">중간평가 사전발표 — 내러티브–공간–인터랙션 3요소 점검</p><p class="en">Mid-term pre-crit — checking narrative, space and interaction</p></div>
+      <div class="wk"><span>6/29</span><p class="ko">UE — Import · 캐릭터/인터랙션 (메타휴먼 포함)</p><p class="en">UE — import · characters and interaction (incl. MetaHuman)</p></div>
+      <div class="wk"><span>6/30</span><p class="ko">UE — Sequencer · 모션그래픽/시네마틱 구성</p><p class="en">UE — Sequencer · motion graphics and cinematics</p></div>
+      <div class="wk key"><span>7/1</span><p class="ko">중간고사 팀 발표 — 힐링/치유 · 자연 · 몰입 · 기억 · 감각 · 시간</p><p class="en">Mid-term team review — healing · nature · immersion · memory · sensation · time</p></div>
+      <div class="wk"><span>7/2</span><p class="ko">Arduino 기초 · Unreal 연동 (Serial 기반)</p><p class="en">Arduino basics · serial integration with Unreal</p></div>
+      <div class="wk"><span>7/3</span><p class="ko">Projection Mapping ① MadMapper 기본</p><p class="en">Projection mapping ① MadMapper basics</p></div>
+      <div class="wk"><span>7/6</span><p class="ko">기말 전 중간발표 (개인 5분)</p><p class="en">Pre-final review (5 min, individual)</p></div>
+      <div class="wk"><span>7/7</span><p class="ko">Projection Mapping ② Unreal 실시간 송출 (Spout/OSC)</p><p class="en">Projection mapping ② real-time output from Unreal (Spout/OSC)</p></div>
+      <div class="wk"><span>7/8</span><p class="ko">기말 준비 · 세팅 · 디버깅 클리닉 (1:1 체크)</p><p class="en">Final prep · rigging · debugging clinic (1:1)</p></div>
+      <div class="wk key"><span>7/9</span><p class="ko">기말 발표 1 (개인 10–15분) + 외부 심사위원</p><p class="en">Final review 1 (10–15 min each) with external panel</p></div>
+      <div class="wk key"><span>7/10</span><p class="ko">외부수업 — 뮤지엄 산(San Museum) · 3D 스캐닝/포토그래매트리</p><p class="en">Field class — San Museum · 3D scanning and photogrammetry</p></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">기말 결과물 · 5개 팀</span><span class="en">Final work · 5 teams</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 01</span>
+          <h4><span class="ko">나를 읽는 색</span><span class="en">The Colour That Reads Me</span></h4>
+          <p class="people">강민서 · 김도경 · 김은유 · 탁수민<span class="en"> — Kang Minseo, Kim Dokyung, Kim Eunyu, Tak Sumin</span></p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1YboBU_eBNmXgTwpVgqTJL5rW96Llhtb4/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/001-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 발표 자료</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1gyzQeCPn8NoozTYqy7xK0FUFtlEj1avC/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/002-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1oeyPeuw0c27tFrahQtBVZWu8HllC7G9-/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/003-screen-recording.jpg" alt="Screen recording" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">콘텐츠 화면 녹화</span><span class="en">Screen recording</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip doc" href="https://docs.google.com/document/d/1zvhBemK5ycwaVCU4VjTZVHWX0hZ_6bAMCdmrpNX9TZA/edit" target="_blank" rel="noopener"><span class="ko">작품 설명</span><span class="en">Statement</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1kPWMnigImtzP5432pAYy65-c63_0GG9-" target="_blank" rel="noopener"><span class="ko">전체 자료</span><span class="en">All files</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 02</span>
+          <h4>Grada<span class="ko"> 그라다</span></h4>
+          <p class="people">박민우 · 안예라 · 신영웅<span class="en"> — Park Minwoo, An Yera, Shin Yeongung</span></p>
+        </div>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/004-grada-installation-still-1.jpg" alt="Grada installation still 1" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/005-grada-installation-still-2.jpg" alt="Grada installation still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/006-grada-installation-still-3.jpg" alt="Grada installation still 3" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/007-exhibition-layout-draft.jpg" alt="Exhibition layout, draft" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/008-exhibition-layout-final.jpg" alt="Exhibition layout, final" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1ur4pH6Rq8TkwOECXhsTaGs6l3HOLLggw/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/009-statement-cover.jpg" alt="Statement cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">작품 설명글</span><span class="en">Statement</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1SUUlpe9u7KgFzssz702Z97CZMt07iDG8/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/010-demo-video-1.jpg" alt="Demo video 1" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상 1</span><span class="en">Demo video 1</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1UQtT8yZvTqdr6yE6qJHe_Yd7SQ_IHw_X/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/011-demo-video-2.jpg" alt="Demo video 2" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상 2</span><span class="en">Demo video 2</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1g_iyigLYWLSpKfYY00tEfDq9QJ68avfl/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/010-demo-video-1.jpg" alt="Intro video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">인트로 영상</span><span class="en">Intro video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1ZK4ly6r6QKyhtzQ-GYpDWOoRr6BwzcP5/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/013-exhibition-screen.jpg" alt="Exhibition screen" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">전시 화면</span><span class="en">Exhibition screen</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1d0UVboB3k4LSjxyNLicnD7WeMPDARYMd/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/014-touchdesigner-screen.jpg" alt="TouchDesigner screen" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b>TouchDesigner</b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/1cPOCtzrcr6848M8CWV5U6lFfnZWa1uFe/view" target="_blank" rel="noopener"><span class="ko">기말 발표 자료</span><span class="en">Final deck</span></a>
+          <a class="chip ppt" href="https://drive.google.com/file/d/1V2X1pNJLqT10LlPV94ZqPTbsAT9FqlEJ/view" target="_blank" rel="noopener"><span class="ko">중간고사 발표 자료</span><span class="en">Mid-term deck</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1Jtn_pch33NBJezROqvLeMXfqpbEOsAoN" target="_blank" rel="noopener"><span class="ko">전체 자료 (원본 영상 포함)</span><span class="en">All files (incl. raw footage)</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 03</span>
+          <h4>501</h4>
+          <p class="people">박연우 · 박예진 · 최윤서<span class="en"> — Park Yeonwoo, Park Yejin, Choi Yunseo</span></p>
+        </div>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/015-501-still-1.jpg" alt="501 still 1" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/016-501-still-2.jpg" alt="501 still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/017-501-still-3.jpg" alt="501 still 3" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/018-501-still-4.jpg" alt="501 still 4" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/019-501-still-5.jpg" alt="501 still 5" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1jNThOLY6n435grRDIRwdpb3FisWGwvsR/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/020-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 발표 자료</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/16g4w321uf8oLVN3qofR5rMk1f4-yqtns/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/021-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/19wlx_IWslICFhJIlTYzYXJuKJ_c1Vv6S/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/022-presentation-recording.jpg" alt="Presentation recording" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">발표 녹화</span><span class="en">Presentation recording</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1r9-mI2M5IJwtMoUnVf3dmeirQCiClu0H/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/023-content-screen.jpg" alt="Content screen" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">콘텐츠 화면</span><span class="en">Content screen</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1A-SPfb-yiep3ASiiJE0aHyXTx3Gjh6Vt/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/024-statement-document.jpg" alt="Statement document" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">작품 설명</span><span class="en">Statement</span></b><em>DOCX</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 04</span>
+          <h4><span class="ko">모래</span><span class="en">Sand</span></h4>
+          <p class="people">배주영 · 오세령 · 홍준서 · 황민협 · 최성윤<span class="en"> — Bae Jooyoung, Oh Seryung, Hong Junseo, Hwang Minhyub, Choi Sungyun</span></p>
+        </div>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/025-sand-documentation-1.jpg" alt="Sand documentation 1" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/026-sand-documentation-2.jpg" alt="Sand documentation 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/027-sand-documentation-3.jpg" alt="Sand documentation 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1jMQm6rrDCrNL2wYOEoOSN_gbi8EcMOAF/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/028-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1fm36xjNL6fTECho2p9jr5RsCqWlgU-wx/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/029-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">데모 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip doc" href="https://docs.google.com/document/d/1KiO1609jubRXHnhcdm_cBSUY9sebiehhmyiNRgUTOZY/edit" target="_blank" rel="noopener"><span class="ko">작품 설명</span><span class="en">Statement</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 05</span>
+          <h4>Tuning</h4>
+          <p class="people">에제키엘 · 김정민 · 김가영<span class="ko"> — 팀 일박이김</span><span class="en"> — Ezekiel, Kim Jungmin, Kim Gayoung</span></p>
+        </div>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/030-tuning-still-1.jpg" alt="Tuning still 1" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/031-tuning-still-2.jpg" alt="Tuning still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/032-tuning-still-3.jpg" alt="Tuning still 3" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/033-tuning-still-4.jpg" alt="Tuning still 4" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/034-tuning-still-5.jpg" alt="Tuning still 5" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1h5edS9mb83PbHHXPsS5X08UpSmwPPOE_/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/035-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 발표 자료</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1LzgKYzfYJ2ZJcLENCQKFm1SfpnqD-6U4/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/036-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">프로젝트 시연 영상</span><span class="en">Project demo</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip doc" href="https://docs.google.com/document/d/163gxzgz_2Yf6E6xyZAAg3unGoj_ALw2aciFZAih40W0/edit" target="_blank" rel="noopener"><span class="ko">작품 설명</span><span class="en">Statement</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 몰입형 ══════════ -->
+<section class="panel" id="p-immersive" role="tabpanel" aria-labelledby="tab-immersive" tabindex="-1" hidden>
+
+  <div class="lede">
+    <h2><span class="ko">몰입형 내러티브 &amp; 인터랙션 디자인</span><span class="en">Immersive Narrative &amp; Interaction Design</span></h2>
+    <p class="ko">한 학기에 걸쳐 이야기를 <b>관객이 걸어 들어가는 공간과 상호작용</b>으로 옮기는 과목입니다. 2인 1팀으로 “힐링·자연”을 주제로 한 중간 프로젝트를 만들며 Twinmotion의 환경 연출에서 Unreal Engine의 트리거·시퀀서·메타휴먼까지 제작 흐름을 익히고, 국립현대미술관 외부수업과 3D 스캐닝을 지나 Arduino 센서 연동과 프로젝션 매핑(Spout/OSC)으로 확장합니다. 기말에는 자유주제를 “완성된 관객 경험”으로 제시하며, 예술적 의도–기술 구현–설치/운영을 한 묶음으로 설득해야 합니다.</p>
+    <p class="en">A semester-long course about moving a story into <b>space and interaction the audience physically walks into</b>. In pairs, students build a mid-term project on the theme of healing and nature, learning the pipeline from Twinmotion environment art direction through to Unreal Engine triggers, Sequencer and MetaHumans. A field class at the National Museum of Modern and Contemporary Art and a 3D-scanning session lead into Arduino sensor integration and projection mapping via Spout/OSC. For the final, each student presents a self-directed theme as a finished audience experience — arguing artistic intent, technical implementation and installation/operation as a single package.</p>
+    <dl class="facts">
+      <div><dt><span class="ko">기간</span><span class="en">Dates</span></dt><dd><span class="ko">2026.3.5 – 6.18 · 16주</span><span class="en">5 Mar – 18 Jun 2026 · 16 weeks</span></dd></div>
+      <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">2인 1팀(중간) · 9개 팀 · 17명</span><span class="en">Pairs (mid-term) · 9 teams · 17 students</span></dd></div>
+      <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Unreal Engine · Twinmotion · Arduino · MadMapper · Spout/OSC</dd></div>
+      <div><dt><span class="ko">발표</span><span class="en">Reviews</span></dt><dd><span class="ko">중간 4.23 · 기말 6.11 &amp; 6.18 (외부 심사위원)</span><span class="en">Mid-term 23 Apr · Final 11 &amp; 18 Jun (external panel)</span></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">평가 구조</span><span class="en">Assessment</span></h3>
+    <div class="grades">
+      <div class="grade"><div class="top"><b><span class="ko">출석 · 참여</span><span class="en">Attendance &amp; participation</span></b><em>20%</em></div><div class="bar"><i style="width:20%"></i></div></div>
+      <div class="grade"><div class="top"><b><span class="ko">과정 산출물</span><span class="en">Process deliverables</span></b><em>20%</em></div><div class="bar"><i style="width:20%"></i></div></div>
+      <div class="grade"><div class="top"><b><span class="ko">중간고사 (팀 · 힐링·자연)</span><span class="en">Mid-term (team · healing &amp; nature)</span></b><em>30%</em></div><div class="bar"><i style="width:30%"></i></div></div>
+      <div class="grade"><div class="top"><b><span class="ko">기말고사 (자유주제 · 외부 심사)</span><span class="en">Final (open theme · external review)</span></b><em>30%</em></div><div class="bar"><i style="width:30%"></i></div></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">주차별 수업 계획</span><span class="en">Weekly plan</span></h3>
+    <div class="curriculum">
+      <div class="wk"><span>1 · 3/5</span><p class="ko">오리엔테이션 · 몰입형 콘텐츠의 범주(게임/전시/공연) · 팀 빌딩</p><p class="en">Orientation · the range of immersive content (game / exhibition / performance) · team building</p></div>
+      <div class="wk"><span>2 · 3/12</span><p class="ko">예술적 방향성 · 웹 기반 AI로 내러티브 씨앗 만들기 · Twinmotion 시작</p><p class="en">Artistic direction · seeding a narrative with web-based AI · starting Twinmotion</p></div>
+      <div class="wk"><span>3 · 3/19</span><p class="ko">Twinmotion — 재질 · 날씨 · 환경으로 Healing/Nature 톤 만들기</p><p class="en">Twinmotion — building a healing/nature tone through material, weather and environment</p></div>
+      <div class="wk"><span>4 · 3/26</span><p class="ko">Twinmotion 애니메이션 구성 · Unreal Engine 기본 세팅 진입</p><p class="en">Twinmotion animation · entering Unreal Engine setup</p></div>
+      <div class="wk"><span>5 · 4/2</span><p class="ko">중간평가 사전발표 — 내러티브–공간–인터랙션 3요소 점검</p><p class="en">Mid-term pre-crit — checking narrative, space and interaction</p></div>
+      <div class="wk"><span>6 · 4/9</span><p class="ko">UE — Import · 캐릭터/인터랙션 (메타휴먼 포함)</p><p class="en">UE — import · characters and interaction (incl. MetaHuman)</p></div>
+      <div class="wk"><span>7 · 4/16</span><p class="ko">UE — Sequencer · 모션그래픽/시네마틱 구성</p><p class="en">UE — Sequencer · motion graphics and cinematics</p></div>
+      <div class="wk key"><span>8 · 4/23</span><p class="ko">중간고사 팀 발표 — 힐링 · 자연</p><p class="en">Mid-term team review — healing and nature</p></div>
+      <div class="wk key"><span>9 · 4/30</span><p class="ko">외부수업 — 국립현대미술관 · 3D 스캐닝 소개 · 기말 리서치 시작</p><p class="en">Field class — MMCA · intro to 3D scanning · final research begins</p></div>
+      <div class="wk"><span>10 · 5/7</span><p class="ko">Arduino 기초 · Unreal 연동 (Serial 기반)</p><p class="en">Arduino basics · serial integration with Unreal</p></div>
+      <div class="wk"><span>11 · 5/14</span><p class="ko">Projection Mapping ① MadMapper 기본</p><p class="en">Projection mapping ① MadMapper basics</p></div>
+      <div class="wk"><span>12 · 5/21</span><p class="ko">기말 전 중간발표 (개인 5분)</p><p class="en">Pre-final review (5 min, individual)</p></div>
+      <div class="wk"><span>13 · 5/28</span><p class="ko">Projection Mapping ② Unreal 실시간 송출 (Spout/OSC)</p><p class="en">Projection mapping ② real-time output from Unreal (Spout/OSC)</p></div>
+      <div class="wk"><span>14 · 6/4</span><p class="ko">기말 준비 · 세팅 · 디버깅 클리닉</p><p class="en">Final prep · rigging · debugging clinic</p></div>
+      <div class="wk key"><span>15 · 6/11</span><p class="ko">기말 발표 1 + 외부 심사위원</p><p class="en">Final review 1 with external panel</p></div>
+      <div class="wk key"><span>16 · 6/18</span><p class="ko">기말 발표 2 + 외부 심사위원</p><p class="en">Final review 2 with external panel</p></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">기말 발표 · 1차 (6월 11일)</span><span class="en">Final review · part 1 (11 June)</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 04</span>
+          <h4><span class="ko">나도 여기 있어요</span><span class="en">I&rsquo;m Here Too</span></h4>
+          <p class="people">김태균<span class="en"> — Kim Taekyun</span></p>
+        </div>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/037-installation-photograph.jpg" alt="Installation photograph" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1AW5Xb3N-oDc_FYmVp5RQJuGxzBVndj_l/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/038-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1hdNaHG8yZSOKtT32i2pvsmP_nXm35VHS/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/039-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 06</span>
+          <h4><span class="ko">별들의 연주</span><span class="en">Concert of Stars</span></h4>
+          <p class="people">곽동주<span class="en"> — Gwak Dongju</span></p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1hSPANchOXh48_RSMox8rp1yUMSeaJD0B/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/040-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 최종 발표</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1fbQlyR3CVPxMvScbpADvSVcWuMGSIrWj/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/041-presentation-notes.jpg" alt="Presentation notes" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 내용</span><span class="en">Presentation notes</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1EJVM9SLH8ZNrMf_PMpsK9EPRuud8FDlC/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/042-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1fBublvuSh1mTbS8Y0YIy7FSUEH5Lu715/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/043-drone-documentation.jpg" alt="Drone documentation" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">드론 기록 (6.11)</span><span class="en">Drone footage (11 Jun)</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 09</span>
+          <h4><span class="ko">숨 Breath</span><span class="en">Breath</span></h4>
+          <p class="people">양호림 · 임예지 · 주이페이<span class="en"> — Liang Haolin, Lin Ruitian, Zhu Yifei</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시에 「숨」으로 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b> as “Breath”</span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/044-breath-installation-view.jpg" alt="Breath installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/045-breath-still-2.jpg" alt="Breath still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/046-breath-still-3.jpg" alt="Breath still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1NDVG4qLuhtQpc2u4w1RbiQ8aKgDq6378/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/047-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1UQMYDR19VozS-ePKSa_hokc2cOWuteYX/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/048-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">기말 발표 · 2차 (6월 18일)</span><span class="en">Final review · part 2 (18 June)</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 01</span>
+          <h4>Whorl: A Meditation</h4>
+          <p class="people">정기찬 · 팽지현 · 최성윤<span class="en"> — Chung Gichan, Paeng Jihyun, Choi Sungyun</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b></span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/049-whorl-installation-view.jpg" alt="Whorl installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/050-whorl-still-2.jpg" alt="Whorl still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/051-whorl-still-3.jpg" alt="Whorl still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1ULD2B-d15LSkT9Oo8Cn75NQ0w4xy28fH/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/052-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1H_oKCDAeCeAkovtGDg1v2NaCUn-vz5Gh/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/053-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">데모 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1biqEFCI4ac4PJ0h2-VmUSozsu7xb1wAp/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/054-on-site-demo.jpg" alt="On-site demo" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">현장 시연</span><span class="en">On-site demo</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 02</span>
+          <h4><span class="ko">김다영 · 이유은 팀</span><span class="en">Kim Dayoung &amp; Lee Yuen</span></h4>
+          <p class="people"><span class="ko">작품명 미기재</span><span class="en">Title not recorded in the files</span></p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1d7UmVGlpiuf0QKyljaHEjZZ0cQmYMy7S/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/055-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 최종 발표</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1OFxMFHwUb2MY5odOttHIak6eLDvF4-tb/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/056-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 03</span>
+          <h4>Josh</h4>
+          <p class="people">김민채<span class="en"> — Kim Min Chae</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b></span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/057-josh-installation-view.jpg" alt="Josh installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/058-josh-still-2.jpg" alt="Josh still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/059-josh-still-3.jpg" alt="Josh still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1ZgeIED_0ZThf7X7ueTBdpPVKs1zqwv9g/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/060-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1DNh55-tUf7gCQM63nsQOC-kqw-KHOEnC/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/061-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 05</span>
+          <h4><span class="ko">등</span><span class="en">Back</span></h4>
+          <p class="people">강윤경 · 오세령<span class="en"> — Kang Yunkyung, Oh Seryung</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b></span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/062-back-installation-view.jpg" alt="Back installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/063-back-still-2.jpg" alt="Back still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/064-back-still-3.jpg" alt="Back still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1xJ2r_hTeeYnb7uGu8G85-daKtP1ywRqs/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/065-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1RuHse06kgfefBUGb8XmZqNiE_OvdBdDc/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/066-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 07</span>
+          <h4><span class="ko">최유진 · 임동 팀</span><span class="en">Choi Yujin &amp; Lim Dong</span></h4>
+          <p class="people"><span class="ko">작품명 미기재</span><span class="en">Title not recorded in the files</span></p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1v6JUtfPW2kOsG0fSlYBNqr_C2Tcr461h/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/067-final-deck-cover.jpg" alt="Final deck cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 발표 자료</span><span class="en">Final deck</span></b><em>PPTX</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1RQ1HJ3CJRVn8gmqHdpZR9hJaM1fpwgbt/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/068-demo-video.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시현 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 08</span>
+          <h4><span class="ko">비밀의 못</span><span class="en">Pond of Secrets</span></h4>
+          <p class="people">황민협 · 배주영<span class="en"> — Hwang Minhyub, Bae Jooyoung</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시에 「Pond」로 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b> as “Pond”</span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/069-pond-installation-view.jpg" alt="Pond installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/070-pond-still-2.jpg" alt="Pond still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/071-pond-still-3.jpg" alt="Pond still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1yPTsmqYEbY1Ji1jqDAVXdAXfMH4uSlEa/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/072-presentation-deck-cover.jpg" alt="Presentation deck cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation deck</span></b><em>PPTX</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1GQ9hrBfWSgQDcnSjgZUU53P-lD-FlEAN/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/073-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1irN_cew5clPTyWTJwFOMq9_DKnVj-Xkh/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/074-drone-documentation.jpg" alt="Drone documentation" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">드론 기록 (6.18)</span><span class="en">Drone footage (18 Jun)</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ AI ══════════ -->
+<section class="panel" id="p-ai" role="tabpanel" aria-labelledby="tab-ai" tabindex="-1" hidden>
+
+  <div class="lede">
+    <h2><span class="ko">AI 기반 인터랙티브 영상</span><span class="en">AI-Driven Interactive Video</span></h2>
+    <p class="ko">AI 생성 도구(ComfyUI 및 웹 기반 AI)로 이미지 · 텍스처 · <b>스타일 규칙</b>을 생산하고, 이를 Unreal Engine의 레벨 디자인과 시네마틱(Sequencer)으로 확장해 ‘공간 기반 인터랙티브 영상 경험’을 구현하는 스튜디오형 수업입니다. 학생은 가상 공간을 배경이 아니라 <b>점유되고 활성화되는 장소</b>로 이해하고, 스스로를 가상 건축가(Virtual Architect)로 설정해 경험의 구조를 설계합니다. 매주 “작동하는 결과물”의 시도와 해결을 중심으로 운영되며, 최종 결과물은 데모가 아니라 전시·시연 가능한 운영 형태(동선 · 안내 · 안정성 · 기록 · 문서화)까지 포함합니다.</p>
+    <p class="en">A studio course in which students produce images, textures and <b>style rules</b> with AI generation tools (ComfyUI and web-based AI), then extend them into Unreal Engine level design and cinematics (Sequencer) to build a spatial interactive video experience. Students treat virtual space not as a backdrop but as <b>a place that is occupied and activated</b>, casting themselves as Virtual Architects who design the structure of an experience. Every week turns on attempting and debugging something that actually runs; the final deliverable is not a demo but an operable installation — circulation, signage, stability, documentation.</p>
+    <dl class="facts">
+      <div><dt><span class="ko">기간</span><span class="en">Dates</span></dt><dd><span class="ko">2026.3.9 – 6.15</span><span class="en">9 Mar – 15 Jun 2026</span></dd></div>
+      <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">2인 이상 팀(중간) · 7개 팀 · 13명</span><span class="en">Teams of 2+ (mid-term) · 7 teams · 13 students</span></dd></div>
+      <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>ComfyUI · Unreal Engine · Arduino · TouchDesigner · Shapr3D · Maya</dd></div>
+      <div><dt><span class="ko">발표</span><span class="en">Reviews</span></dt><dd><span class="ko">중간 4.20 · 기말 쇼케이스 6.8 &amp; 6.15</span><span class="en">Mid-term 20 Apr · Final showcase 8 &amp; 15 Jun</span></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">3막 구조</span><span class="en">Three acts</span></h3>
+    <div class="grades" style="grid-template-columns:repeat(auto-fit,minmax(265px,1fr))">
+      <div class="grade">
+        <div class="top"><b>Act 1 — Synthetic Space</b><em>3/9–3/30</em></div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <p class="note-in ko">AI로 만든 시각언어를 “그림”이 아니라 공간을 구성하는 규칙/재료로 만들고, 학생을 가상 건축가로 세운다.</p>
+        <p class="note-in en">Turn AI-made visual language into rules and materials that construct space rather than pictures — and put the student in the role of Virtual Architect.</p>
+      </div>
+      <div class="grade">
+        <div class="top"><b>Act 2 — Reality Threshold</b><em>4/6–4/20</em></div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <p class="note-in ko">서로 다른 두 경험 공간 A–B와 그 사이의 경계/다리/전환을 설계한다. 설계 변수는 Distance · Connection · Narrative · Tension.</p>
+        <p class="note-in en">Design two distinct experiential spaces, A and B, and the boundary, bridge or transition between them. The design variables: distance, connection, narrative, tension.</p>
+      </div>
+      <div class="grade">
+        <div class="top"><b>Act 3 — Simulated Experience</b><em>5/11–6/15</em></div>
+        <div class="bar"><i style="width:100%"></i></div>
+        <p class="note-in ko">선택한 경험(치유·기다림·숭고·향수·어둠·리듬·환영·정체성 등)의 본질을 기본 요소로 시뮬레이션하고, 관객 입력(Arduino)으로 변화하는 형태로 완성한다.</p>
+        <p class="note-in en">Simulate the essence of one chosen experience — healing, waiting, the sublime, nostalgia, darkness, rhythm, illusion, identity — from primitive elements, and make it change under audience input via Arduino.</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">주차별 수업 내용</span><span class="en">Weekly plan</span></h3>
+    <div class="curriculum">
+      <div class="wk"><span>3/9</span><p class="ko">오리엔테이션 — “가상 공간은 배경이 아니라 장소이며, 우리는 Virtual Architect다”</p><p class="en">Orientation — “virtual space is a place, not a backdrop, and we are Virtual Architects”</p></div>
+      <div class="wk"><span>3/16</span><p class="ko">ComfyUI로 “세계관 규칙” 만들기 — A vs B 대비의 씨앗, 스타일 가이드</p><p class="en">Building world rules in ComfyUI — seeding the A/B contrast, writing a style guide</p></div>
+      <div class="wk"><span>3/23</span><p class="ko">에셋 파이프라인 — Fab/Quixel · AI 생성 · Shapr3D → Maya UV → UE import</p><p class="en">Asset pipeline — Fab/Quixel, AI generation, Shapr3D → Maya UV → UE import</p></div>
+      <div class="wk"><span>3/30</span><p class="ko">언리얼 엔진의 시작 + Blockout — Distance/Connection을 공간으로 번역</p><p class="en">Starting Unreal + blockout — translating distance and connection into space</p></div>
+      <div class="wk"><span>4/6</span><p class="ko">중간 사전 발표 (Pre-crit) — Threshold 크리틱</p><p class="en">Mid-term pre-crit — threshold critique</p></div>
+      <div class="wk"><span>4/13</span><p class="ko">Sequencer — 전환을 ‘시네마틱화’하기</p><p class="en">Sequencer — turning the transition cinematic</p></div>
+      <div class="wk key"><span>4/20</span><p class="ko">중간고사 — Reality Threshold</p><p class="en">Mid-term — Reality Threshold</p></div>
+      <div class="wk key"><span>4/25</span><p class="ko">현장 방문 — 국립현대미술관 · 공간 번역 · 현장 3D 스캐닝</p><p class="en">Field visit — MMCA · translating real space · on-site 3D scanning</p></div>
+      <div class="wk"><span>4/27</span><p class="ko">Arduino 기초 — ‘생물학적 인식 채널’ 만들기</p><p class="en">Arduino basics — building a biological sensing channel</p></div>
+      <div class="wk"><span>5/4</span><p class="ko">Arduino ↔ TouchDesigner — EEG/Heartbeat 센서, OSC/Spout 허브</p><p class="en">Arduino ↔ TouchDesigner — EEG/heartbeat sensors, OSC/Spout as hub</p></div>
+      <div class="wk"><span>5/11</span><p class="ko">기말 사전 발표 (개인 5분) — Fail-safe · 동선 · 안내 확정</p><p class="en">Pre-final review (5 min each) — fail-safe, circulation and signage locked</p></div>
+      <div class="wk"><span>5/18</span><p class="ko">Arduino → TD → UE — Act 3 시작</p><p class="en">Arduino → TD → UE — Act 3 begins</p></div>
+      <div class="wk"><span>6/1</span><p class="ko">Advanced Lighting/Materials + 관객 테스트</p><p class="en">Advanced lighting and materials + audience testing</p></div>
+      <div class="wk key"><span>6/8 · 6/15</span><p class="ko">Final Showcase — Simulated Experience</p><p class="en">Final showcase — Simulated Experience</p></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">기말 제출 요건</span><span class="en">Final requirements</span></h3>
+    <div class="notes">
+      <div class="note">
+        <h4><span class="ko">필수 구성</span><span class="en">Required components</span></h4>
+        <ul class="ko">
+          <li>관객 입력 1개 이상 (Arduino — 거리/빛/압력/움직임)</li>
+          <li>연동 파이프라인: Arduino → TouchDesigner(정규화·스무딩) → Unreal</li>
+          <li>Unreal에서 최소 2종 변화: 조명 · 머티리얼 · 카메라/시퀀서 · 공간 상태(Idle→Engage→Climax)</li>
+          <li>전시 운영 요소: 안내문 · 동선 · Fail-safe · 최소 10회 반복 시연</li>
+        </ul>
+        <ul class="en">
+          <li>At least one audience input via Arduino — distance, light, pressure or motion</li>
+          <li>Pipeline: Arduino → TouchDesigner (normalising, smoothing) → Unreal</li>
+          <li>At least two kinds of change in Unreal: lighting, material, camera/Sequencer, or spatial state (idle → engage → climax)</li>
+          <li>Operating conditions: signage, circulation, fail-safe, at least ten repeat runs</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h4><span class="ko">제출물</span><span class="en">Deliverables</span></h4>
+        <ul class="ko">
+          <li>라이브 시연 (현장)</li>
+          <li>데모 영상 20–40초 — 입력→반응이 보이게</li>
+          <li>기록 영상 30–90초 — 분위기 중심</li>
+          <li>2p 문서(PDF) — 컨셉 · 상호작용 규칙 · 시스템 구조도 · 설치 도면 + 운영 체크리스트</li>
+        </ul>
+        <ul class="en">
+          <li>Live demonstration on site</li>
+          <li>Demo video, 20–40 s — input and response must both be visible</li>
+          <li>Documentation video, 30–90 s — atmosphere-led</li>
+          <li>Two-page PDF — concept, interaction rules, system diagram, installation drawing and operating checklist</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">기말 결과물 · 7개 팀</span><span class="en">Final work · 7 teams</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 01</span>
+          <h4><span class="ko">조단비 · 김윤서 팀</span><span class="en">Cho Danbi &amp; Kim Yunseo</span></h4>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시에 「Will you walk with ____?」로 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b> as “Will you walk with ____?”</span></p>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1tJIVJ1IL5Jm-w56L3ZwXYQMpn05CpU_h/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/075-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">프리젠테이션 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1EMFzwuFDOYcijn10axqQySf2h3o-zWyY/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/076-final-demo-video.jpg" alt="Final demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">최종 시현 영상</span><span class="en">Final demo</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 02</span>
+          <h4><span class="ko">환영</span><span class="en">Illusion</span></h4>
+          <p class="people">윤이나 · 한민택<span class="en"> — Yoon Yina, Han Mintaek</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시에 「잔을 기울이면」으로 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b> as “When You Tilt the Glass”</span></p>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1Gxc_jj4HZ6bYguRB3zlIZ84VuMQuk-vX/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/077-final-project-cover.jpg" alt="Final project cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 프로젝트 자료</span><span class="en">Final project</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1M3_8wqDJKUVr5tCTLLYveeJ0MbrckJlB/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/078-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 03</span>
+          <h4><span class="ko">오세령 · 이용길 팀</span><span class="en">Oh Seryung &amp; Lee Yonggil</span></h4>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시에 「Way Back Home」으로 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b> as “Way Back Home”</span></p>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1xWQhWjG1nrp9TjlBlJystopGsWsXCYjB/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/079-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">최종 발표 자료</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1J_I6DMaYIXL9PsvUKJ3TQRrsNYVbTs3w/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/010-demo-video-1.jpg" alt="Final video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">기말 영상</span><span class="en">Final video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 04</span>
+          <h4>Overlap</h4>
+          <p class="people">팽지현 · 홍준서<span class="en"> — Paeng Jihyun, Hong Junseo</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b></span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/081-overlap-installation-view.jpg" alt="Overlap installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/082-overlap-still-2.jpg" alt="Overlap still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/083-overlap-still-3.jpg" alt="Overlap still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1YFA91PQ2P0I6HXdVjOXR9JQHRypO9vyl/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/084-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 프리젠테이션</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 05</span>
+          <h4><span class="ko">안아힘 · 윤재연 팀</span><span class="en">An Ahim &amp; Yoon Jaeyeon</span></h4>
+          <p class="people"><span class="ko">작품명 미기재</span><span class="en">Title not recorded in the files</span></p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1gJNfIUvf8rXo8Mkcl3efqOTICLX_rh6o/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/085-presentation-cover.jpg" alt="Presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1S43TJgTQVcllYDDg-p2jFc88UoiOzHMy/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/086-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 06</span>
+          <h4><span class="ko">계절의 변곡점</span><span class="en">Inflection Point of Seasons</span></h4>
+          <p class="people">박호윤<span class="en"> — Park Hoyoon</span></p>
+        </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b></span></p>
+        <div class="shots">
+          <button class="shot" type="button"><img src="assets/img/087-inflection-point-installation-view.jpg" alt="Inflection Point installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/088-inflection-point-still-2.jpg" alt="Inflection Point still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/089-inflection-point-still-3.jpg" alt="Inflection Point still 3" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1RheBqT8mzAH1MNplG_XOvuj2v7BVKEfW/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/090-final-project-cover.jpg" alt="Final project cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 프로젝트 자료</span><span class="en">Final project</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1pJv5Jaa9Qbq7Dql0zHiAzp-sFomy9YBK/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/091-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 07</span>
+          <h4>Waiting in the Snow</h4>
+          <p class="people">장서오 · 당유이<span class="en"> — Jang Seo-o, Dang Yui</span></p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/11feuZu7ZVcgWEw_UTnMwB_K81sjcgIQA/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/092-final-project-cover.jpg" alt="Final project cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 프로젝트 자료</span><span class="en">Final project</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1wfnwqjtUkovoim3nNsyX0e-dSgCDyIRr/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/093-work-video.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1d16K_TA0zoxr8fH7C_ALyhcRIZJcUvsO/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/094-snowy-bus-stop-document.jpg" alt="Snowy Bus Stop document" loading="lazy"></span>
+            <span class="mmeta"><b>Snowy Bus Stop</b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ N.I.M.A ══════════ -->
+<section class="panel" id="p-nima" role="tabpanel" aria-labelledby="tab-nima" tabindex="-1" hidden>
+
+  <div class="exhibit-top">
+    <button class="poster" type="button" aria-label="Enlarge exhibition poster">
+      <img src="assets/img/095-n-i-m-a-2026-new-interfaces-for-moving-arts-post.jpg" alt="N.I.M.A. 2026 — New Interfaces for Moving Arts poster">
+    </button>
+    <div class="lede">
+      <h2>N.I.M.A. 2026 — New Interfaces for Moving Arts</h2>
+      <p class="ko">수업에서 만들어진 작업이 강의실 밖 관객을 만난 첫 전시입니다. 세 과목에서 나온 인터랙티브 설치 열 점을 성균갤러리에 모아 이틀간 무료로 공개했고, 설치 전경은 스틸과 드론으로 기록했습니다. 아래 작품 설명은 각 팀이 제출한 발표 자료에서 옮긴 것입니다.</p>
+      <p class="en">The first exhibition in which work made inside these courses met an audience outside the classroom. Ten interactive installations from three courses were brought together at Sungkyun Gallery and shown free of charge over two days; the installations were documented in stills and by drone. The descriptions below are drawn from each team&rsquo;s own submitted presentation.</p>
+      <dl class="facts">
+        <div><dt><span class="ko">오프닝</span><span class="en">Opening</span></dt><dd><span class="ko">2026.7.4 (토) 19:00 – 21:00</span><span class="en">Sat 4 July 2026, 19:00 – 21:00</span></dd></div>
+        <div><dt><span class="ko">전시</span><span class="en">Exhibition</span></dt><dd><span class="ko">2026.7.5 (일) 11:00 – 17:00 · 무료 관람</span><span class="en">Sun 5 July 2026, 11:00 – 17:00 · free admission</span></dd></div>
+        <div><dt><span class="ko">장소</span><span class="en">Venue</span></dt><dd><span class="ko">성균갤러리 1F, 성균관대 경영관<br>서울 종로구 성균관로 25-2</span><span class="en">Sungkyun Gallery, 1F, SKK Business School<br>25-2 Sungkyunkwan-ro, Jongno-gu, Seoul</span></dd></div>
+        <div><dt><span class="ko">주최 지원</span><span class="en">Supported by</span></dt><dd><span class="ko">성균관대학교 영상학과</span><span class="en">Sungkyunkwan University,<br>Dept. of Film, Television and Multimedia</span></dd></div>
+        <div><dt><span class="ko">기획</span><span class="en">Curated by</span></dt><dd><span class="ko">유준오 · 황민협</span><span class="en">Junoh Yu · MinHyub Hwang</span></dd></div>
+        <div><dt><span class="ko">규모</span><span class="en">Scale</span></dt><dd><span class="ko">참여 작가 19명 · 출품작 10점</span><span class="en">19 artists · 10 works</span></dd></div>
+      </dl>
+      <div class="files">
+        <a class="chip dir" href="https://drive.google.com/drive/folders/1nrPNr2OenP1ntiCYtcItk37s0KI0DiJP" target="_blank" rel="noopener"><span class="ko">전시 기록 전체</span><span class="en">All exhibition documentation</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">출품작 10점</span><span class="en">Ten works</span></h3>
+    <div class="pieces">
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">숨</span><span class="en">Breath</span></h4><p class="people">임예지 · 양호림 · 주이페이<span class="en"> — Lin Ruitian, Liang Haolin, Zhu Yifei</span></p></div>
+        <p class="blurb ko">사람은 태어나는 순간부터 하나의 몸을 갖고, 그 몸을 통해 숨 쉬고 감각하고 세계에 닿는다. 그러나 질병과 노화와 죽음, 그 곁에 따라오는 의료와 돌봄과 타인의 손길은 저마다의 방식으로 몸 안으로 들어온다. 외부의 개입이 일어나는 순간 그토록 자명하던 ‘나’라는 정체성이 흔들리기 시작한다. 작품은 묻는다 — 몸은 여전히 나의 것인가, 그 경계는 어디에 있는가.</p>
+        <p class="blurb en">From the moment we are born we have a body, and through it we breathe, sense and touch the world. But illness, ageing and death — and the medicine, care and other people&rsquo;s hands that come with them — enter that body each in their own way. At the moment of external intervention, the self that felt so self-evident begins to waver. The work asks: is the body still mine, and where exactly is its boundary?</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/044-breath-installation-view.jpg" alt="Breath installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/045-breath-still-2.jpg" alt="Breath still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/046-breath-still-3.jpg" alt="Breath still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1_OEVsPgJUhhTZ0NrzurOi6V9ZA7W6XD_" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1UQMYDR19VozS-ePKSa_hokc2cOWuteYX/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Whorl: A Meditation</h4><p class="people">팽지현 · 정기찬 · 최성윤<span class="en"> — Paeng Jihyun, Chung Gichan, Choi Sungyun</span></p></div>
+        <p class="blurb ko">물 위에 잉크를 떨어뜨려 예측할 수 없는 흐름과 유기적인 패턴을 만드는 일본 전통 기법 <b>스미나가시</b>에서 출발한다. 관객의 움직임과 목소리를 아두이노와 MediaPipe로 읽어 화면에 번지는 문양을 실시간으로 생성하고, 관객은 자신의 그림자 같은 형상 안에서 그 흐름을 바라보며 시선을 유지한다. 팀은 이것을 “명상”보다는 <b>집중 기반 인터랙티브 경험</b>이라 부른다 — 작품이 특정 감정을 주입할 수는 없지만, 어떤 행위를 제안하고 그 행위를 통해 특정 상태를 경험할 조건은 마련할 수 있다는 생각에서다.</p>
+        <p class="blurb en">The work begins from <b>suminagashi</b>, the Japanese technique of dropping ink onto water to produce unpredictable currents and organic patterns. A viewer&rsquo;s movement and voice are read through Arduino and MediaPipe to generate spreading patterns in real time; the viewer holds their gaze on that flow from inside a shadow-like figure of themselves. The team calls it not meditation but <b>a concentration-based interactive experience</b> — a work cannot inject a particular emotion, but it can propose an action and build the conditions in which a particular state becomes possible.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/049-whorl-installation-view.jpg" alt="Whorl installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/050-whorl-still-2.jpg" alt="Whorl still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/051-whorl-still-3.jpg" alt="Whorl still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1bu6WPfo73ZBbMr6M2tTkjtOtt5u38Cso" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1H_oKCDAeCeAkovtGDg1v2NaCUn-vz5Gh/view" target="_blank" rel="noopener"><span class="ko">데모 영상</span><span class="en">Demo video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">Pond — 비밀의 못</span><span class="en">Pond</span></h4><p class="people">배주영 · 황민협<span class="en"> — Bae Jooyoung, Hwang Minhyub</span></p></div>
+        <p class="blurb ko">누구에게나 쉽게 말하지 못하는 것이 있다. 비밀, 후회, 끝내 전하지 못한 진심. 관객은 어두운 녹음실에 혼자 들어가 부저에 손을 올리고, 아무도 듣지 않는 상태에서 그것을 털어놓는다. 녹음은 사람을 거치지 않고 자동으로 다른 목소리들과 겹쳐져, 개인의 비밀은 끝까지 식별되지 않은 채 <b>4m × 4m의 사운드 배스</b>에 고인 소리의 일부가 된다. 좌판의 베이스 쉐이커와 등받이 익사이터, 낮은 조명과 포그가 소리를 듣는 것이 아니라 소리 안으로 가라앉는 감각을 만든다. 원본 파일은 남지도, 복원되지도 않는다.</p>
+        <p class="blurb en">Everyone carries something they cannot easily say — a secret, a regret, a truth never delivered. Alone in a darkened recording booth, the visitor places a hand on a glowing buzzer and speaks it aloud with no one listening. The recording never passes through a person: it is automatically layered into the other voices, so that an individual secret is never identifiable again and becomes part of the sound pooled in a <b>4 × 4 m sound bath</b>. Bass shakers in the seat, exciters in the backrest, low light and fog turn listening into the sensation of sinking into sound. No original file is kept, and none can be recovered.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/069-pond-installation-view.jpg" alt="Pond installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/070-pond-still-2.jpg" alt="Pond still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/071-pond-still-3.jpg" alt="Pond still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/10190I8nC2NNfuochGoMb7zbS7hwhBxuS" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1GQ9hrBfWSgQDcnSjgZUU53P-lD-FlEAN/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">Way Back Home — 집에 가는 길</span><span class="en">Way Back Home</span></h4><p class="people">오세령 · 이용길<span class="en"> — Oh Seryung, Lee Yonggil</span></p></div>
+        <p class="blurb ko">노스탤지어에서 출발해 <b>‘타인의 신발을 신는 경험’</b>을 만든다. 신발은 단순한 물건이 아니라 한 사람이 세상과 접촉하는 방식이다. 어떤 속도로, 어떤 무게로, 어떤 각도로 땅을 밟는가 — 그것이 곧 그 사람이 세상을 살아온 방식이다. 관객은 신발의 주인이 어떤 감각으로 이 세상을 딛고 서 있었는지를 아주 조금이나마 느껴본다.</p>
+        <p class="blurb en">Starting from nostalgia, the work builds an experience of <b>putting yourself in someone else&rsquo;s shoes</b> — literally. A shoe is not simply an object but the way a person makes contact with the world. At what speed, with what weight, at what angle does someone meet the ground? That is how they have lived. The visitor gets to feel, if only slightly, the sensation with which the shoe&rsquo;s owner stood on the earth.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/105-way-back-home-installation-view.jpg" alt="Way Back Home installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/106-way-back-home-still-2.jpg" alt="Way Back Home still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/107-way-back-home-still-3.jpg" alt="Way Back Home still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1A9HJirCw6ZT2gBIoWobnRvJnw300e0Pk" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1J_I6DMaYIXL9PsvUKJ3TQRrsNYVbTs3w/view" target="_blank" rel="noopener"><span class="ko">기말 영상</span><span class="en">Final video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Will you walk with ____?</h4><p class="people">김윤서 · 조단비<span class="en"> — Kim Yunseo, Cho Danbi</span></p></div>
+        <p class="blurb ko">키워드는 <b>리듬</b>이다. 관람자에게 약자의 느린 리듬에 맞춰 함께 걸어가는 경험을 제공한다. 전시에서 약자는 폭력에 노출된 중학생 “민이”의 모습으로 구현되었고, 연대하는 행위는 “느린 속도로 함께 걸어간다”는 경험으로 풀어냈다. 관람자는 프롤로그 영상으로 민이를 알게 된 뒤 암흑 공간에서 보폭을 맞추며 리듬을 동기화하고, 민이는 이곳을 빠져나가기까지 함께해 준 관람자에게 미소를 지어 보이며 작별 인사를 고한다. 웹캠 → MediaPipe → TouchDesigner로 발목 좌표를 실시간 전송하고 Unreal Engine에서 반응한다.</p>
+        <p class="blurb en">The keyword is <b>rhythm</b>. The work offers the experience of walking together at the slower pace of someone vulnerable. Here that person is “Min-i”, a middle-school student exposed to violence, and the act of solidarity is rendered as simply walking beside them, slowly. After a prologue video introduces Min-i, the visitor synchronises their stride in a darkened space; when Min-i finally makes it out, they turn, smile at the visitor who walked the whole way, and say goodbye. Ankle coordinates travel from a webcam through MediaPipe and TouchDesigner into Unreal Engine in real time.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/108-will-you-walk-with-installation-view.jpg" alt="Will you walk with installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/109-will-you-walk-with-still-2.jpg" alt="Will you walk with still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/110-will-you-walk-with-still-3.jpg" alt="Will you walk with still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1KU6HJGINXqOP05BM4Px5JgRE4HDJvLaH" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1EMFzwuFDOYcijn10axqQySf2h3o-zWyY/view" target="_blank" rel="noopener"><span class="ko">시현 영상</span><span class="en">Demo video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Overlap</h4><p class="people">팽지현 · 홍준서<span class="en"> — Paeng Jihyun, Hong Junseo</span></p></div>
+        <p class="blurb ko">대한민국은 아시아에서 비교적 최근까지 전쟁을 경험한 국가다. 그럼에도 러시아–우크라이나 전쟁은 여전히 먼 곳의 이야기처럼 인식된다. 작품은 그 거리감 속에서 <b>‘안전’이라는 개념을 다시 질문한다.</b> 익숙하고 안전한 강의실에서 관객은 핸드폰 화면을 통해 같은 공간의 또 다른 가능성을 마주한다. 안전 → 균열 → 중첩 → 충돌. 하나의 공간에 서로 다른 세계가 겹쳐지고, 동일한 장소가 서로 다른 상태로 동시에 인식된다.</p>
+        <p class="blurb en">Korea is a country that experienced war relatively recently, and yet the war in Ukraine still registers as something happening far away. From inside that distance, the work <b>puts the idea of “safety” back into question</b>. In a familiar, safe lecture room, the visitor meets another possible version of the same space through a phone screen. Safety, then fracture, then overlap, then collision: two worlds superimposed on one room, the same place perceived in two states at once.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/081-overlap-installation-view.jpg" alt="Overlap installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/082-overlap-still-2.jpg" alt="Overlap still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/083-overlap-still-3.jpg" alt="Overlap still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1aG6worKY0bKsFfitdq1xxR87KBqi_TKD" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1YFA91PQ2P0I6HXdVjOXR9JQHRypO9vyl/view" target="_blank" rel="noopener"><span class="ko">프리젠테이션</span><span class="en">Presentation</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">잔을 기울이면</span><span class="en">When You Tilt the Glass</span></h4><p class="people">윤이나 · 한민택<span class="en"> — Yoon Yina, Han Mintaek</span></p></div>
+        <p class="blurb ko"><b>“분위기를 마신다”</b>는 감각을 데이터와 공간 연출로 구현한다. 바에서의 음용 행위를 단순한 소비가 아니라 맛·향·잔·공간의 기억이 결합되는 몰입형 경험으로 재정의했다. 관객이 시그니처 음료를 주문하면 바텐더가 스마트 코스터 위에 잔을 올리고, 로드셀이 음료의 무게를 1g 단위로 읽는다. 선택한 칵테일의 가상 공간이 5면 스크린에 등장하고, 마실수록 줄어드는 음료량에 따라 조명·음악·효과가 강해진다. 가상공간은 고정된 배경이 아니라 관객의 음용량에 따라 점차 완성되는 환영으로 설계되었다.</p>
+        <p class="blurb en">The work gives physical form to the idea of <b>drinking an atmosphere</b>, using data and spatial staging. Drinking at a bar is reframed not as consumption but as an immersive experience in which taste, aroma, glass and the memory of a place combine. The visitor orders a signature drink; the bartender sets it on a smart coaster, and a load cell reads its weight to the gram. The virtual space belonging to that cocktail appears across five screens, and as the level in the glass falls, light, music and effects intensify. The space is not a fixed backdrop but an illusion that completes itself in proportion to how much has been drunk.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/114-when-you-tilt-the-glass-installation-view.jpg" alt="When You Tilt the Glass installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/115-when-you-tilt-the-glass-still-2.jpg" alt="When You Tilt the Glass still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/116-when-you-tilt-the-glass-still-3.jpg" alt="When You Tilt the Glass still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1nkJ4iNnMD_k3g5ldAGeOHJDNRkJ3wlwx" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1M3_8wqDJKUVr5tCTLLYveeJ0MbrckJlB/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">계절의 변곡점</span><span class="en">Inflection Point of Seasons</span></h4><p class="people">박호윤<span class="en"> — Park Hoyoon</span></p></div>
+        <p class="blurb ko">봄부터 겨울까지 사계를 가로지르는 <b>계절의 변곡점</b>을 보여준다. 우리가 살아가는 현실은 명확한 선으로 단절되어 있는 것처럼 보이지만, 실상 그 경계는 겨울에서 봄으로 넘어가는 변곡점처럼 흐릿하고 유동적이다. TouchDesigner를 활용한 인터랙티브 텍스타일 디자인은 관객의 움직임에 실시간으로 반응하며 끊임없이 변화한다. 텍스타일은 더 이상 고정된 표면에 머무르지 않고, 관객의 존재와 움직임에 따라 유기적으로 변하며 새로운 시각적 흐름을 생성한다. 관객이 움직이는 순간, 계절은 벽을 넘어 몸 위에 내려앉는다.</p>
+        <p class="blurb en">The work traces the <b>inflection points</b> that run across the four seasons, from spring to winter. The reality we live in appears to be divided by clear lines, but in fact its boundaries are blurred and fluid, like the turn from winter into spring. Built in TouchDesigner, the interactive textile design responds to the visitor&rsquo;s movement in real time and never stops changing. The textile no longer rests on a fixed surface: it shifts organically with the presence and motion of the viewer, generating new visual currents. The moment the visitor moves, the season crosses the wall and settles onto the body.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/087-inflection-point-installation-view.jpg" alt="Inflection Point installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/088-inflection-point-still-2.jpg" alt="Inflection Point still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/089-inflection-point-still-3.jpg" alt="Inflection Point still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/10Efa2qiyGFMxEEcKQKkRq3eLf14G6o_-" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1pJv5Jaa9Qbq7Dql0zHiAzp-sFomy9YBK/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">등</span><span class="en">Back to Back</span></h4><p class="people">강윤경 · 오세령<span class="en"> — Kang Yunkyung, Oh Seryung</span></p></div>
+        <p class="blurb ko">키워드는 <b>관계</b>, 그리고 <b>상호의존</b>이다. 스쳐 지나가는 사람들 사이에서 등을 맞대는 행위를 관계의 최소 단위로 삼는다. 벽을 사이에 두고 양쪽에 기대어 선 두 사람은 서로를 보지 못하지만, 반대편 벽에 나타난 열화상의 형상으로 상대의 존재를 감지한다. 서로에게 기대야만 성립하는 자세를 통해, 보지 않고도 지탱되는 관계를 경험하게 한다.</p>
+        <p class="blurb en">The keywords are <b>relationship</b> and <b>interdependence</b>. Among people who only pass one another by, the work takes leaning back to back as the smallest possible unit of a relationship. Two people rest against opposite sides of a wall; they cannot see each other, but each senses the other as a thermal figure appearing on the far wall. In a posture that only holds if both lean in, the visitor experiences a relationship that supports without being seen.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/062-back-installation-view.jpg" alt="Back to Back installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/063-back-still-2.jpg" alt="Back to Back still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/064-back-still-3.jpg" alt="Back to Back still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1u7sXq5mgerrsB2HNB80B1vkrs0sgjDoA" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1RuHse06kgfefBUGb8XmZqNiE_OvdBdDc/view" target="_blank" rel="noopener"><span class="ko">시연 영상</span><span class="en">Demo video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Josh</h4><p class="people">김민채<span class="en"> — Kim Min Chae</span></p></div>
+        <p class="blurb ko">우울증에 대한 흔한 오해와 날카로운 시선을 다룬다. 당사자에게 필요한 것은 조언이나 비난이 아니라 <b>타인의 지속적인 관심과 연대</b>라는 메시지를, 마네킹 ‘조쉬’가 앉은 벤치 옆에 관객이 함께 앉아 머무는 행위로 전한다. 대기 상태에서는 당사자가 매일 마주하는 편견과 시선을 관객이 직접 겪게 해 불편함을 유도하고, 관객이 옆에 앉는 순간 세상의 비판이 사라진 단둘만의 안전한 연대 공간이 만들어진다. 진득하게 머무는 시간이 쌓일수록 닫혀 있던 내면이 조금씩 열리며 치유가 시작된다. “함께 앉아 머무는 행위”가 유일한 열쇠임을 시각·촉각·청각적 메타포로 공유한다.</p>
+        <p class="blurb en">The work takes on the ordinary misconceptions and sharp looks directed at depression. Its message — that what a person needs is not advice or blame but <b>the sustained attention and solidarity of others</b> — is carried entirely by the act of sitting down beside a mannequin named Josh and staying there. In its idle state the piece deliberately makes the visitor uncomfortable, exposing them to the prejudice its subject meets every day. The moment the visitor sits, the world&rsquo;s judgment falls away and a safe space for two is formed. The longer they stay, the more a closed interior opens and healing begins. Visual, tactile and auditory metaphors carry one idea: sitting and staying is the only key.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/057-josh-installation-view.jpg" alt="Josh installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/058-josh-still-2.jpg" alt="Josh still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/059-josh-still-3.jpg" alt="Josh still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1NlWJbC5VRCCpHRE4_euNlnp7MQiepesx" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1DNh55-tUf7gCQM63nsQOC-kqw-KHOEnC/view" target="_blank" rel="noopener"><span class="ko">시연 영상</span><span class="en">Demo video</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">전시장 드론 기록 · 7.5</span><span class="en">Drone documentation · 5 July</span></h3>
+    <div class="media">
+      <a class="mcard" href="https://drive.google.com/file/d/1YndXshOUvRH7iHPcqJdfeyKgz8WHas1z/view" target="_blank" rel="noopener">
+        <span class="mthumb"><img src="assets/img/126-gallery-drone-footage-1.jpg" alt="Gallery drone footage 1" loading="lazy"><span class="play"><span></span></span></span>
+        <span class="mmeta"><b><span class="ko">전시장 전경 1</span><span class="en">Gallery view 1</span></b><em>Video · 14:36</em></span>
+      </a>
+      <a class="mcard" href="https://drive.google.com/file/d/1w_9u5_Uab2j5mY7uUfEsODtHjCqM4sXA/view" target="_blank" rel="noopener">
+        <span class="mthumb"><img src="assets/img/127-gallery-drone-footage-2.jpg" alt="Gallery drone footage 2" loading="lazy"><span class="play"><span></span></span></span>
+        <span class="mmeta"><b><span class="ko">전시장 전경 2</span><span class="en">Gallery view 2</span></b><em>Video · 14:38</em></span>
+      </a>
+      <a class="mcard" href="https://drive.google.com/file/d/19_564T25mP2oSa6T2rmEmDXrAr8TR1cX/view" target="_blank" rel="noopener">
+        <span class="mthumb"><img src="assets/img/128-gallery-drone-footage-3.jpg" alt="Gallery drone footage 3" loading="lazy"><span class="play"><span></span></span></span>
+        <span class="mmeta"><b><span class="ko">전시장 전경 3</span><span class="en">Gallery view 3</span></b><em>Video · 14:45</em></span>
+      </a>
+    </div>
+    <div class="files" style="margin-top:.8rem">
+      <a class="chip dir" href="https://drive.google.com/drive/folders/1VQV7iv8AXVhE41DnepZ6ii72LUqUfnps" target="_blank" rel="noopener"><span class="ko">드론 기록 영상 7건 전체</span><span class="en">All 7 drone clips</span></a>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <span><span class="ko">유준오 · 성균관대학교 영상학과 · 2026년 1학기</span><span class="en">Junoh Yu · Sungkyunkwan University · Spring 2026</span></span>
+    <span><span class="ko">자료 원본 — Google Drive</span><span class="en">Source files — Google Drive</span></span>
+  </footer>
+</div>
+
+<dialog class="lb" id="lb">
+  <img alt="">
+  <button type="button" id="lbclose">CLOSE ESC</button>
+</dialog>
+
+<script>
+/* safety net: if the tab script never runs, reveal every panel instead of a blank page */
+setTimeout(function () {
+  if (!document.querySelector('.tab[aria-selected="true"]')) {
+    var ps = document.querySelectorAll('.panel');
+    for (var i = 0; i < ps.length; i++) ps[i].hidden = false;
+  }
+}, 800);
+</script>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  /* ── language ── */
+  function setLang(l) {
+    root.setAttribute('data-lang', l);
+    root.setAttribute('lang', l === 'en' ? 'en' : 'ko');
+    try { localStorage.setItem('ta-lang', l); } catch (err) {}
+  }
+  var startLang = 'ko';
+  try {
+    var saved = localStorage.getItem('ta-lang');
+    if (saved === 'en' || saved === 'ko') startLang = saved;
+  } catch (err) {}
+  setLang(startLang);
+
+  var langBtn = document.getElementById('lang');
+  if (langBtn) {
+    langBtn.addEventListener('click', function () {
+      setLang(root.getAttribute('data-lang') === 'en' ? 'ko' : 'en');
+    });
+  }
+
+  /* ── tabs ── */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+  window.addEventListener('error', function () {
+    panels.forEach(function (p) { if (p) p.hidden = false; });
+  });
+
+  function select(i, focus) {
+    tabs.forEach(function (t, n) {
+      t.setAttribute('aria-selected', n === i ? 'true' : 'false');
+      t.tabIndex = n === i ? 0 : -1;
+      if (panels[n]) panels[n].hidden = n !== i;
+    });
+    if (focus) tabs[i].focus();
+    try {
+      var id = tabs[i].getAttribute('aria-controls').replace(/^p-/, '');
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+    } catch (err) {}
+  }
+
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () {
+      select(i);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    t.addEventListener('keydown', function (e) {
+      var n = null;
+      if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === 'Home') n = 0;
+      if (e.key === 'End') n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); select(n, true); }
+    });
+  });
+
+  var start = 0;
+  try {
+    var hash = (location.hash || '').replace(/^#/, '');
+    tabs.forEach(function (t, i) {
+      if (t.getAttribute('aria-controls') === 'p-' + hash) start = i;
+    });
+  } catch (err) { start = 0; }
+  select(start);
+
+  /* ── lightbox ── */
+  var lb = document.getElementById('lb');
+  var lbImg = lb ? lb.querySelector('img') : null;
+
+  function openLb(src, alt) {
+    if (!lb || !lbImg) return;
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    if (typeof lb.showModal === 'function') { try { lb.showModal(); return; } catch (err) {} }
+    lb.setAttribute('open', '');
+  }
+  function closeLb() {
+    if (!lb) return;
+    if (typeof lb.close === 'function') { try { lb.close(); } catch (err) {} }
+    lb.removeAttribute('open');
+    if (lbImg) lbImg.removeAttribute('src');
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.shot, .poster') : null;
+    if (!btn) return;
+    var img = btn.querySelector('img');
+    if (img) openLb(img.currentSrc || img.src, img.alt);
+  });
+  var closeBtn = document.getElementById('lbclose');
+  if (closeBtn) closeBtn.addEventListener('click', closeLb);
+  if (lb) {
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbImg) closeLb(); });
+    lb.addEventListener('close', function () { if (lbImg) lbImg.removeAttribute('src'); });
+  }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+})();
+</script>
+
+</body></html>
