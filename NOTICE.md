@@ -23,7 +23,10 @@
 사이트에 실린 스틸 이미지는 전부 **수업 크리틱 녹화(Zoom) 화면에서 추출한 것**이며,
 공유 화면 영역만 잘라 썼습니다(2025.12.21 녹화는 우측 웹캠 타일을 제거). 학생의 얼굴은
 싣지 않았습니다. 애니메이션 스튜디오 8편은 담당 교수의 유튜브 채널에 이미 공개되어 있습니다.
-녹화 원본과 발표자별로 잘라낸 클립에는 학번·채팅·얼굴이 남아 있으므로 이 저장소에 포함하지 않았습니다.
+발표자별로 잘라낸 클립 18개는 용량 때문에 이 저장소에 두지 않고 구글 드라이브에 두었으며,
+각 카드에서 해당 학생의 클립으로 직접 연결됩니다. 이 클립에는 학번·채팅·목소리와 일부 바탕화면이
+남아 있고 현재 링크가 있는 사람은 누구나 볼 수 있는 상태이므로, 원하지 않는 학생은 해당 파일의
+공유를 제한하거나 삭제를 요청할 수 있습니다.
 
 삭제 요청: 본인의 작품·사진·이름을 내리고 싶은 경우 담당 교수에게 연락하면
 확인 후 즉시 삭제합니다.
@@ -53,8 +56,10 @@ or by replacing names with initials.
 this university. Every still shown is **extracted from the Zoom recordings of the class critiques**,
 cropped to the shared-screen area only (the 21 Dec 2025 recording had its right-hand webcam tile
 removed). No student faces are reproduced. The eight Animation Studio videos are already public on
-the instructor's YouTube channel. The raw recordings and the per-presenter clips cut from them still
-contain ID numbers, chat and faces, and are therefore not included in this repository.
+the instructor's YouTube channel. The eighteen per-presenter clips are too large for this repository and live on Google Drive
+instead; each card links straight to the clip for that student. Those clips still contain ID numbers,
+chat, the presenters' voices and, in places, a desktop, and are currently viewable by anyone with the
+link — any student who would rather not be there can have their file restricted or removed.
 
 Takedown: anyone who wants their work, photograph or name removed may contact the instructor;
 it will be taken down promptly.
