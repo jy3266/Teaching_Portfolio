@@ -19,6 +19,12 @@
 동의를 받지 못한 항목은 해당 `<article>` 블록 또는 이미지를 삭제하거나,
 이름을 이니셜로 바꾸어 게시할 수 있습니다.
 
+**동양대학교 항목에 관하여** — 이 대학의 자료에는 제출된 결과물 사진이 없습니다.
+사이트에 실린 스틸 이미지는 전부 **수업 크리틱 녹화(Zoom) 화면에서 추출한 것**이며,
+공유 화면 영역만 잘라 썼습니다(2025.12.21 녹화는 우측 웹캠 타일을 제거). 학생의 얼굴은
+싣지 않았습니다. 애니메이션 스튜디오 8편은 담당 교수의 유튜브 채널에 이미 공개되어 있습니다.
+녹화 원본과 발표자별로 잘라낸 클립에는 학번·채팅·얼굴이 남아 있으므로 이 저장소에 포함하지 않았습니다.
+
 삭제 요청: 본인의 작품·사진·이름을 내리고 싶은 경우 담당 교수에게 연락하면
 확인 후 즉시 삭제합니다.
 
@@ -42,6 +48,13 @@ as an educational record. Reuse, redistribution or derivative work requires thei
 Please obtain consent from the students involved before switching the repository to Public.
 Entries without consent can be removed by deleting the relevant `<article>` block or image,
 or by replacing names with initials.
+
+**On the Dongyang University entries** — there are no photographs of submitted deliverables for
+this university. Every still shown is **extracted from the Zoom recordings of the class critiques**,
+cropped to the shared-screen area only (the 21 Dec 2025 recording had its right-hand webcam tile
+removed). No student faces are reproduced. The eight Animation Studio videos are already public on
+the instructor's YouTube channel. The raw recordings and the per-presenter clips cut from them still
+contain ID numbers, chat and faces, and are therefore not included in this repository.
 
 Takedown: anyone who wants their work, photograph or name removed may contact the instructor;
 it will be taken down promptly.
