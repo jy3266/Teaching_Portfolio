@@ -38,7 +38,7 @@
     --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
     /* text runs the full width of the shell; the shell is what scales with the screen */
     --measure: 100%;
-    --shell: min(100%, 1680px);
+    --shell: min(100%, 1360px);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -124,6 +124,17 @@
     padding-top: 1rem; border-top: 1px solid var(--rule);
   }
   .byline b { font-weight: 600; color: var(--ink); }
+  .sitelink {
+    margin: .55rem 0 0; font-size: .88rem; display: flex; flex-wrap: wrap;
+    align-items: baseline; gap: .3rem .6rem;
+  }
+  .sitelink a {
+    font-family: var(--mono); font-size: .82rem; letter-spacing: .01em;
+    color: var(--accent); text-decoration: none;
+    border-bottom: 1px solid var(--accent-line); padding-bottom: .05rem;
+  }
+  .sitelink a:hover { border-bottom-color: var(--accent); }
+  .sitelink em { font-style: normal; color: var(--ink-3); font-size: .82rem; }
   .byline i {
     font-style: normal; font-family: var(--mono); font-size: .74rem;
     letter-spacing: .09em; color: var(--ink-3);
@@ -203,7 +214,7 @@
     font-family: var(--display); font-weight: 700;
     font-size: clamp(1.45rem,3.2vw,2rem); margin: 0; line-height: 1.25;
   }
-  .uni-head p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: clamp(.97rem, .87rem + .26vw, 1.16rem); }
+  .uni-head p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: clamp(.97rem, .91rem + .17vw, 1.09rem); }
   .uni-head .byline { margin: .5rem 0 0; }
 
   /* ── panels ─────────────────────────────── */
@@ -211,7 +222,7 @@
 
   .lede { display: flex; flex-direction: column; gap: 1.1rem; }
   .lede h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.5rem,3.2vw,2.15rem); margin: 0; line-height: 1.3; text-wrap: balance; }
-  .lede p { margin: 0; max-width: var(--measure); font-size: clamp(1.01rem, .89rem + .3vw, 1.22rem); color: var(--ink-2); }
+  .lede p { margin: 0; max-width: var(--measure); font-size: clamp(1.01rem, .94rem + .19vw, 1.14rem); color: var(--ink-2); }
   .lede p b { font-weight: 600; color: var(--ink); }
 
   .facts {
@@ -278,11 +289,11 @@
   .note-in { font-size: clamp(.87rem, .84rem + .09vw, .94rem); color: var(--ink-3); margin: 0; }
   .note-in b { color: var(--accent); font-weight: 500; }
 
-  /* very wide screens: let the shell breathe rather than stretching one line further */
-  @media (min-width: 1900px) { :root { --shell: min(100%, 1840px); } }
+  /* very wide screens: a little more room, but the column stays a readable measure */
+  @media (min-width: 1900px) { :root { --shell: min(100%, 1480px); } }
 
   .blurb {
-    margin: -.35rem 0 0; font-size: clamp(.95rem, .86rem + .24vw, 1.13rem); line-height: 1.78; color: var(--ink-2);
+    margin: -.35rem 0 0; font-size: clamp(.95rem, .89rem + .16vw, 1.07rem); line-height: 1.76; color: var(--ink-2);
     max-width: var(--measure); padding-left: .85rem; border-left: 2px solid var(--accent-line);
   }
 
@@ -297,7 +308,7 @@
     padding: clamp(1.9rem,4vw,2.8rem) 0 clamp(3rem,6vw,5rem);
     display: flex; flex-direction: column; gap: 1rem;
   }
-  .uni-foot p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: clamp(.97rem, .87rem + .26vw, 1.16rem); }
+  .uni-foot p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: clamp(.97rem, .91rem + .17vw, 1.09rem); }
   .uni-foot p b { font-weight: 600; color: var(--ink); }
 
   /* big stills */
@@ -435,6 +446,10 @@
       <b><span class="ko">유준오</span><span class="en">Junoh Yu</span></b>
       <span class="ko">성균관대학교 영상학과 · 청주대학교 디지털미디어디자인학과 · 동양대학교 웹툰애니메이션학과 · 게임학부</span><span class="en">SKKU Film, Television &amp; Multimedia · CJU Digital Media Design · DYU Webtoon &amp; Animation / Game Studies</span>
       <i>2025 – 2026 · 3 UNIVERSITIES · 6 COURSES · 41 TEAMS · 26 REVIEWS · 1 EXHIBITION</i>
+    </p>
+    <p class="sitelink">
+      <a href="https://jy3266.github.io/Junoh_Yu_Artist_Portfolio/" target="_blank" rel="noopener">jy3266.github.io/Junoh_Yu_Artist_Portfolio</a>
+      <em><span class="ko">작가 포트폴리오</span><span class="en">Artist portfolio</span></em>
     </p>
   </header>
 </div>
@@ -2809,6 +2824,7 @@
 
   <footer>
     <span><span class="ko">유준오 · 성균관대학교 영상학과 · 청주대학교 디지털미디어디자인학과 · 동양대학교 웹툰애니메이션학과 · 게임학부</span><span class="en">Junoh Yu · Sungkyunkwan University · Cheongju University · Dongyang University</span></span>
+    <span><a href="https://jy3266.github.io/Junoh_Yu_Artist_Portfolio/" target="_blank" rel="noopener" style="color:inherit"><span class="ko">작가 포트폴리오 — jy3266.github.io/Junoh_Yu_Artist_Portfolio</span><span class="en">Artist portfolio — jy3266.github.io/Junoh_Yu_Artist_Portfolio</span></a></span>
     <span><span class="ko">자료 원본 — Google Drive</span><span class="en">Source files — Google Drive</span></span>
   </footer>
 </div>
