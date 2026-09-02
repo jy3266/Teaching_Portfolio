@@ -281,6 +281,20 @@
     max-width: var(--measure); padding-left: .85rem; border-left: 2px solid var(--accent-line);
   }
 
+  .credit {
+    margin: -.2rem 0 0; font-family: var(--mono); font-size: .735rem; line-height: 1.7;
+    color: var(--ink-3); max-width: var(--measure);
+  }
+  .credit b { font-weight: 500; color: var(--ink-2); }
+
+  .uni-foot {
+    border-top: 1px solid var(--rule);
+    padding: clamp(1.9rem,4vw,2.8rem) 0 clamp(3rem,6vw,5rem);
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .uni-foot p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: .97rem; }
+  .uni-foot p b { font-weight: 600; color: var(--ink); }
+
   /* big stills */
   .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: .6rem; }
   .shot {
@@ -441,7 +455,7 @@
         <button class="tab" role="tab" id="tab-capstone" aria-controls="p-capstone" aria-selected="false"><span class="ko">캡스톤 디자인</span><span class="en">Capstone Design</span> <i>5</i></button>
         <button class="tab" role="tab" id="tab-immersive" aria-controls="p-immersive" aria-selected="false"><span class="ko">몰입형 내러티브 &amp; 인터랙션</span><span class="en">Immersive Narrative &amp; Interaction</span> <i>9</i></button>
         <button class="tab" role="tab" id="tab-ai" aria-controls="p-ai" aria-selected="false"><span class="ko">AI 기반 인터랙티브 영상</span><span class="en">AI-Driven Interactive Video</span> <i>7</i></button>
-        <button class="tab" role="tab" id="tab-nima" aria-controls="p-nima" aria-selected="false"><span class="ko">1st N.I.M.A 전시</span><span class="en">1st N.I.M.A</span> <i>10</i></button>
+        <button class="tab" role="tab" id="tab-nima" aria-controls="p-nima" aria-selected="false"><span class="ko">1st N.I.M.A 전시</span><span class="en">1st N.I.M.A</span> <i>13</i></button>
       </div>
       <div class="tablist" role="tablist" aria-label="Course tabs — Cheongju University" data-uni="u-cju" hidden>
         <button class="tab" role="tab" id="tab-cju-q1" aria-controls="p-cju-q1" aria-selected="false"><span class="ko">인터랙션 디자인 — 1분기</span><span class="en">Interaction Design — Q1</span> <i>9</i></button>
@@ -461,8 +475,12 @@
 
   <header class="uni-head">
     <h2><span class="ko">성균관대학교 영상학과</span><span class="en">Sungkyunkwan University · Film, Television and Multimedia</span></h2>
-    <p class="ko">2026년 1학기에 진행한 세 과목과, 그 결과물이 모인 <b>1st N.I.M.A</b> 전시의 기록입니다. 21개 팀 41명이 수업계획서에서 출발해 전시장 바닥까지 도달한 과정을 과목별로 정리했습니다.</p>
+    <p class="ko">2026년 1학기에 진행한 세 과목과, 그 결과물이 모인 <b>1st N.I.M.A</b> 전시의 기록입니다. 21개 팀 41명이 수업계획서에서 전시장까지 도달한 과정을 과목별로 정리했습니다.</p>
     <p class="en">Three courses taught in spring 2026, and the exhibition — <b>1st N.I.M.A</b> — where their outcomes came together. Twenty-one teams and forty-one students, from syllabus to gallery floor, organised course by course.</p>
+    <p class="ko">세 과목은 <b>가상환경 · 인공지능 · 피지컬 컴퓨팅 · 프로젝션 매핑</b>을 융합해 관객 중심의 몰입형 경험을 설계하고 구현하는 프로젝트 기반 교육으로 구성했습니다. 학생들은 Unreal Engine을 중심으로 공간과 서사를 구축하고, Arduino 센서와 실시간 미디어 기술을 연동해 디지털 환경을 실제 전시 공간으로 확장했습니다.</p>
+    <p class="en">All three are built as project-based teaching that fuses <b>virtual environments, AI, physical computing and projection mapping</b> into audience-centred immersive experience. Students construct space and narrative around Unreal Engine, then wire in Arduino sensors and real-time media to extend a digital environment out into an actual exhibition space.</p>
+    <p class="ko">수업은 특정 소프트웨어의 기능을 익히는 데 머무르지 않고, <b>개념 설정 → 사용자 경험 설계 → 기술적 문제 해결 → 관객 앞에서의 안정적 운영</b>까지 전 과정을 직접 통과하도록 설계했습니다. 예술적 의도와 기술적 구현, 공간 연출과 관객 상호작용을 분리된 항목이 아니라 하나의 통합된 창작 과정으로 이해하게 하는 데 중점을 두었습니다.</p>
+    <p class="en">The courses do not stop at learning what a piece of software can do. Each student passes through the whole arc — <b>setting a concept, designing the audience experience, solving the technical problems, and running the work reliably in front of a live audience</b> — so that artistic intent, technical implementation, spatial staging and interaction are understood as one continuous act of making rather than four separate subjects.</p>
     <p class="byline">
       <i>2026.03 – 07 · 3 COURSES · 21 TEAMS · 41 STUDENTS · 1 EXHIBITION</i>
     </p>
@@ -474,8 +492,14 @@
 
   <div class="lede">
     <h2><span class="ko">캡스톤 디자인</span><span class="en">Capstone Design</span></h2>
-    <p class="ko">Unreal Engine · Twinmotion · Arduino · 프로젝션 매핑(MadMapper)을 중심으로, <b>공간 · 서사 · 상호작용을 결합한 몰입형 경험</b>을 기획하고 구현하는 프로젝트 기반 수업입니다. 2–3인 팀으로 시작해 “힐링·자연·몰입·기억·감각·시간”을 주제로 한 중간 프로젝트에서 환경 연출과 내러티브 설계, UE 상호작용(트리거·시퀀서·메타휴먼)을 통합적으로 익히고, 3D 스캐닝 리서치 트립과 Arduino(센서)–UE 연동, 실시간 송출(Spout/OSC)과 맵핑 워크플로우를 거쳐 <b>현장 설치 가능한 프로토타입</b>으로 확장합니다. 기말에는 자유주제 프로젝트를 외부 심사위원 앞에서 발표합니다.</p>
-    <p class="en">A project-based course built around Unreal Engine, Twinmotion, Arduino and projection mapping (MadMapper), in which students plan and build <b>immersive experiences that fuse space, narrative and interaction</b>. Working in teams of two or three, they develop a mid-term project on the themes of healing, nature, immersion, memory, sensation and time — learning environment art direction, narrative design and UE interaction (triggers, Sequencer, MetaHumans) as one continuous pipeline. A 3D-scanning research trip, Arduino-to-UE sensor integration, real-time output via Spout/OSC and a mapping workflow then push the work toward <b>a prototype that can actually be installed on site</b>. For the final, each student presents a self-directed project to an external review panel.</p>
+    <p class="ko">Unreal Engine · Twinmotion · Arduino · 프로젝션 매핑(MadMapper)을 중심으로 <b>공간 · 서사 · 상호작용이 결합된 몰입형 경험</b>을 기획하고 구현하는 융합 프로젝트 수업입니다. 2–3인으로 팀을 구성해 아이디어 도출부터 프로토타이핑, 기술 구현, 현장 설치와 운영에 이르는 전체 제작 과정을 직접 수행합니다.</p>
+    <p class="en">A convergence studio built around Unreal Engine, Twinmotion, Arduino and projection mapping (MadMapper), in which students plan and build <b>immersive experiences that fuse space, narrative and interaction</b>. Working in teams of two or three, they carry the entire production arc themselves — from generating the idea through prototyping and technical implementation to installing and operating the work on site.</p>
+    <p class="ko">학기 전반부에는 ‘힐링 · 자연 · 몰입 · 기억 · 감각 · 시간’을 키워드로 중간 프로젝트를 진행했습니다. Twinmotion으로 가상환경과 분위기를 설계하고, Unreal Engine의 Trigger · Sequencer · MetaHuman을 적용해 공간 안에서 일어나는 사건과 내러티브를 구체화합니다. 이 과정에서 공간을 시각적 배경으로 다루기보다 <b>관객의 이동과 행동에 따라 이야기가 전개되는 경험적 인터페이스</b>로 이해하도록 지도했습니다.</p>
+    <p class="en">The first half of the term runs on a mid-term project keyed to healing, nature, immersion, memory, sensation and time. Students design environment and atmosphere in Twinmotion, then use Unreal Engine triggers, Sequencer and MetaHumans to give concrete shape to the events and narrative that unfold inside that space. The teaching emphasis throughout is on treating space not as visual backdrop but as <b>an experiential interface where the story advances according to how the visitor moves and acts</b>.</p>
+    <p class="ko">이후 3D 스캐닝을 위한 현장 리서치와 실습으로 실제 공간과 사물을 디지털 환경으로 전환하는 방법을 탐구하고, Arduino 센서와 Unreal Engine을 연동해 관객의 움직임과 입력이 가상환경에 실시간으로 반영되도록 했습니다. Spout와 OSC를 활용한 실시간 영상 송출, MadMapper 기반 프로젝션 매핑 워크플로우를 거쳐 화면 안의 결과물을 <b>실제 공간에 설치하고 시연할 수 있는 현장형 인터랙티브 프로토타입</b>으로 확장합니다.</p>
+    <p class="en">A field research trip and hands-on 3D scanning sessions then explore how real spaces and objects are converted into digital environments. Arduino sensors are wired to Unreal Engine so that a visitor’s movement and input register in the virtual environment in real time, and real-time video output via Spout and OSC plus a MadMapper projection-mapping workflow push the work off the screen and into <b>an on-site interactive prototype that can actually be installed and demonstrated</b>.</p>
+    <p class="ko">기말 프로젝트는 자유 주제로 운영했습니다. 최종 발표에는 외부 심사위원이 참여해 예술적 개념, 사용자 경험, 기술적 완성도, 공간 설치 가능성, 운영 안정성을 종합적으로 평가했고, 학생들은 자신의 작업을 전문적으로 설명하고 외부의 비평적 관점에 대응하며 프로젝트를 발전시키는 역량을 길렀습니다.</p>
+    <p class="en">The final project is self-directed. An external review panel sits in on the final presentations and assesses artistic concept, audience experience, technical resolution, installability and operational stability together — so that students practise explaining their own work professionally, answering outside criticism, and developing the project in response to it.</p>
     <dl class="facts">
       <div><dt><span class="ko">기간</span><span class="en">Dates</span></dt><dd><span class="ko">2026.6.22 – 7.10 · 15일차 집중</span><span class="en">22 Jun – 10 Jul 2026 · 15 sessions</span></dd></div>
       <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">2–3인 1팀 · 5개 팀 · 18명</span><span class="en">Teams of 2–3 · 5 teams · 18 students</span></dd></div>
@@ -691,8 +715,16 @@
 
   <div class="lede">
     <h2><span class="ko">몰입형 내러티브 &amp; 인터랙션 디자인</span><span class="en">Immersive Narrative &amp; Interaction Design</span></h2>
-    <p class="ko">한 학기에 걸쳐 이야기를 <b>관객이 걸어 들어가는 공간과 상호작용</b>으로 옮기는 과목입니다. 2인 1팀으로 “힐링·자연”을 주제로 한 중간 프로젝트를 만들며 Twinmotion의 환경 연출에서 Unreal Engine의 트리거·시퀀서·메타휴먼까지 제작 흐름을 익히고, 국립현대미술관 외부수업과 3D 스캐닝을 지나 Arduino 센서 연동과 프로젝션 매핑(Spout/OSC)으로 확장합니다. 기말에는 자유주제를 “완성된 관객 경험”으로 제시하며, 예술적 의도–기술 구현–설치/운영을 한 묶음으로 설득해야 합니다.</p>
-    <p class="en">A semester-long course about moving a story into <b>space and interaction the audience physically walks into</b>. In pairs, students build a mid-term project on the theme of healing and nature, learning the pipeline from Twinmotion environment art direction through to Unreal Engine triggers, Sequencer and MetaHumans. A field class at the National Museum of Modern and Contemporary Art and a 3D-scanning session lead into Arduino sensor integration and projection mapping via Spout/OSC. For the final, each student presents a self-directed theme as a finished audience experience — arguing artistic intent, technical implementation and installation/operation as a single package.</p>
+    <p class="ko">선형적인 이야기를 영상으로 전달하는 방식에서 벗어나, <b>관객이 직접 들어가 이동하고 행동하며 경험하는 공간적 서사</b>로 전환하는 방법을 연구하는 과목입니다. 이야기와 공간, 신체적 움직임, 상호작용, 사운드가 결합될 때 어떤 몰입 경험이 형성되는지를 실습 중심으로 탐구합니다.</p>
+    <p class="en">A course about moving away from telling a linear story on screen and toward <b>a spatial narrative the audience physically enters, moves through and acts inside</b>. It is taught as studio practice: what kind of immersion emerges when story, space, bodily movement, interaction and sound are combined.</p>
+    <p class="ko">학생들은 2인 1팀으로 ‘힐링 · 자연’을 주제로 중간 프로젝트를 제작했습니다. Twinmotion의 환경 연출에서 출발해 Unreal Engine의 Trigger · Sequencer · MetaHuman을 단계적으로 적용하며, 관객의 이동과 선택에 따라 장면과 사건이 변화하는 내러티브 구조를 설계합니다. 특히 서사를 대사나 설명문에 의존하기보다 <b>공간의 규모와 동선, 빛과 소리의 변화, 오브젝트의 반응</b>으로 전달하도록 지도했습니다.</p>
+    <p class="en">In pairs, students build a mid-term project on the theme of healing and nature. Starting from environment art direction in Twinmotion, they layer in Unreal Engine triggers, Sequencer and MetaHumans, designing a narrative structure in which scenes and events shift according to where the visitor goes and what they choose. The emphasis is on carrying the story <b>through the scale of the space, the circulation path, changes in light and sound, and how objects respond</b> — rather than through dialogue or explanatory text.</p>
+    <p class="ko">국립현대미술관 외부수업에서는 실제 전시 사례를 분석하며 작품과 관객, 건축 공간 사이의 관계를 관찰했습니다. 이어진 3D 스캐닝 실습에서는 물리적 공간과 사물을 디지털 데이터로 전환하고 이를 가상환경의 재료로 활용하는 방식을 다루었습니다. 현실 공간과 가상 공간을 분리된 영역이 아니라 <b>상호 전환과 확장이 가능한 연속적 환경</b>으로 이해하게 하는 데 목적이 있었습니다.</p>
+    <p class="en">A field class at the National Museum of Modern and Contemporary Art puts real exhibitions under analysis — the relationship between work, audience and architectural space. The 3D-scanning session that follows converts physical spaces and objects into digital data and uses that data as material for a virtual environment. The aim is that students stop reading physical and virtual space as separate domains and start reading them as <b>one continuous environment that can be converted and extended in both directions</b>.</p>
+    <p class="ko">학기 후반부에는 Arduino 센서 기반 피지컬 컴퓨팅과 Unreal Engine을 연결하고, Spout와 OSC로 실시간 영상을 MadMapper에 송출해 프로젝션 매핑으로 확장했습니다. 관객의 신체적 행동이 디지털 이미지와 공간의 변화로 이어지는 상호작용 구조를 실제로 구현합니다.</p>
+    <p class="en">The second half connects Arduino-based physical computing to Unreal Engine and pushes real-time video through Spout and OSC into MadMapper for projection mapping — building, in working form, an interaction structure in which a visitor’s physical action becomes a change in the digital image and in the room.</p>
+    <p class="ko">기말에는 자유 주제로 <b>하나의 완성된 관객 경험</b>을 제시합니다. 학생들은 작품의 예술적 의도뿐 아니라 관객의 진입과 이동 동선, 인터랙션의 이해 가능성, 장비 구성, 설치 방식, 현장 운영과 오류 대응까지 함께 설계했습니다. 결과적으로 이 수업은 내러티브 창작, 실시간 기술, 물리적 설치를 분리된 영역이 아닌 하나의 통합된 경험 디자인 과정으로 다룹니다.</p>
+    <p class="en">For the final, each student presents a self-directed theme as <b>one finished audience experience</b>. The design work covers not only artistic intent but entry and circulation, whether the interaction can be understood without instruction, equipment, installation method, on-site operation and what happens when something fails. Narrative authorship, real-time technology and physical installation are taught as a single experience-design process rather than three separate territories.</p>
     <dl class="facts">
       <div><dt><span class="ko">기간</span><span class="en">Dates</span></dt><dd><span class="ko">2026.3.5 – 6.18 · 16주</span><span class="en">5 Mar – 18 Jun 2026 · 16 weeks</span></dd></div>
       <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">2인 1팀(중간) · 9개 팀 · 17명</span><span class="en">Pairs (mid-term) · 9 teams · 17 students</span></dd></div>
@@ -743,6 +775,7 @@
           <h4><span class="ko">나도 여기 있어요</span><span class="en">I&rsquo;m Here Too</span></h4>
           <p class="people">김태균<span class="en"> — Kim Taekyun</span></p>
         </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ later shown at <b>1st N.I.M.A</b></span></p>
         <div class="shots">
           <button class="shot" type="button"><img src="assets/img/037-installation-photograph.jpg" alt="Installation photograph" loading="lazy"></button>
         </div>
@@ -764,6 +797,7 @@
           <h4><span class="ko">별들의 연주</span><span class="en">Concert of Stars</span></h4>
           <p class="people">곽동주<span class="en"> — Gwak Dongju</span></p>
         </div>
+        <p class="note-in"><span class="ko">→ 〈Elsewhere〉로 발전해 <b>1st N.I.M.A</b> 전시 출품</span><span class="en">→ developed into 〈Elsewhere〉 and shown at <b>1st N.I.M.A</b></span></p>
         <div class="media">
           <a class="mcard" href="https://drive.google.com/file/d/1hSPANchOXh48_RSMox8rp1yUMSeaJD0B/view" target="_blank" rel="noopener">
             <span class="mthumb pdf"><img src="assets/img/040-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
@@ -846,9 +880,10 @@
       <article class="work">
         <div class="work-head">
           <span class="tag">Team 02</span>
-          <h4><span class="ko">김다영 · 이유은 팀</span><span class="en">Kim Dayoung &amp; Lee Yuen</span></h4>
-          <p class="people"><span class="ko">작품명 미기재</span><span class="en">Title not recorded in the files</span></p>
+          <h4>Becoming Pearl</h4>
+          <p class="people">김다영 · 이유은<span class="en"> — Kim Dayoung, Lee Yuen</span></p>
         </div>
+        <p class="note-in"><span class="ko">→ 이후 <b>1st N.I.M.A</b> 전시 출품 · 수업 파일에는 작품명이 기재되지 않았고, 전시 제목을 따랐습니다</span><span class="en">→ later shown at <b>1st N.I.M.A</b>; no title was recorded in the course files, so the exhibition title is used</span></p>
         <div class="media">
           <a class="mcard" href="https://drive.google.com/file/d/1d7UmVGlpiuf0QKyljaHEjZZ0cQmYMy7S/view" target="_blank" rel="noopener">
             <span class="mthumb pdf"><img src="assets/img/055-final-presentation-cover.jpg" alt="Final presentation cover" loading="lazy"></span>
@@ -964,8 +999,16 @@
 
   <div class="lede">
     <h2><span class="ko">AI 기반 인터랙티브 영상</span><span class="en">AI-Driven Interactive Video</span></h2>
-    <p class="ko">AI 생성 도구(ComfyUI 및 웹 기반 AI)로 이미지 · 텍스처 · <b>스타일 규칙</b>을 생산하고, 이를 Unreal Engine의 레벨 디자인과 시네마틱(Sequencer)으로 확장해 ‘공간 기반 인터랙티브 영상 경험’을 구현하는 스튜디오형 수업입니다. 학생은 가상 공간을 배경이 아니라 <b>점유되고 활성화되는 장소</b>로 이해하고, 스스로를 가상 건축가(Virtual Architect)로 설정해 경험의 구조를 설계합니다. 매주 “작동하는 결과물”의 시도와 해결을 중심으로 운영되며, 최종 결과물은 데모가 아니라 전시·시연 가능한 운영 형태(동선 · 안내 · 안정성 · 기록 · 문서화)까지 포함합니다.</p>
-    <p class="en">A studio course in which students produce images, textures and <b>style rules</b> with AI generation tools (ComfyUI and web-based AI), then extend them into Unreal Engine level design and cinematics (Sequencer) to build a spatial interactive video experience. Students treat virtual space not as a backdrop but as <b>a place that is occupied and activated</b>, casting themselves as Virtual Architects who design the structure of an experience. Every week turns on attempting and debugging something that actually runs; the final deliverable is not a demo but an operable installation — circulation, signage, stability, documentation.</p>
+    <p class="ko">생성형 인공지능을 이미지 제작 도구로 쓰는 데 그치지 않고, <b>일관된 시각 언어와 공간 경험을 구축하기 위한 창작 시스템</b>으로 활용하는 스튜디오형 수업입니다. 학생들은 ComfyUI와 웹 기반 AI 도구로 이미지 · 텍스처 · 캐릭터 · 환경 요소를 생성하고, 반복적인 실험을 통해 작품 고유의 <b>스타일 규칙</b>을 만들어 갑니다.</p>
+    <p class="en">A studio course in which generative AI is used not as a tool for making pictures but as <b>a creative system for building a consistent visual language and a spatial experience</b>. Students generate images, textures, characters and environment elements with ComfyUI and web-based AI tools, and through repeated experiment arrive at <b>style rules</b> particular to their own work.</p>
+    <p class="ko">생성된 결과물은 Unreal Engine의 레벨 디자인과 Sequencer 기반 시네마틱으로 확장합니다. 이미지 한 장의 완성도보다, 여러 시각 요소가 공간 안에서 어떤 관계를 형성하고 시간에 따라 어떻게 변화하며 관객의 행동에 어떻게 반응하는지를 중심으로 작업했습니다. AI 생성물을 개별적인 시각 자료가 아니라 <b>공간 · 움직임 · 사운드 · 상호작용을 구성하는 제작 자원</b>으로 다루는 것이 핵심입니다.</p>
+    <p class="en">Those outputs are then extended into Unreal Engine level design and Sequencer-based cinematics. The work turns less on how finished any single image is than on what relationships several visual elements form inside a space, how they change over time, and how they answer the visitor’s actions. The point is to treat AI output not as standalone visual material but as <b>a production resource that constructs space, movement, sound and interaction</b>.</p>
+    <p class="ko">수업에서는 학생을 <b>가상 건축가(Virtual Architect)</b>로 설정합니다. 가상 공간은 배경이나 장면이 아니라, 관객이 진입하고 이동하며 행동함으로써 활성화되는 장소입니다. 따라서 공간의 형태뿐 아니라 관객의 시선과 동선, 이동 속도, 사건이 발생하는 순서, 인터랙션의 조건, 감정의 변화까지 함께 설계했습니다.</p>
+    <p class="en">Students are cast as <b>Virtual Architects</b>. A virtual space here is not a backdrop or a scene but a place that is activated when someone enters it, moves through it and acts in it. So the design brief covers not only the form of the space but sightlines and circulation, walking speed, the order in which events fire, the conditions of each interaction, and the arc of feeling across the whole.</p>
+    <p class="ko">운영은 매주 완성된 이미지를 제출하는 방식이 아니라, 규모가 작더라도 <b>실제로 실행되고 작동하는 결과물</b>을 지속적으로 만드는 방식에 중점을 두었습니다. 반복적인 프로토타이핑을 통해 생성형 AI의 시각적 일관성 문제, Unreal Engine 내 최적화, 인터랙션 오류, 실시간 재생 안정성 등 제작 과정에서 실제로 발생하는 문제를 학생이 직접 진단하고 해결합니다.</p>
+    <p class="en">The week-to-week format is not a finished image handed in on schedule but <b>something small that actually runs</b>, made again and again. Through that repeated prototyping students diagnose and fix the problems that really arise in production: visual consistency in generative AI, optimisation inside Unreal Engine, broken interactions, and stability during real-time playback.</p>
+    <p class="ko">최종 결과물은 단순한 영상 데모가 아니라 <b>실제 전시와 시연이 가능한 형태</b>로 발전시키도록 했습니다. 관객 동선, 작품 사용 안내, 장비 및 프로그램의 안정성, 현장 운영 방식, 오류 발생 시 대응, 영상과 사진 기록, 제작 과정의 문서화까지 결과물의 범위에 포함됩니다. 본 수업은 AI 기반 콘텐츠 제작 역량과 함께, 이를 공간적 · 상호작용적 경험으로 확장하는 통합 설계 능력을 갖추게 하는 데 목적이 있습니다.</p>
+    <p class="en">The final deliverable is not a video demo but <b>something that can be exhibited and demonstrated for real</b>. Circulation, instructions for use, the stability of the hardware and software, how the piece is run on site, what to do when it fails, video and photographic documentation, and written documentation of the process are all part of what is handed in. The aim is that students leave with both the ability to make AI-driven content and the integrated design ability to extend it into a spatial, interactive experience.</p>
     <dl class="facts">
       <div><dt><span class="ko">기간</span><span class="en">Dates</span></dt><dd><span class="ko">2026.3.9 – 6.15</span><span class="en">9 Mar – 15 Jun 2026</span></dd></div>
       <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">2인 이상 팀(중간) · 7개 팀 · 13명</span><span class="en">Teams of 2+ (mid-term) · 7 teams · 13 students</span></dd></div>
@@ -1210,15 +1253,21 @@
     </button>
     <div class="lede">
       <h2>N.I.M.A. 2026 — New Interfaces for Moving Arts</h2>
-      <p class="ko">수업에서 만들어진 작업이 강의실 밖 관객을 만난 첫 전시입니다. 세 과목에서 나온 인터랙티브 설치 열 점을 성균갤러리에 모아 이틀간 무료로 공개했고, 설치 전경은 스틸과 드론으로 기록했습니다. 아래 작품 설명은 각 팀이 제출한 발표 자료에서 옮긴 것입니다.</p>
-      <p class="en">The first exhibition in which work made inside these courses met an audience outside the classroom. Ten interactive installations from three courses were brought together at Sungkyun Gallery and shown free of charge over two days; the installations were documented in stills and by drone. The descriptions below are drawn from each team&rsquo;s own submitted presentation.</p>
+      <p class="ko">세 과목에서 제작된 프로젝트를 강의실 밖의 실제 관객에게 공개한 첫 번째 전시이자 교육 성과 공유회입니다. 성균관대학교 영상학과와 게임디자인학과의 후원으로 <b>성균갤러리</b>에서 이틀간 무료로 열렸고, 수업에서 발전된 인터랙티브 설치 13점을 선보였습니다.</p>
+      <p class="en">The first exhibition — and shared review of what the teaching produced — in which projects made inside the three courses met an audience outside the classroom. Supported by the Departments of Film, Television &amp; Multimedia and Game Design at Sungkyunkwan University, it ran free of charge over two days at <b>Sungkyun Gallery</b> with thirteen interactive installations developed out of coursework.</p>
+      <p class="ko">전시는 인공지능, 가상현실, 게임 엔진, 피지컬 컴퓨팅, 프로젝션 매핑 등 서로 다른 기술을 기반으로 제작된 작업을 통해 <b>움직이는 이미지와 관객 사이의 새로운 인터페이스</b>를 제안했습니다. 작품을 완결된 오브젝트로 진열하는 기존의 방식보다, 아이디어가 실험과 제작, 수정과 비평을 거쳐 하나의 관객 경험으로 발전하는 과정을 공개하는 <b>프로세스 중심의 전시 형식</b>을 택했습니다.</p>
+      <p class="en">Built on AI, virtual reality, game engines, physical computing and projection mapping, the exhibition proposes <b>new interfaces between the moving image and the people in front of it</b>. Rather than arranging finished objects, it takes <b>a process-centred format</b>: what is put on view is how an idea becomes an audience experience through experiment, making, revision and critique.</p>
+      <p class="ko">오프닝에서는 모든 작품을 일괄 소개하는 대신 <b>작품별 실시간 시연과 학생 발표</b>를 순차적으로 진행했습니다. 학생들은 관객 앞에서 작품의 개념과 기술 구조를 설명하고 직접 인터랙션을 시연했으며, 관객은 자신의 움직임과 선택으로 작품에 참여한 뒤 그 경험과 의견을 학생들과 나누었습니다. 결과 발표의 장이 아니라, 창작자와 관객이 함께 작품의 의미와 가능성을 검토하는 <b>공개형 크리틱의 장</b>으로 전시를 운영했습니다.</p>
+      <p class="en">The opening did not introduce the works in a single block. Instead <b>each piece was demonstrated live, in turn, by the students who made it</b> — explaining its concept and its technical structure, then running the interaction in front of everyone. Visitors took part with their own movement and choices and then talked those experiences back to the students. The exhibition was run less as a presentation of results than as <b>an open critique</b> in which makers and audience examine a work’s meaning and possibilities together.</p>
+      <p class="ko">학생들은 작품 제작 외에도 전시장 사전 조사, 공간 배치, 장비 설치, 프로젝터와 센서 세팅, 케이블 및 네트워크 구성, 관객 안내, 현장 운영, 기술적 오류 대응에 직접 참여했습니다. 설치 전경과 관객의 참여 과정은 스틸과 드론 영상으로 기록해 결과물뿐 아니라 전시가 형성되는 과정 전체를 아카이빙했습니다. 아래 작품 설명은 각 팀이 제출한 자료를 바탕으로 정리한 것입니다.</p>
+      <p class="en">Beyond making the work, students surveyed the gallery in advance, planned the layout, installed equipment, set projectors and sensors, ran cabling and networking, guided visitors, operated the show and handled technical failures on the spot. Installation views and audience participation were recorded in stills and drone footage, so that the archive holds not only the outcomes but the whole process by which an exhibition comes together. The descriptions below are drawn from each team’s own submitted material.</p>
       <dl class="facts">
         <div><dt><span class="ko">오프닝</span><span class="en">Opening</span></dt><dd><span class="ko">2026.7.4 (토) 19:00 – 21:00</span><span class="en">Sat 4 July 2026, 19:00 – 21:00</span></dd></div>
         <div><dt><span class="ko">전시</span><span class="en">Exhibition</span></dt><dd><span class="ko">2026.7.5 (일) 11:00 – 17:00 · 무료 관람</span><span class="en">Sun 5 July 2026, 11:00 – 17:00 · free admission</span></dd></div>
         <div><dt><span class="ko">장소</span><span class="en">Venue</span></dt><dd><span class="ko">성균갤러리 1F, 성균관대 경영관<br>서울 종로구 성균관로 25-2</span><span class="en">Sungkyun Gallery, 1F, SKK Business School<br>25-2 Sungkyunkwan-ro, Jongno-gu, Seoul</span></dd></div>
-        <div><dt><span class="ko">주최 지원</span><span class="en">Supported by</span></dt><dd><span class="ko">성균관대학교 영상학과</span><span class="en">Sungkyunkwan University,<br>Dept. of Film, Television and Multimedia</span></dd></div>
+        <div><dt><span class="ko">주최 지원</span><span class="en">Supported by</span></dt><dd><span class="ko">성균관대학교 영상학과 · 게임디자인학과</span><span class="en">Sungkyunkwan University,<br>Dept. of Film, Television and Multimedia ·<br>Dept. of Game Design</span></dd></div>
         <div><dt><span class="ko">기획</span><span class="en">Curated by</span></dt><dd><span class="ko">유준오 · 황민협</span><span class="en">Junoh Yu · MinHyub Hwang</span></dd></div>
-        <div><dt><span class="ko">규모</span><span class="en">Scale</span></dt><dd><span class="ko">참여 작가 19명 · 출품작 10점</span><span class="en">19 artists · 10 works</span></dd></div>
+        <div><dt><span class="ko">규모</span><span class="en">Scale</span></dt><dd><span class="ko">참여 작가 22명 · 출품작 13점</span><span class="en">22 artists · 13 works</span></dd></div>
       </dl>
       <div class="files">
         <a class="chip dir" href="https://drive.google.com/drive/folders/1nrPNr2OenP1ntiCYtcItk37s0KI0DiJP" target="_blank" rel="noopener"><span class="ko">전시 기록 전체</span><span class="en">All exhibition documentation</span></a>
@@ -1227,28 +1276,30 @@
   </div>
 
   <div>
-    <h3 class="block"><span class="ko">출품작 10점</span><span class="en">Ten works</span></h3>
+    <h3 class="block"><span class="ko">출품작 13점</span><span class="en">Thirteen works</span></h3>
     <div class="pieces">
 
       <article class="piece">
-        <div class="piece-head"><h4><span class="ko">숨</span><span class="en">Breath</span></h4><p class="people">임예지 · 양호림 · 주이페이<span class="en"> — Lin Ruitian, Liang Haolin, Zhu Yifei</span></p></div>
-        <p class="blurb ko">사람은 태어나는 순간부터 하나의 몸을 갖고, 그 몸을 통해 숨 쉬고 감각하고 세계에 닿는다. 그러나 질병과 노화와 죽음, 그 곁에 따라오는 의료와 돌봄과 타인의 손길은 저마다의 방식으로 몸 안으로 들어온다. 외부의 개입이 일어나는 순간 그토록 자명하던 ‘나’라는 정체성이 흔들리기 시작한다. 작품은 묻는다 — 몸은 여전히 나의 것인가, 그 경계는 어디에 있는가.</p>
-        <p class="blurb en">From the moment we are born we have a body, and through it we breathe, sense and touch the world. But illness, ageing and death — and the medicine, care and other people&rsquo;s hands that come with them — enter that body each in their own way. At the moment of external intervention, the self that felt so self-evident begins to waver. The work asks: is the body still mine, and where exactly is its boundary?</p>
+        <div class="piece-head"><h4>Josh</h4><p class="people">김민채<span class="en"> — Kim Min Chae</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치, 혼합매체 · 마네킹, 가구, FSR 압력 센서, Arduino Uno, NeoPixel LED, 스피커, 모니터, Processing, LLM 기반 텍스트 대화 프로그램</span><span class="en">2026 · Interactive installation, mixed media · mannequin, furniture, FSR pressure sensors, Arduino Uno, NeoPixel LED, speakers, monitor, Processing, LLM-based text dialogue</span></p>
+        <p class="blurb ko">〈Josh〉는 우울을 겪는 사람을 일으켜 세우거나 즉시 바꾸려 하는 대신, <b>그 곁에 앉아 함께 머무르는 행위</b>를 유일한 인터랙션으로 설정한다. 대기 상태에서 관객은 당사자가 매일 마주하는 편견과 시선을 먼저 겪으며 불편함을 감수한다. 관객이 벤치의 조쉬 옆에 앉는 순간 세상의 비판이 사라진 단둘만의 공간이 만들어지고, FSR 압력 센서가 착석과 체류를 읽으며 조명과 음성, 모니터의 텍스트 대화가 차례로 열린다. 머무는 시간이 쌓일수록 닫혀 있던 내면이 조금씩 열린다. 작품은 돌봄을 문제를 해결하거나 타인을 바꾸는 일이 아니라, <b>상대의 속도를 존중하며 곁을 지키는 관계적 실천</b>으로 다시 정의한다.</p>
+        <p class="blurb en">〈Josh〉 makes one act its only interaction: <b>sitting down beside someone and staying there</b>, rather than pulling them upright or trying to fix them. In its idle state the piece deliberately makes the visitor uncomfortable, exposing them to the prejudice and the stares its subject meets every day. The moment they sit beside Josh on the bench, the world’s judgment falls away and a space for two is formed; FSR pressure sensors read both the sitting and the staying, and light, voice and a text conversation on the monitor open one after another. The longer the visitor stays, the more a closed interior opens. The work redefines care not as solving a problem or changing another person but as <b>a relational practice of keeping company at their pace</b>.</p>
         <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/044-breath-installation-view.jpg" alt="Breath installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/045-breath-still-2.jpg" alt="Breath still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/046-breath-still-3.jpg" alt="Breath still 3" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/057-josh-installation-view.jpg" alt="Josh installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/058-josh-still-2.jpg" alt="Josh still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/059-josh-still-3.jpg" alt="Josh still 3" loading="lazy"></button>
         </div>
         <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/1_OEVsPgJUhhTZ0NrzurOi6V9ZA7W6XD_" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1UQMYDR19VozS-ePKSa_hokc2cOWuteYX/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1NlWJbC5VRCCpHRE4_euNlnp7MQiepesx" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1DNh55-tUf7gCQM63nsQOC-kqw-KHOEnC/view" target="_blank" rel="noopener"><span class="ko">시연 영상</span><span class="en">Demo video</span></a>
         </div>
       </article>
 
       <article class="piece">
         <div class="piece-head"><h4>Whorl: A Meditation</h4><p class="people">팽지현 · 정기찬 · 최성윤<span class="en"> — Paeng Jihyun, Chung Gichan, Choi Sungyun</span></p></div>
-        <p class="blurb ko">물 위에 잉크를 떨어뜨려 예측할 수 없는 흐름과 유기적인 패턴을 만드는 일본 전통 기법 <b>스미나가시</b>에서 출발한다. 관객의 움직임과 목소리를 아두이노와 MediaPipe로 읽어 화면에 번지는 문양을 실시간으로 생성하고, 관객은 자신의 그림자 같은 형상 안에서 그 흐름을 바라보며 시선을 유지한다. 팀은 이것을 “명상”보다는 <b>집중 기반 인터랙티브 경험</b>이라 부른다 — 작품이 특정 감정을 주입할 수는 없지만, 어떤 행위를 제안하고 그 행위를 통해 특정 상태를 경험할 조건은 마련할 수 있다는 생각에서다.</p>
-        <p class="blurb en">The work begins from <b>suminagashi</b>, the Japanese technique of dropping ink onto water to produce unpredictable currents and organic patterns. A viewer&rsquo;s movement and voice are read through Arduino and MediaPipe to generate spreading patterns in real time; the viewer holds their gaze on that flow from inside a shadow-like figure of themselves. The team calls it not meditation but <b>a concentration-based interactive experience</b> — a work cannot inject a particular emotion, but it can propose an action and build the conditions in which a particular state becomes possible.</p>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 모니터, 웹캠, Arduino, ‘숨’ 구조물, 식물, 현수막</span><span class="en">2026 · Interactive installation · projector, monitor, webcam, Arduino, ‘breath’ structure, plants, banner</span></p>
+        <p class="blurb ko">물 위에 잉크를 떨어뜨려 예측할 수 없는 흐름과 유기적 패턴을 만드는 일본 전통 기법 <b>스미나가시</b>에서 출발한다. 웹캠과 Arduino가 관객의 움직임과 목소리를 읽어 화면에 번지는 문양을 실시간으로 생성하고, 관객은 자신의 그림자 같은 형상 안에서 그 흐름을 바라보며 시선을 유지한다. 식물과 구조물, 반응형 미디어와 투사 이미지가 결합된 공간 전체가 하나의 호흡처럼 작동하며, 관객은 형상을 바라보는 동안 자신의 감각을 관찰하게 된다. 팀은 이것을 ‘명상’보다 <b>집중 기반 인터랙티브 경험</b>이라 부른다 — 작품이 특정 감정을 주입할 수는 없지만, 어떤 행위를 제안하고 그 행위를 통해 특정 상태를 경험할 조건은 마련할 수 있다는 생각에서다. 명상은 일상과 분리된 의식이 아니라 자신의 주의와 감각을 지속적으로 조율하는 행위로 제안된다.</p>
+        <p class="blurb en">The work begins from <b>suminagashi</b>, the Japanese technique of dropping ink onto water to produce unpredictable currents and organic patterns. A webcam and Arduino read the visitor’s movement and voice to generate spreading patterns in real time; the visitor holds their gaze on that flow from inside a shadow-like figure of themselves. Plants, structure, responsive media and projected image work together as a single breathing environment, and in watching the form the visitor ends up observing their own senses. The team calls it not meditation but <b>a concentration-based interactive experience</b> — a work cannot inject a particular emotion, but it can propose an action and build the conditions in which a particular state becomes possible. Meditation, here, is not a ritual set apart from daily life but the continuous act of tuning one’s own attention.</p>
         <div class="piece-shots">
           <button class="shot" type="button"><img src="assets/img/049-whorl-installation-view.jpg" alt="Whorl installation view" loading="lazy"></button>
           <button class="shot" type="button"><img src="assets/img/050-whorl-still-2.jpg" alt="Whorl still 2" loading="lazy"></button>
@@ -1261,85 +1312,10 @@
       </article>
 
       <article class="piece">
-        <div class="piece-head"><h4><span class="ko">Pond — 비밀의 못</span><span class="en">Pond</span></h4><p class="people">배주영 · 황민협<span class="en"> — Bae Jooyoung, Hwang Minhyub</span></p></div>
-        <p class="blurb ko">누구에게나 쉽게 말하지 못하는 것이 있다. 비밀, 후회, 끝내 전하지 못한 진심. 관객은 어두운 녹음실에 혼자 들어가 부저에 손을 올리고, 아무도 듣지 않는 상태에서 그것을 털어놓는다. 녹음은 사람을 거치지 않고 자동으로 다른 목소리들과 겹쳐져, 개인의 비밀은 끝까지 식별되지 않은 채 <b>4m × 4m의 사운드 배스</b>에 고인 소리의 일부가 된다. 좌판의 베이스 쉐이커와 등받이 익사이터, 낮은 조명과 포그가 소리를 듣는 것이 아니라 소리 안으로 가라앉는 감각을 만든다. 원본 파일은 남지도, 복원되지도 않는다.</p>
-        <p class="blurb en">Everyone carries something they cannot easily say — a secret, a regret, a truth never delivered. Alone in a darkened recording booth, the visitor places a hand on a glowing buzzer and speaks it aloud with no one listening. The recording never passes through a person: it is automatically layered into the other voices, so that an individual secret is never identifiable again and becomes part of the sound pooled in a <b>4 × 4 m sound bath</b>. Bass shakers in the seat, exciters in the backrest, low light and fog turn listening into the sensation of sinking into sound. No original file is kept, and none can be recovered.</p>
-        <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/069-pond-installation-view.jpg" alt="Pond installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/070-pond-still-2.jpg" alt="Pond still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/071-pond-still-3.jpg" alt="Pond still 3" loading="lazy"></button>
-        </div>
-        <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/10190I8nC2NNfuochGoMb7zbS7hwhBxuS" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1GQ9hrBfWSgQDcnSjgZUU53P-lD-FlEAN/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
-        </div>
-      </article>
-
-      <article class="piece">
-        <div class="piece-head"><h4><span class="ko">Way Back Home — 집에 가는 길</span><span class="en">Way Back Home</span></h4><p class="people">오세령 · 이용길<span class="en"> — Oh Seryung, Lee Yonggil</span></p></div>
-        <p class="blurb ko">노스탤지어에서 출발해 <b>‘타인의 신발을 신는 경험’</b>을 만든다. 신발은 단순한 물건이 아니라 한 사람이 세상과 접촉하는 방식이다. 어떤 속도로, 어떤 무게로, 어떤 각도로 땅을 밟는가 — 그것이 곧 그 사람이 세상을 살아온 방식이다. 관객은 신발의 주인이 어떤 감각으로 이 세상을 딛고 서 있었는지를 아주 조금이나마 느껴본다.</p>
-        <p class="blurb en">Starting from nostalgia, the work builds an experience of <b>putting yourself in someone else&rsquo;s shoes</b> — literally. A shoe is not simply an object but the way a person makes contact with the world. At what speed, with what weight, at what angle does someone meet the ground? That is how they have lived. The visitor gets to feel, if only slightly, the sensation with which the shoe&rsquo;s owner stood on the earth.</p>
-        <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/105-way-back-home-installation-view.jpg" data-full="assets/hires/wayback.jpg" alt="Way Back Home installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/106-way-back-home-still-2.jpg" alt="Way Back Home still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/107-way-back-home-still-3.jpg" alt="Way Back Home still 3" loading="lazy"></button>
-        </div>
-        <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/1A9HJirCw6ZT2gBIoWobnRvJnw300e0Pk" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1J_I6DMaYIXL9PsvUKJ3TQRrsNYVbTs3w/view" target="_blank" rel="noopener"><span class="ko">기말 영상</span><span class="en">Final video</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1U25v0HOujIfczTFIC4Vdsm0hszMV5DIv/view" target="_blank" rel="noopener"><span class="ko">전시 영상</span><span class="en">Exhibition video</span></a>
-        </div>
-      </article>
-
-      <article class="piece">
-        <div class="piece-head"><h4>Will you walk with ____?</h4><p class="people">김윤서 · 조단비<span class="en"> — Kim Yunseo, Cho Danbi</span></p></div>
-        <p class="blurb ko">키워드는 <b>리듬</b>이다. 관람자에게 약자의 느린 리듬에 맞춰 함께 걸어가는 경험을 제공한다. 전시에서 약자는 폭력에 노출된 중학생 “민이”의 모습으로 구현되었고, 연대하는 행위는 “느린 속도로 함께 걸어간다”는 경험으로 풀어냈다. 관람자는 프롤로그 영상으로 민이를 알게 된 뒤 암흑 공간에서 보폭을 맞추며 리듬을 동기화하고, 민이는 이곳을 빠져나가기까지 함께해 준 관람자에게 미소를 지어 보이며 작별 인사를 고한다. 웹캠 → MediaPipe → TouchDesigner로 발목 좌표를 실시간 전송하고 Unreal Engine에서 반응한다.</p>
-        <p class="blurb en">The keyword is <b>rhythm</b>. The work offers the experience of walking together at the slower pace of someone vulnerable. Here that person is “Min-i”, a middle-school student exposed to violence, and the act of solidarity is rendered as simply walking beside them, slowly. After a prologue video introduces Min-i, the visitor synchronises their stride in a darkened space; when Min-i finally makes it out, they turn, smile at the visitor who walked the whole way, and say goodbye. Ankle coordinates travel from a webcam through MediaPipe and TouchDesigner into Unreal Engine in real time.</p>
-        <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/108-will-you-walk-with-installation-view.jpg" data-full="assets/hires/willyouwalk.jpg" alt="Will you walk with installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/109-will-you-walk-with-still-2.jpg" alt="Will you walk with still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/110-will-you-walk-with-still-3.jpg" alt="Will you walk with still 3" loading="lazy"></button>
-        </div>
-        <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/1KU6HJGINXqOP05BM4Px5JgRE4HDJvLaH" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1EMFzwuFDOYcijn10axqQySf2h3o-zWyY/view" target="_blank" rel="noopener"><span class="ko">시현 영상</span><span class="en">Demo video</span></a>
-        </div>
-      </article>
-
-      <article class="piece">
-        <div class="piece-head"><h4>Overlap</h4><p class="people">팽지현 · 홍준서<span class="en"> — Paeng Jihyun, Hong Junseo</span></p></div>
-        <p class="blurb ko">대한민국은 아시아에서 비교적 최근까지 전쟁을 경험한 국가다. 그럼에도 러시아–우크라이나 전쟁은 여전히 먼 곳의 이야기처럼 인식된다. 작품은 그 거리감 속에서 <b>‘안전’이라는 개념을 다시 질문한다.</b> 익숙하고 안전한 강의실에서 관객은 핸드폰 화면을 통해 같은 공간의 또 다른 가능성을 마주한다. 안전 → 균열 → 중첩 → 충돌. 하나의 공간에 서로 다른 세계가 겹쳐지고, 동일한 장소가 서로 다른 상태로 동시에 인식된다.</p>
-        <p class="blurb en">Korea is a country that experienced war relatively recently, and yet the war in Ukraine still registers as something happening far away. From inside that distance, the work <b>puts the idea of “safety” back into question</b>. In a familiar, safe lecture room, the visitor meets another possible version of the same space through a phone screen. Safety, then fracture, then overlap, then collision: two worlds superimposed on one room, the same place perceived in two states at once.</p>
-        <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/081-overlap-installation-view.jpg" alt="Overlap installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/082-overlap-still-2.jpg" alt="Overlap still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/083-overlap-still-3.jpg" alt="Overlap still 3" loading="lazy"></button>
-        </div>
-        <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/1aG6worKY0bKsFfitdq1xxR87KBqi_TKD" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1YFA91PQ2P0I6HXdVjOXR9JQHRypO9vyl/view" target="_blank" rel="noopener"><span class="ko">프리젠테이션</span><span class="en">Presentation</span></a>
-        </div>
-      </article>
-
-      <article class="piece">
-        <div class="piece-head"><h4><span class="ko">잔을 기울이면</span><span class="en">When You Tilt the Glass</span></h4><p class="people">윤이나 · 한민택<span class="en"> — Yoon Yina, Han Mintaek</span></p></div>
-        <p class="blurb ko"><b>“분위기를 마신다”</b>는 감각을 데이터와 공간 연출로 구현한다. 바에서의 음용 행위를 단순한 소비가 아니라 맛·향·잔·공간의 기억이 결합되는 몰입형 경험으로 재정의했다. 관객이 시그니처 음료를 주문하면 바텐더가 스마트 코스터 위에 잔을 올리고, 로드셀이 음료의 무게를 1g 단위로 읽는다. 선택한 칵테일의 가상 공간이 5면 스크린에 등장하고, 마실수록 줄어드는 음료량에 따라 조명·음악·효과가 강해진다. 가상공간은 고정된 배경이 아니라 관객의 음용량에 따라 점차 완성되는 환영으로 설계되었다.</p>
-        <p class="blurb en">The work gives physical form to the idea of <b>drinking an atmosphere</b>, using data and spatial staging. Drinking at a bar is reframed not as consumption but as an immersive experience in which taste, aroma, glass and the memory of a place combine. The visitor orders a signature drink; the bartender sets it on a smart coaster, and a load cell reads its weight to the gram. The virtual space belonging to that cocktail appears across five screens, and as the level in the glass falls, light, music and effects intensify. The space is not a fixed backdrop but an illusion that completes itself in proportion to how much has been drunk.</p>
-        <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/114-when-you-tilt-the-glass-installation-view.jpg" data-full="assets/hires/tilt.jpg" alt="When You Tilt the Glass installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/115-when-you-tilt-the-glass-still-2.jpg" alt="When You Tilt the Glass still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/116-when-you-tilt-the-glass-still-3.jpg" alt="When You Tilt the Glass still 3" loading="lazy"></button>
-        </div>
-        <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/1nkJ4iNnMD_k3g5ldAGeOHJDNRkJ3wlwx" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1M3_8wqDJKUVr5tCTLLYveeJ0MbrckJlB/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
-        </div>
-      </article>
-
-      <article class="piece">
         <div class="piece-head"><h4><span class="ko">계절의 변곡점</span><span class="en">Inflection Point of Seasons</span></h4><p class="people">박호윤<span class="en"> — Park Hoyoon</span></p></div>
-        <p class="blurb ko">봄부터 겨울까지 사계를 가로지르는 <b>계절의 변곡점</b>을 보여준다. 우리가 살아가는 현실은 명확한 선으로 단절되어 있는 것처럼 보이지만, 실상 그 경계는 겨울에서 봄으로 넘어가는 변곡점처럼 흐릿하고 유동적이다. TouchDesigner를 활용한 인터랙티브 텍스타일 디자인은 관객의 움직임에 실시간으로 반응하며 끊임없이 변화한다. 텍스타일은 더 이상 고정된 표면에 머무르지 않고, 관객의 존재와 움직임에 따라 유기적으로 변하며 새로운 시각적 흐름을 생성한다. 관객이 움직이는 순간, 계절은 벽을 넘어 몸 위에 내려앉는다.</p>
-        <p class="blurb en">The work traces the <b>inflection points</b> that run across the four seasons, from spring to winter. The reality we live in appears to be divided by clear lines, but in fact its boundaries are blurred and fluid, like the turn from winter into spring. Built in TouchDesigner, the interactive textile design responds to the visitor&rsquo;s movement in real time and never stops changing. The textile no longer rests on a fixed surface: it shifts organically with the presence and motion of the viewer, generating new visual currents. The moment the visitor moves, the season crosses the wall and settles onto the body.</p>
+        <p class="credit"><span class="ko">2026 · 반응형 미디어 텍스타일 기반 인터랙티브 설치 · TouchDesigner</span><span class="en">2026 · Interactive installation on responsive media textile · TouchDesigner</span></p>
+        <p class="blurb ko">봄부터 겨울까지 사계를 가로지르는 <b>계절의 변곡점</b>을 보여준다. 우리가 살아가는 현실은 명확한 선으로 단절되어 있는 것처럼 보이지만, 실상 그 경계는 겨울에서 봄으로 넘어가는 변곡점처럼 흐릿하고 유동적이다. TouchDesigner로 구축한 인터랙티브 텍스타일은 관객의 움직임에 실시간으로 반응하며 끊임없이 변화한다. 섬유가 지닌 촉각적 물성과 디지털 이미지의 유동성이 중첩되면서 자연과 기술, 신체와 환경, 물질과 데이터 사이의 경계가 해체되고 다시 결합된다. 계절은 고정된 풍경이 아니라 <b>관객의 신체적 개입에 따라 계속 변화하는 관계적 과정</b>으로 재구성되며, 관객이 움직이는 순간 계절은 벽을 넘어 몸 위에 내려앉는다.</p>
+        <p class="blurb en">The work traces the <b>inflection points</b> that run across the four seasons, from spring to winter. The reality we live in appears to be divided by clear lines, but its boundaries are in fact blurred and fluid, like the turn from winter into spring. Built in TouchDesigner, the interactive textile responds to the visitor’s movement in real time and never stops changing. The tactile materiality of fibre and the fluidity of the digital image overlap, and the boundaries between nature and technology, body and environment, matter and data come apart and recombine. Season becomes not a fixed landscape but <b>a relational process that keeps changing with the visitor’s physical intervention</b>: the moment they move, the season crosses the wall and settles onto the body.</p>
         <div class="piece-shots">
           <button class="shot" type="button"><img src="assets/img/087-inflection-point-installation-view.jpg" alt="Inflection Point installation view" loading="lazy"></button>
           <button class="shot" type="button"><img src="assets/img/088-inflection-point-still-2.jpg" alt="Inflection Point still 2" loading="lazy"></button>
@@ -1352,9 +1328,60 @@
       </article>
 
       <article class="piece">
+        <div class="piece-head"><h4><span class="ko">잔을 기울이면</span><span class="en">When You Tilt the Glass</span></h4><p class="people">윤이나 · 한민택<span class="en"> — Yoon Yina, Han Mintaek</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · Arduino UNO R3, HX711 로드셀 센서, 스마트 코스터, TouchDesigner, Unreal Engine 5.5, MadMapper, OSC, 프로젝터, 스피커, 조명, 칵테일잔, 향 연출 재료</span><span class="en">2026 · Interactive installation · Arduino UNO R3, HX711 load cell, smart coaster, TouchDesigner, Unreal Engine 5.5, MadMapper, OSC, projectors, speakers, lighting, cocktail glass, scent materials</span></p>
+        <p class="blurb ko">잔을 들고 기울이는 일상적 행위를 다감각적 미디어 경험으로 확장한 <b>인터랙티브 바 설치</b>다. “분위기를 마신다”는 감각을 데이터와 공간 연출로 구현해, 바에서의 음용을 단순한 소비가 아니라 맛 · 향 · 잔 · 공간의 기억이 결합되는 몰입형 경험으로 재정의했다. 관객이 시그니처 음료를 주문하면 바텐더가 스마트 코스터 위에 잔을 올리고, HX711 로드셀이 음료의 무게를 1g 단위로 읽는다. 선택한 칵테일의 가상 공간이 5면 스크린에 나타나고, TouchDesigner와 Unreal Engine, OSC, MadMapper를 통해 영상 · 조명 · 사운드 · 향이 실시간으로 연동되며 마실수록 강해진다. 가상공간은 고정된 배경이 아니라 <b>관객의 음용량에 따라 점차 완성되는 환영</b>으로 설계되어, 한 모금의 음료가 공간 전체로 확산되는 경험을 만든다.</p>
+        <p class="blurb en">An <b>interactive bar installation</b> that expands the everyday act of lifting and tilting a glass into a multisensory media experience. It gives physical form to the idea of drinking an atmosphere, reframing a drink at a bar not as consumption but as an immersive experience in which taste, aroma, glass and the memory of a place combine. The visitor orders a signature drink; the bartender sets it on a smart coaster and an HX711 load cell reads its weight to the gram. The virtual space belonging to that cocktail appears across five screens, and TouchDesigner, Unreal Engine, OSC and MadMapper drive image, light, sound and scent in real time, intensifying as the level falls. The space is not a fixed backdrop but <b>an illusion that completes itself in proportion to how much has been drunk</b> — a single mouthful spreading out into the whole room.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/114-when-you-tilt-the-glass-installation-view.jpg" data-full="assets/hires/tilt.jpg" alt="When You Tilt the Glass installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/115-when-you-tilt-the-glass-still-2.jpg" alt="When You Tilt the Glass still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/116-when-you-tilt-the-glass-still-3.jpg" alt="When You Tilt the Glass still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1nkJ4iNnMD_k3g5ldAGeOHJDNRkJ3wlwx" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1M3_8wqDJKUVr5tCTLLYveeJ0MbrckJlB/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Becoming Pearl</h4><p class="people">김다영 · 이유은<span class="en"> — Kim Dayoung, Lee Yuen</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 스피커, Arduino, ToF 거리 센서, 정전식 터치 센서, Unreal Engine, Niagara Particle System, 생성형 AI</span><span class="en">2026 · Interactive installation · projector, speakers, Arduino, ToF distance sensor, capacitive touch sensor, Unreal Engine, Niagara particle system, generative AI</span></p>
+        <p class="blurb ko">조개가 내부의 이물질을 감싸 진주를 만들어내는 자연의 과정을, <b>상처와 기억이 개인의 고유한 빛으로 전환되는 심리적 과정</b>에 비유한다. 관객의 접근과 접촉은 ToF 거리 센서와 정전식 터치 센서로 감지되어, Unreal Engine과 Niagara Particle System으로 구축된 가상환경의 변화로 이어진다. 생성형 AI 이미지와 빛의 입자는 내면의 기억이 새로운 형태로 재구성되는 과정을 시각화한다. 작품은 상처를 제거해야 할 결함이 아니라 <b>새로운 정체성을 형성하는 재료</b>로 바라본다.</p>
+        <p class="blurb en">The work reads the natural process by which an oyster wraps an intruding particle until it becomes a pearl as an analogy for <b>the psychological process in which injury and memory turn into a person’s own particular light</b>. A ToF distance sensor and a capacitive touch sensor register the visitor’s approach and contact, and those readings drive changes in a virtual environment built in Unreal Engine with the Niagara particle system. Generative AI imagery and particles of light visualise interior memory being reassembled into a new form. A wound is treated not as a defect to be removed but as <b>material out of which a new identity is formed</b>.</p>
+        <p class="note-in"><span class="ko">← 「몰입형 내러티브 &amp; 인터랙션 디자인」 기말 프로젝트에서 발전 · 아래 자료는 수업 제출본입니다</span><span class="en">← developed from a final project in Immersive Narrative &amp; Interaction Design; the files below are the coursework submission</span></p>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1d7UmVGlpiuf0QKyljaHEjZZ0cQmYMy7S/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/055-final-presentation-cover.jpg" alt="Becoming Pearl final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 최종 발표</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1OFxMFHwUb2MY5odOttHIak6eLDvF4-tb/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/056-demo-video.jpg" alt="Becoming Pearl demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Overlap</h4><p class="people">팽지현 · 홍준서<span class="en"> — Paeng Jihyun, Hong Junseo</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · Unreal VCam, 스마트폰, 무선 헤드셋</span><span class="en">2026 · Interactive installation · Unreal VCam, smartphone, wireless headset</span></p>
+        <p class="blurb ko">평온한 실제 강의실과 화면 속 폐허를 하나의 시점 위에 중첩함으로써 <b>장소의 단일성과 현실 인식의 안정성</b>에 질문을 던진다. 대한민국은 아시아에서 비교적 최근까지 전쟁을 경험한 국가지만, 러시아–우크라이나 전쟁은 여전히 먼 곳의 이야기처럼 인식된다. 작품은 그 거리감 속에서 ‘안전’이라는 개념을 다시 묻는다. 관객은 스마트폰 기반 Unreal VCam과 무선 헤드셋을 들고 물리적으로는 익숙한 강의실을 걷지만, 화면 속에서는 파괴된 또 다른 공간을 동시에 경험한다. 안전 → 균열 → 중첩 → 충돌. 하나의 장소가 <b>기억과 이미지, 매체적 프레임에 따라 서로 다른 현실로 존재할 수 있음</b>을 드러낸다.</p>
+        <p class="blurb en">By superimposing a calm, real lecture room and a ruin on screen within a single point of view, the work questions <b>the singularity of a place and the stability of our grip on reality</b>. Korea experienced war relatively recently, and yet the war in Ukraine still registers as something happening far away; from inside that distance the piece puts the idea of “safety” back into question. Holding a smartphone running Unreal VCam and wearing a wireless headset, the visitor physically walks a familiar classroom while simultaneously experiencing another, destroyed space on screen. Safety, then fracture, then overlap, then collision — the work shows that one place <b>can exist as different realities depending on memory, image and the frame of the medium</b>.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/081-overlap-installation-view.jpg" alt="Overlap installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/082-overlap-still-2.jpg" alt="Overlap still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/083-overlap-still-3.jpg" alt="Overlap still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1aG6worKY0bKsFfitdq1xxR87KBqi_TKD" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1YFA91PQ2P0I6HXdVjOXR9JQHRypO9vyl/view" target="_blank" rel="noopener"><span class="ko">프리젠테이션</span><span class="en">Presentation</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
         <div class="piece-head"><h4><span class="ko">등</span><span class="en">Back to Back</span></h4><p class="people">강윤경 · 오세령<span class="en"> — Kang Yunkyung, Oh Seryung</span></p></div>
-        <p class="blurb ko">키워드는 <b>관계</b>, 그리고 <b>상호의존</b>이다. 스쳐 지나가는 사람들 사이에서 등을 맞대는 행위를 관계의 최소 단위로 삼는다. 벽을 사이에 두고 양쪽에 기대어 선 두 사람은 서로를 보지 못하지만, 반대편 벽에 나타난 열화상의 형상으로 상대의 존재를 감지한다. 서로에게 기대야만 성립하는 자세를 통해, 보지 않고도 지탱되는 관계를 경험하게 한다.</p>
-        <p class="blurb en">The keywords are <b>relationship</b> and <b>interdependence</b>. Among people who only pass one another by, the work takes leaning back to back as the smallest possible unit of a relationship. Two people rest against opposite sides of a wall; they cannot see each other, but each senses the other as a thermal figure appearing on the far wall. In a posture that only holds if both lean in, the visitor experiences a relationship that supports without being seen.</p>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 웹캠, Arduino, TouchDesigner, AI 세그멘테이션, 비전 기반 자세 인식</span><span class="en">2026 · Interactive installation · projector, webcam, Arduino, TouchDesigner, AI segmentation, vision-based pose recognition</span></p>
+        <p class="blurb ko">키워드는 <b>관계</b>, 그리고 <b>상호의존</b>이다. 서로를 직접 볼 수 없는 두 관객이 벽을 사이에 두고 등을 맞대도록 구성한 관계적 설치로, 스쳐 지나가는 사람들 사이에서 등을 맞대는 행위를 관계의 최소 단위로 삼는다. 웹캠 기반 자세 인식과 AI 세그멘테이션이 두 사람의 위치와 신체적 정렬을 읽어 투사 영상의 변화로 연결하고, 벽 반대편에 나타난 열화상 같은 형상으로 서로의 존재를 감지하게 한다. 작품은 관계를 마주 보거나 언어로 소통하는 행위에 한정하지 않고, <b>상대의 무게를 받아들이며 서로를 기대고 지탱하는 상호의존의 감각</b>으로 탐구한다.</p>
+        <p class="blurb en">The keywords are <b>relationship</b> and <b>interdependence</b>. Two visitors who cannot see each other lean back to back with a wall between them; among people who otherwise only pass one another by, the work takes that posture as the smallest possible unit of a relationship. Webcam-based pose recognition and AI segmentation read each person’s position and physical alignment and translate them into changes in the projection, so that each senses the other as a thermal-like figure appearing on the far wall. Relationship here is not limited to facing someone or speaking to them: it is explored as <b>the sense of interdependence in taking another’s weight and being held up in turn</b>.</p>
         <div class="piece-shots">
           <button class="shot" type="button"><img src="assets/img/062-back-installation-view.jpg" alt="Back to Back installation view" loading="lazy"></button>
           <button class="shot" type="button"><img src="assets/img/063-back-still-2.jpg" alt="Back to Back still 2" loading="lazy"></button>
@@ -1369,20 +1396,125 @@
       </article>
 
       <article class="piece">
-        <div class="piece-head"><h4>Josh</h4><p class="people">김민채<span class="en"> — Kim Min Chae</span></p></div>
-        <p class="blurb ko">우울증에 대한 흔한 오해와 날카로운 시선을 다룬다. 당사자에게 필요한 것은 조언이나 비난이 아니라 <b>타인의 지속적인 관심과 연대</b>라는 메시지를, 마네킹 ‘조쉬’가 앉은 벤치 옆에 관객이 함께 앉아 머무는 행위로 전한다. 대기 상태에서는 당사자가 매일 마주하는 편견과 시선을 관객이 직접 겪게 해 불편함을 유도하고, 관객이 옆에 앉는 순간 세상의 비판이 사라진 단둘만의 안전한 연대 공간이 만들어진다. 진득하게 머무는 시간이 쌓일수록 닫혀 있던 내면이 조금씩 열리며 치유가 시작된다. “함께 앉아 머무는 행위”가 유일한 열쇠임을 시각·촉각·청각적 메타포로 공유한다.</p>
-        <p class="blurb en">The work takes on the ordinary misconceptions and sharp looks directed at depression. Its message — that what a person needs is not advice or blame but <b>the sustained attention and solidarity of others</b> — is carried entirely by the act of sitting down beside a mannequin named Josh and staying there. In its idle state the piece deliberately makes the visitor uncomfortable, exposing them to the prejudice its subject meets every day. The moment the visitor sits, the world&rsquo;s judgment falls away and a safe space for two is formed. The longer they stay, the more a closed interior opens and healing begins. Visual, tactile and auditory metaphors carry one idea: sitting and staying is the only key.</p>
-        <div class="piece-shots">
-          <button class="shot" type="button"><img src="assets/img/057-josh-installation-view.jpg" alt="Josh installation view" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/058-josh-still-2.jpg" alt="Josh still 2" loading="lazy"></button>
-          <button class="shot" type="button"><img src="assets/img/059-josh-still-3.jpg" alt="Josh still 3" loading="lazy"></button>
-        </div>
-        <div class="files">
-          <a class="chip dir" href="https://drive.google.com/drive/folders/1NlWJbC5VRCCpHRE4_euNlnp7MQiepesx" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
-          <a class="chip img" href="https://drive.google.com/file/d/1DNh55-tUf7gCQM63nsQOC-kqw-KHOEnC/view" target="_blank" rel="noopener"><span class="ko">시연 영상</span><span class="en">Demo video</span></a>
+        <div class="piece-head"><h4>Elsewhere</h4><p class="people">곽동주<span class="en"> — Gwak Dongju</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 스피커, Arduino, 거리 센서, Unreal Engine</span><span class="en">2026 · Interactive installation · projector, speakers, Arduino, distance sensor, Unreal Engine</span></p>
+        <p class="blurb ko">관객의 위치와 오브제에 대한 접근에 따라 서로 다른 음향과 시각 환경이 활성화되는 <b>공간적 서사 작품</b>이다. 거리 센서와 Unreal Engine을 연동해, 동일한 장소가 관객의 이동 경로와 관점에 따라 전혀 다르게 경험되도록 설계했다. 작품은 부분적으로 포착된 장면이나 감각만으로 타인의 삶 전체를 판단할 수 있는지 묻고, <b>인간 인식의 불완전성과 관점의 상대성</b>을 드러낸다.</p>
+        <p class="blurb en">A <b>spatial narrative</b> in which different sonic and visual environments are activated according to where the visitor stands and which objects they approach. Distance sensors are wired to Unreal Engine so that the same place is experienced quite differently depending on the path taken through it and the vantage point held. The work asks whether a life can be judged from a scene or a sensation caught only in part, and exposes <b>the incompleteness of human perception and the relativity of any single viewpoint</b>.</p>
+        <p class="note-in"><span class="ko">← 「몰입형 내러티브 &amp; 인터랙션 디자인」 기말 프로젝트 「별들의 연주」에서 발전 · 아래 자료는 수업 제출본입니다</span><span class="en">← developed from ‘Concert of Stars’, a final project in Immersive Narrative &amp; Interaction Design; the files below are the coursework submission</span></p>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1hSPANchOXh48_RSMox8rp1yUMSeaJD0B/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/040-final-presentation-cover.jpg" alt="Elsewhere final presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">기말 최종 발표</span><span class="en">Final presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1EJVM9SLH8ZNrMf_PMpsK9EPRuud8FDlC/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/042-work-video.jpg" alt="Elsewhere work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1fBublvuSh1mTbS8Y0YIy7FSUEH5Lu715/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/043-drone-documentation.jpg" alt="Elsewhere drone documentation" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">드론 기록</span><span class="en">Drone documentation</span></b><em>Video</em></span>
+          </a>
         </div>
       </article>
 
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">나도 여기 있어요</span><span class="en">I&rsquo;m Here Too</span></h4><p class="people">김태균<span class="en"> — Kim Taekyun</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 스피커, Arduino, 정전식 터치 센서, DFPlayer, LED, 인형, 사진, 의자, 이불, 담요, TouchDesigner, Processing</span><span class="en">2026 · Interactive installation · projector, speakers, Arduino, capacitive touch sensors, DFPlayer, LED, dolls, photographs, chair, duvet, blanket, TouchDesigner, Processing</span></p>
+        <p class="blurb ko">부모의 갈등 속에서 아이가 스스로 마련한 <b>작은 아지트</b>를 설치 공간으로 재구성한 작품이다. 인형과 사진, 의자, 이불과 담요로 조성한 친밀한 공간에 터치 센서와 LED, 음향과 투사 이미지를 결합해, 외부의 다툼과 내부의 불안이 교차하는 정서적 환경을 만든다. 작품은 성인 중심의 갈등 서사에서 쉽게 지워지는 <b>아이의 존재와 침묵</b>을 드러내며, 관객이 아이의 위치에 앉아 관계의 갈등과 정서적 상처를 바라보게 한다.</p>
+        <p class="blurb en">The work rebuilds, as an installation, <b>the small hideout a child makes for themselves</b> in the middle of their parents’ conflict. Into an intimate space of dolls, photographs, a chair, a duvet and a blanket it folds touch sensors, LEDs, sound and projected image, producing an emotional environment where the argument outside and the anxiety inside cross. It surfaces <b>the presence and the silence of the child</b> — the part most easily erased from an adult-centred account of conflict — and seats the visitor in the child’s position to look at the damage from there.</p>
+        <p class="note-in"><span class="ko">← 「몰입형 내러티브 &amp; 인터랙션 디자인」 기말 프로젝트에서 발전 · 아래 자료는 수업 제출본입니다</span><span class="en">← developed from a final project in Immersive Narrative &amp; Interaction Design; the files below are the coursework submission</span></p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/037-installation-photograph.jpg" alt="I&rsquo;m Here Too installation photograph" loading="lazy"></button>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1AW5Xb3N-oDc_FYmVp5RQJuGxzBVndj_l/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/038-presentation-cover.jpg" alt="I&rsquo;m Here Too presentation cover" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Presentation</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1hdNaHG8yZSOKtT32i2pvsmP_nXm35VHS/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/039-demo-video.jpg" alt="I&rsquo;m Here Too demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">숨</span><span class="en">Breath</span></h4><p class="people">임예지 · 양호림 · 주이페이<span class="en"> — Lin Ruitian, Liang Haolin, Zhu Yifei</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 스피커, Arduino, 압력 센서, TouchDesigner, LED 스트립, 링거백, 링거 스탠드, 이불, 베개</span><span class="en">2026 · Interactive installation · projector, speakers, Arduino, pressure sensors, TouchDesigner, LED strip, IV bag, IV stand, duvet, pillow</span></p>
+        <p class="blurb ko">사람은 태어나는 순간부터 하나의 몸을 갖고, 그 몸을 통해 숨 쉬고 감각하고 세계에 닿는다. 그러나 질병과 노화와 죽음, 그 곁에 따라오는 의료와 돌봄과 타인의 손길은 저마다의 방식으로 몸 안으로 들어온다. 외부의 개입이 일어나는 순간 그토록 자명하던 ‘나’라는 정체성이 흔들리기 시작한다 — 몸은 여전히 나의 것인가, 그 경계는 어디에 있는가. 링거백을 모티프로 제작된 장치를 관객이 누르면, 압력 센서와 Arduino, TouchDesigner를 통해 그 힘이 LED와 심장박동 소리의 리듬에 실시간으로 반영된다. 링거 스탠드와 이불, 베개로 구성된 공간은 돌봄과 취약성의 분위기를 만들고, 작품은 <b>외부의 힘과 신체가 접촉하는 순간</b>을 통해 호흡과 생명 유지, 신체적 긴장의 감각을 환기한다.</p>
+        <p class="blurb en">From the moment we are born we have a body, and through it we breathe, sense and touch the world. But illness, ageing and death — and the medicine, care and other people’s hands that come with them — enter that body each in their own way. At the moment of external intervention, the self that felt so self-evident begins to waver: is the body still mine, and where exactly is its boundary? When the visitor presses a device built around the motif of an IV bag, pressure sensors, Arduino and TouchDesigner translate that force in real time into the rhythm of LEDs and a heartbeat. An IV stand, a duvet and a pillow set an atmosphere of care and vulnerability, and the work uses <b>the instant at which an outside force meets a body</b> to bring breathing, the maintenance of life and physical tension back into the senses.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/044-breath-installation-view.jpg" alt="Breath installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/045-breath-still-2.jpg" alt="Breath still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/046-breath-still-3.jpg" alt="Breath still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1_OEVsPgJUhhTZ0NrzurOi6V9ZA7W6XD_" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1UQMYDR19VozS-ePKSa_hokc2cOWuteYX/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4>Will you walk with ____?</h4><p class="people">김윤서 · 조단비<span class="en"> — Kim Yunseo, Cho Danbi</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 프로젝터, 웹캠, 스피커, Arduino, 초음파 센서, TouchDesigner, 생성형 AI, Unreal Engine</span><span class="en">2026 · Interactive installation · projector, webcam, speakers, Arduino, ultrasonic sensors, TouchDesigner, generative AI, Unreal Engine</span></p>
+        <p class="blurb ko">키워드는 <b>리듬</b>이다. 어둠 속 디지털 아바타와 보폭을 맞추며 ‘동행’의 의미를 신체적으로 경험하게 한다. 전시에서 약자는 폭력에 노출된 중학생 “민이”의 모습으로 구현되었고, 연대하는 행위는 “느린 속도로 함께 걸어간다”는 경험으로 풀어냈다. 관객은 프롤로그 영상으로 민이를 알게 된 뒤 암흑 공간에서 보폭을 맞추며 리듬을 동기화하고, 민이는 이곳을 빠져나가기까지 함께해 준 관객에게 미소를 지어 보이며 작별을 고한다. 웹캠과 초음파 센서가 관객의 위치와 움직임을 읽어 발목 좌표를 MediaPipe와 TouchDesigner로 실시간 전송하고, 생성형 AI로 구축된 이미지와 Unreal Engine의 아바타가 반응한다. 작품은 타인을 자신의 속도에 맞추는 대신 <b>소외된 존재의 리듬을 존중하며 함께 걷는 관계의 윤리</b>를 제안한다.</p>
+        <p class="blurb en">The keyword is <b>rhythm</b>. Matching stride with a digital avatar in the dark, the visitor experiences what accompanying someone actually asks of the body. Here the vulnerable figure is “Min-i”, a middle-school student exposed to violence, and the act of solidarity is rendered as simply walking beside them, slowly. After a prologue video introduces Min-i, the visitor synchronises their pace in a darkened space; when Min-i finally makes it out, they turn, smile at the visitor who walked the whole way, and say goodbye. A webcam and ultrasonic sensors read position and movement, ankle coordinates travel through MediaPipe and TouchDesigner in real time, and generative-AI imagery and an Unreal Engine avatar respond. Instead of asking another person to keep up, the work proposes <b>an ethics of walking together at the rhythm of whoever has been left behind</b>.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/108-will-you-walk-with-installation-view.jpg" data-full="assets/hires/willyouwalk.jpg" alt="Will you walk with installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/109-will-you-walk-with-still-2.jpg" alt="Will you walk with still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/110-will-you-walk-with-still-3.jpg" alt="Will you walk with still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1KU6HJGINXqOP05BM4Px5JgRE4HDJvLaH" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1EMFzwuFDOYcijn10axqQySf2h3o-zWyY/view" target="_blank" rel="noopener"><span class="ko">시현 영상</span><span class="en">Demo video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">Way Back Home — 집에 가는 길</span><span class="en">Way Back Home</span></h4><p class="people">오세령 · 이용길<span class="en"> — Oh Seryung, Lee Yonggil</span></p></div>
+        <p class="credit"><span class="ko">2026 · 인터랙티브 설치 · 모니터, 스피커, Arduino, FSR 압력 감지 센서, Unreal Engine 5, 생성형 AI, 신발</span><span class="en">2026 · Interactive installation · monitor, speakers, Arduino, FSR pressure sensors, Unreal Engine 5, generative AI, shoes</span></p>
+        <p class="blurb ko">노스탤지어에서 출발해 <b>‘타인의 신발을 신는 경험’</b>을 만든다. 신발은 단순한 물건이 아니라 한 사람이 세상과 접촉하는 방식이다. 어떤 속도로, 어떤 무게로, 어떤 각도로 땅을 밟는가 — 그것이 곧 그 사람이 세상을 살아온 방식이다. 관객이 낯선 신발로 갈아 신고 걸으면 FSR 압력 감지 센서와 Arduino가 발걸음과 신체적 움직임을 입력으로 받아, Unreal Engine과 생성형 AI로 제작된 영상 · 음향 환경과 연결한다. 익숙한 귀가의 움직임은 <b>타인의 시간과 기억을 신체적으로 상상하고 마주하는 공감의 여정</b>으로 전환된다.</p>
+        <p class="blurb en">Starting from nostalgia, the work builds an experience of <b>putting yourself in someone else’s shoes</b> — literally. A shoe is not simply an object but the way a person makes contact with the world. At what speed, with what weight, at what angle does someone meet the ground? That is how they have lived. When the visitor changes into an unfamiliar pair and walks, FSR pressure sensors and Arduino take each step and bodily movement as input and connect them to an audiovisual environment built in Unreal Engine with generative AI. The familiar motion of heading home becomes <b>a journey of empathy in which another person’s time and memory are physically imagined and met</b>.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/105-way-back-home-installation-view.jpg" data-full="assets/hires/wayback.jpg" alt="Way Back Home installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/106-way-back-home-still-2.jpg" alt="Way Back Home still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/107-way-back-home-still-3.jpg" alt="Way Back Home still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1A9HJirCw6ZT2gBIoWobnRvJnw300e0Pk" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1J_I6DMaYIXL9PsvUKJ3TQRrsNYVbTs3w/view" target="_blank" rel="noopener"><span class="ko">기말 영상</span><span class="en">Final video</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1U25v0HOujIfczTFIC4Vdsm0hszMV5DIv/view" target="_blank" rel="noopener"><span class="ko">전시 영상</span><span class="en">Exhibition video</span></a>
+        </div>
+      </article>
+
+      <article class="piece">
+        <div class="piece-head"><h4><span class="ko">Pond — 비밀의 못</span><span class="en">Pond</span></h4><p class="people">배주영 · 황민협<span class="en"> — Bae Jooyoung, Hwang Minhyub</span></p></div>
+        <p class="credit"><span class="ko">2026 · 몰입형 사운드 설치 · 합판 사운드 배스 구조물, 스피커, 진동 장치, LED 조명</span><span class="en">2026 · Immersive sound installation · plywood sound-bath structure, speakers, transducers, LED lighting</span></p>
+        <p class="blurb ko">누구에게나 쉽게 말하지 못하는 것이 있다. 비밀, 후회, 끝내 전하지 못한 진심. 관객은 어두운 녹음실에 혼자 들어가 부저에 손을 올리고, 아무도 듣지 않는 상태에서 그것을 털어놓는다. 녹음은 사람을 거치지 않고 자동으로 다른 목소리들과 겹쳐져, 개인의 비밀은 끝까지 식별되지 않은 채 <b>4m × 4m의 사운드 배스</b>에 고인 소리의 일부가 된다. 합판 구조물 안에서 좌판의 베이스 쉐이커와 등받이 익사이터, 낮은 조명과 포그가 소리를 듣는 것이 아니라 소리 안으로 가라앉는 감각을 만든다. 관객은 타인의 속마음을 들으며 자신의 고민을 내려놓고, 다시 자신의 목소리를 공동의 공간에 보탠다. 원본 파일은 남지도 복원되지도 않는다. 작품은 <b>익명성이 개인을 지우는 장치가 아니라 안전하게 감정을 공유하게 하는 조건</b>이 될 수 있음을 보여준다.</p>
+        <p class="blurb en">Everyone carries something they cannot easily say — a secret, a regret, a truth never delivered. Alone in a darkened recording booth, the visitor places a hand on a glowing buzzer and speaks it aloud with no one listening. The recording never passes through a person: it is automatically layered into the other voices, so that an individual secret is never identifiable again and becomes part of the sound pooled in a <b>4 × 4 m sound bath</b>. Inside the plywood structure, bass shakers in the seat, exciters in the backrest, low light and fog turn listening into the sensation of sinking into sound. Hearing other people’s inmost thoughts, the visitor sets down their own and then adds their voice back to the common pool. No original file is kept, and none can be recovered. Anonymity, the work argues, is not a device that erases the individual but <b>a condition under which feeling can be shared safely and another’s presence can be sensed</b>.</p>
+        <div class="piece-shots">
+          <button class="shot" type="button"><img src="assets/img/069-pond-installation-view.jpg" alt="Pond installation view" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/070-pond-still-2.jpg" alt="Pond still 2" loading="lazy"></button>
+          <button class="shot" type="button"><img src="assets/img/071-pond-still-3.jpg" alt="Pond still 3" loading="lazy"></button>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/10190I8nC2NNfuochGoMb7zbS7hwhBxuS" target="_blank" rel="noopener"><span class="ko">기록 사진</span><span class="en">Documentation</span></a>
+          <a class="chip img" href="https://drive.google.com/file/d/1GQ9hrBfWSgQDcnSjgZUU53P-lD-FlEAN/view" target="_blank" rel="noopener"><span class="ko">작품 영상</span><span class="en">Work video</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">작품 종합 설명</span><span class="en">The works, taken together</span></h3>
+    <div class="lede">
+      <p class="ko">출품작들은 <b>앉기, 기대기, 걷기, 누르기, 잔을 기울이기, 오브제에 접근하기, 목소리를 남기기</b>와 같은 일상적인 신체 행위를 작품의 핵심 인터페이스로 전환했습니다. 학생들은 관객의 행동을 센서 데이터로 수집하는 데 그치지 않고, 이를 빛과 소리, 영상, 진동, 가상환경의 변화로 되돌려주며 관객이 작품의 의미 형성에 직접 참여하도록 설계했습니다.</p>
+      <p class="en">Across the show, ordinary bodily acts — <b>sitting, leaning, walking, pressing, tilting a glass, approaching an object, leaving a voice</b> — became the primary interface. Students did not stop at collecting a visitor’s behaviour as sensor data; they returned it as light, sound, image, vibration and change in a virtual environment, so that the audience takes part in making the work mean something.</p>
+      <p class="ko">기술적으로는 Arduino와 거리 · 압력 · 터치 센서, Unreal Engine, TouchDesigner, Processing, 생성형 AI, 프로젝션 매핑, 실시간 사운드 및 진동 시스템이 활용되었습니다. 다만 기술 자체를 시연하는 데 목적을 두기보다, <b>돌봄과 동행, 신체적 취약성, 기억과 상처, 장소에 대한 인식, 타인과의 관계</b>와 같은 주제를 관객이 몸으로 경험할 수 있도록 변환하는 매개로 사용했다는 점이 특징입니다.</p>
+      <p class="en">Technically the works draw on Arduino with distance, pressure and touch sensing, Unreal Engine, TouchDesigner, Processing, generative AI, projection mapping and real-time sound and haptic systems. What distinguishes them is that none of it is there to demonstrate the technology: it is a means of converting subjects — <b>care and accompaniment, physical vulnerability, memory and injury, the perception of place, the relationship with another person</b> — into something a visitor can experience with the body.</p>
+      <p class="ko">이러한 결과물은 예술적 개념 설정에서 출발해 관객 경험 설계, 센서와 소프트웨어의 연동, 공간 설치, 현장 운영과 관객 피드백에 이르는 전 과정을 학생이 직접 수행한 프로젝트 기반 교육의 성과입니다. 〈N.I.M.A. 2026〉은 완성된 결과물을 진열하는 자리가 아니라, 학생들이 서로 다른 기술과 매체를 자신의 문제의식에 맞게 선택하고 통합해 <b>실제로 작동하는 관객 중심의 경험</b>으로 발전시킨 교육적 실험의 장이었습니다.</p>
+      <p class="en">These outcomes are the result of project-based teaching in which students themselves ran the whole arc: setting an artistic concept, designing the audience experience, integrating sensors with software, installing in a space, operating it live and taking feedback from real visitors. 〈N.I.M.A. 2026〉 was less a display of finished objects than a teaching experiment in which students chose and combined different technologies and media to suit their own questions, and developed them into <b>an audience-centred experience that actually runs</b>.</p>
     </div>
   </div>
 
@@ -1406,6 +1538,16 @@
       <a class="chip dir" href="https://drive.google.com/drive/folders/1VQV7iv8AXVhE41DnepZ6ii72LUqUfnps" target="_blank" rel="noopener"><span class="ko">드론 기록 영상 7건 전체</span><span class="en">All 7 drone clips</span></a>
     </div>
   </div>
+</section>
+
+<section class="uni-foot">
+  <h3 class="block"><span class="ko">교육 성과 및 교육적 의의</span><span class="en">Outcomes and significance</span></h3>
+  <p class="ko">성균관대학교에서 운영한 세 과목과 전시는 <b>아이디어 구상 – 디지털 제작 – 피지컬 인터랙션 – 공간 설치 – 관객 시연 – 비평과 기록</b>으로 이어지는 통합 교육과정을 구축했다는 점에서 의미가 있습니다. 학생들은 소프트웨어 기능을 개별적으로 학습하는 데 그치지 않고, 각 기술을 자신의 주제와 서사에 맞게 선택하고 연결하는 방법을 익혔습니다.</p>
+  <p class="en">What the three courses and the exhibition amount to is <b>one continuous curriculum</b> — conceiving an idea, making it digitally, wiring in physical interaction, installing it in a space, demonstrating it to an audience, then critiquing and documenting it. Students did not simply learn software features one at a time; they learned how to choose among technologies and connect them to their own subject and narrative.</p>
+  <p class="ko">특히 Unreal Engine을 가상 공간 제작 도구에 한정하지 않고, <b>인공지능 생성 콘텐츠 · 센서 데이터 · 실시간 영상 · 프로젝션 매핑을 통합하는 중심 플랫폼</b>으로 활용했습니다. 이러한 교육 방식은 학생들이 예술적 개념과 기술적 구현 사이의 간극을 스스로 조정하고, 디지털 결과물을 실제 관객이 경험할 수 있는 물리적 환경으로 발전시키는 능력을 기르는 데 초점을 두었습니다.</p>
+  <p class="en">Unreal Engine in particular was used not as a tool for building virtual space but as <b>the central platform integrating AI-generated content, sensor data, real-time video and projection mapping</b>. The point of teaching it that way is that students learn to close the gap between an artistic concept and its technical implementation themselves, and to develop a digital outcome into a physical environment a real audience can walk into.</p>
+  <p class="ko">궁극적으로 본 교육은 학생들이 특정 기술의 사용자가 아니라, <b>새로운 매체와 인터페이스를 통해 공간 · 서사 · 관객 경험을 설계하는 융합형 창작자</b>로 성장하도록 하는 것을 목표로 합니다.</p>
+  <p class="en">Ultimately the aim is that students leave not as users of a particular tool but as <b>hybrid authors who design space, narrative and audience experience through new media and new interfaces</b>.</p>
 </section>
 </div><!-- /u-skku -->
 
