@@ -3038,14 +3038,45 @@
 </dialog>
 
 <script>
-/* safety net: if the tab script never runs, reveal every panel instead of a blank page.
-   The signal is a selected university tab — the teaching statement has no course tabs,
-   so a selected .tab would report a failure that never happened. */
-setTimeout(function () {
-  if (!document.querySelector('.unitab[aria-selected="true"]')) {
-    var ps = document.querySelectorAll('.panel, .uni, .tablist[data-uni]');
-    for (var i = 0; i < ps.length; i++) ps[i].hidden = false;
+/* Safety net. Every section starts out hidden, so if the tab script never runs the page
+   would be blank. The fallback opens ONE section — the first university and its first
+   course — and never every section at once, which would stack the whole archive onto a
+   single scroll. A selected university tab is the signal that the tab script did run;
+   a selected course tab is not, because the teaching statement has no course tabs. */
+window.taFallback = function () {
+  var unitabs = document.querySelectorAll('.unitab');
+  if (!unitabs.length) return;
+  var firstUni = unitabs[0].getAttribute('aria-controls');
+
+  for (var i = 0; i < unitabs.length; i++) {
+    var onUni = i === 0;
+    unitabs[i].setAttribute('aria-selected', onUni ? 'true' : 'false');
+    var uni = document.getElementById(unitabs[i].getAttribute('aria-controls'));
+    if (uni) uni.hidden = !onUni;
   }
+
+  var lists = document.querySelectorAll('.tablist[data-uni]');
+  for (var j = 0; j < lists.length; j++) {
+    lists[j].hidden = lists[j].getAttribute('data-uni') !== firstUni;
+  }
+
+  var list = document.querySelector('.tablist[data-uni="' + firstUni + '"]');
+  var courseTabs = list ? list.querySelectorAll('.tab') : [];
+  var bar = document.querySelector('.tabbar');
+  if (bar) bar.hidden = !courseTabs.length;
+
+  var panels = document.querySelectorAll('.panel');
+  for (var k = 0; k < panels.length; k++) panels[k].hidden = true;
+  for (var m = 0; m < courseTabs.length; m++) {
+    var onTab = m === 0;
+    courseTabs[m].setAttribute('aria-selected', onTab ? 'true' : 'false');
+    var panel = document.getElementById(courseTabs[m].getAttribute('aria-controls'));
+    if (panel) panel.hidden = !onTab;
+  }
+};
+
+setTimeout(function () {
+  if (!document.querySelector('.unitab[aria-selected="true"]')) window.taFallback();
 }, 800);
 </script>
 
@@ -3079,13 +3110,10 @@ setTimeout(function () {
   var tablists = Array.prototype.slice.call(document.querySelectorAll('.tablist[data-uni]'));
   var tabbar = document.querySelector('.tabbar');
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
-  var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
 
+  /* if something in here throws, fall back to a single open section — never all of them */
   window.addEventListener('error', function () {
-    unis.forEach(function (u) { if (u) u.hidden = false; });
-    tablists.forEach(function (l) { l.hidden = false; });
-    if (tabbar) tabbar.hidden = false;
-    panels.forEach(function (p) { if (p) p.hidden = false; });
+    if (!document.querySelector('.unitab[aria-selected="true"]') && window.taFallback) window.taFallback();
   });
 
   /* course tabs belonging to one university */
