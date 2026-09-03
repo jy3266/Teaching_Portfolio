@@ -37,8 +37,9 @@
     --body: "IBM Plex Sans KR", "Malgun Gothic", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
     /* text runs the full width of the shell; the shell is what scales with the screen */
-    --measure: 100%;
-    --shell: min(100%, 1360px);
+    --measure: 100%;          /* lede / section intros — full width of the shell */
+    --measure-2: min(100%, 88ch); /* detail prose — kept to a reading measure */
+    --shell: min(100%, 1560px);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -217,6 +218,44 @@
   .uni-head p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: clamp(.97rem, .91rem + .17vw, 1.09rem); }
   .uni-head .byline { margin: .5rem 0 0; }
 
+  /* teaching statement */
+  .statement { padding: clamp(2rem,4.5vw,3.25rem) 0 5rem; display: flex; flex-direction: column; gap: 1.3rem; }
+  .statement p {
+    margin: 0; max-width: var(--measure-2); color: var(--ink-2);
+    font-size: clamp(1.02rem, .95rem + .2vw, 1.15rem); line-height: 1.85;
+  }
+  .statement p b { font-weight: 600; color: var(--ink); }
+  .statement p em { font-style: normal; color: var(--accent); }
+  .statement p.open {
+    font-family: var(--display); font-weight: 500; color: var(--ink); max-width: var(--measure);
+    font-size: clamp(1.18rem, 1.03rem + .5vw, 1.5rem); line-height: 1.6; text-wrap: pretty;
+  }
+  .statement .qs {
+    margin: .45rem 0; max-width: var(--measure-2);
+    padding: .15rem 0 .15rem 1.35rem; border-left: 2px solid var(--accent-line);
+    display: flex; flex-direction: column; gap: .65rem;
+  }
+  .statement .qs p { color: var(--ink); font-size: clamp(1.03rem, .96rem + .2vw, 1.17rem); line-height: 1.6; }
+  .statement .chain {
+    display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .7rem;
+    margin: .7rem 0; padding: 1.1rem 1.3rem; max-width: var(--measure-2);
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 3px;
+  }
+  .statement .chain span {
+    font-family: var(--mono); font-size: clamp(.72rem, .68rem + .18vw, .84rem); letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); background: var(--accent-soft);
+    border-radius: 2px; padding: .3rem .6rem;
+  }
+  .statement .chain i { font-style: normal; color: var(--ink-3); font-size: 1rem; }
+  .statement .pull {
+    margin: 1.4rem 0 0; max-width: var(--measure);
+    padding: 1.7rem 0 0; border-top: 1px solid var(--rule);
+  }
+  .statement .pull p {
+    font-family: var(--display); font-weight: 500; color: var(--ink); max-width: none;
+    font-size: clamp(1.13rem, 1rem + .5vw, 1.42rem); line-height: 1.55; text-wrap: pretty;
+  }
+
   /* ── panels ─────────────────────────────── */
   .panel { padding: clamp(2.25rem,5vw,3.75rem) 0 5rem; display: flex; flex-direction: column; gap: clamp(2.5rem,5vw,3.75rem); }
 
@@ -286,20 +325,20 @@
   }
   .work h4 { font-family: var(--display); font-weight: 700; font-size: clamp(1.2rem,2.2vw,1.45rem); margin: 0; line-height: 1.35; }
   .people { font-size: clamp(.88rem, .85rem + .09vw, .95rem); color: var(--ink-3); margin: 0; }
-  .note-in { font-size: clamp(.87rem, .84rem + .09vw, .94rem); color: var(--ink-3); margin: 0; }
+  .note-in { font-size: clamp(.87rem, .84rem + .09vw, .94rem); color: var(--ink-3); margin: 0; max-width: var(--measure-2); }
   .note-in b { color: var(--accent); font-weight: 500; }
 
   /* very wide screens: a little more room, but the column stays a readable measure */
-  @media (min-width: 1900px) { :root { --shell: min(100%, 1480px); } }
+  @media (min-width: 1900px) { :root { --shell: min(100%, 1720px); } }
 
   .blurb {
     margin: -.35rem 0 0; font-size: clamp(.95rem, .89rem + .16vw, 1.07rem); line-height: 1.76; color: var(--ink-2);
-    max-width: var(--measure); padding-left: .85rem; border-left: 2px solid var(--accent-line);
+    max-width: var(--measure-2); padding-left: .85rem; border-left: 2px solid var(--accent-line);
   }
 
   .credit {
     margin: -.2rem 0 0; font-family: var(--mono); font-size: clamp(.735rem, .7rem + .1vw, .82rem); line-height: 1.7;
-    color: var(--ink-3); max-width: var(--measure);
+    color: var(--ink-3); max-width: var(--measure-2);
   }
   .credit b { font-weight: 500; color: var(--ink-2); }
 
@@ -308,7 +347,7 @@
     padding: clamp(1.9rem,4vw,2.8rem) 0 clamp(3rem,6vw,5rem);
     display: flex; flex-direction: column; gap: 1rem;
   }
-  .uni-foot p { margin: 0; max-width: var(--measure); color: var(--ink-2); font-size: clamp(.97rem, .91rem + .17vw, 1.09rem); }
+  .uni-foot p { margin: 0; max-width: var(--measure-2); color: var(--ink-2); font-size: clamp(.97rem, .91rem + .17vw, 1.09rem); }
   .uni-foot p b { font-weight: 600; color: var(--ink); }
 
   /* big stills */
@@ -467,6 +506,7 @@
   <nav class="unibar">
     <div class="unirow">
       <div class="unilist" role="tablist" aria-label="University tabs">
+        <button class="unitab" role="tab" id="u-tab-statement" aria-controls="u-statement" aria-selected="false"><span class="ko">교육 철학</span><span class="en">Teaching Statement</span></button>
         <button class="unitab" role="tab" id="u-tab-skku" aria-controls="u-skku" aria-selected="false"><span class="ko">성균관대학교</span><span class="en">Sungkyunkwan Univ.</span> <i>3 courses · 21 teams · 1 in progress</i></button>
         <button class="unitab" role="tab" id="u-tab-cju" aria-controls="u-cju" aria-selected="false"><span class="ko">청주대학교</span><span class="en">Cheongju Univ.</span> <i>1 course · 20 teams · 1 in progress</i></button>
         <button class="unitab" role="tab" id="u-tab-dyu" aria-controls="u-dyu" aria-selected="false"><span class="ko">동양대학교</span><span class="en">Dongyang Univ.</span> <i>2 courses · 26 reviews</i></button>
@@ -501,6 +541,116 @@
 </div>
 
 <div class="wrap">
+
+<!-- ══════════════════ 교육 철학 · Teaching Statement ══════════════════ -->
+<div class="uni" id="u-statement" role="tabpanel" aria-labelledby="u-tab-statement" hidden>
+
+  <header class="uni-head">
+    <h2><span class="ko">교육 철학</span><span class="en">Teaching Statement</span></h2>
+    <p class="byline">
+      <b><span class="ko">유준오</span><span class="en">Junoh Yu</span></b>
+      <i>TEACHING STATEMENT</i>
+    </p>
+  </header>
+
+  <section class="statement">
+
+    <p class="open ko">제가 처음 가르치는 일을 시작하게 된 이유는, 사실 교육자가 되고 싶다는 생각에서 출발한 것은 아니었습니다.</p>
+    <p class="open en">I did not start teaching because I wanted to be an educator.</p>
+
+    <p class="ko">당시 저는 청년들의 정신건강을 위한 플랫폼 <b>REBREATHE</b>를 개발하고 있었습니다. 하지만 기술과 서비스를 만드는 것만으로는 제가 만나고자 하는 청년들이 실제로 무엇을 고민하고, 어떤 감정을 경험하며, 세상을 어떻게 바라보고 있는지를 충분히 이해하기 어렵다고 느꼈습니다. 그래서 저는 그들과 가장 가까운 거리에서 만나고 대화할 수 있는 방법으로 ‘가르치는 일’을 선택했습니다.</p>
+    <p class="en">At the time I was building <b>REBREATHE</b>, a platform for young people’s mental health. But building the technology and the service was not enough to understand what the young people I wanted to reach were actually worried about, what they felt, or how they saw the world. So I chose teaching as the way to meet them and talk with them at the closest possible range.</p>
+
+    <p class="ko">그러나 수업을 시작한 이후, 제가 예상하지 못했던 변화가 일어났습니다. 저는 학생들에게 무언가를 전달하기 위해 교실에 들어갔지만, 오히려 그들의 질문과 생각, 그리고 제가 예상하지 못했던 방식으로 문제를 해석하는 모습을 통해 더 많은 것을 배우기 시작했습니다.</p>
+    <p class="en">Once I began, something I had not anticipated happened. I walked into the classroom to give students something, and instead began to learn far more from their questions, their thinking, and the ways they read a problem that I had never expected.</p>
+
+    <p class="ko">그때부터 저에게 교육은 지식을 한 방향으로 전달하는 일이 아니라, <b>서로 다른 경험과 관점이 만나 새로운 질문을 만들어가는 공동의 탐구 과정</b>이 되었습니다.</p>
+    <p class="en">From then on, teaching stopped being the one-directional delivery of knowledge and became <b>a shared inquiry in which different experiences and perspectives meet and produce new questions</b>.</p>
+
+    <p class="ko">제가 수업에서 가장 중요하게 생각하는 것 역시 이러한 <b>대화(Dialogue)</b>입니다.</p>
+    <p class="en">What I value most in the classroom is exactly that — <b>dialogue</b>.</p>
+
+    <p class="ko">특히 AI, Unreal Engine, VR, Physical Computing, Projection Mapping과 같은 기술을 다루는 수업에서는 새로운 도구를 빠르게 익히는 것도 중요하지만, 저는 그보다 학생들이 끊임없이 서로에게 질문하도록 만드는 것이 더 중요하다고 생각합니다.</p>
+    <p class="en">In courses that deal with AI, Unreal Engine, VR, physical computing and projection mapping, picking up a new tool quickly matters — but I think it matters more to keep students asking each other questions.</p>
+
+    <div class="qs">
+      <p class="ko">“왜 이 기술을 사용해야 하는가?”</p>
+      <p class="en">“Why should we use this technology?”</p>
+      <p class="ko">“이 경험을 통해 관객에게 무엇을 전달하고 싶은가?”</p>
+      <p class="en">“What do we want this experience to give the audience?”</p>
+      <p class="ko">“우리가 만드는 것이 누군가의 감정이나 삶에 어떤 영향을 줄 수 있는가?”</p>
+      <p class="en">“What effect could what we are making have on someone’s feelings, or on their life?”</p>
+    </div>
+
+    <p class="ko">저는 기술을 목적이 아니라, <b>학생들이 자신이 가진 질문을 세상과 연결하기 위한 하나의 언어이자 매개체</b>로 가르치고자 합니다.</p>
+    <p class="en">I try to teach technology not as an end in itself but as <b>a language and a medium through which students connect their own questions to the world</b>.</p>
+
+    <p class="ko">이러한 생각은 제가 수업에서 ‘Healing’, ‘Nature’, ‘Memory’, ‘Time’, ‘Home’, ‘Connection’과 같은 주제를 지속적으로 제안하는 이유이기도 합니다.</p>
+    <p class="en">That is also why I keep proposing themes such as <em>Healing</em>, <em>Nature</em>, <em>Memory</em>, <em>Time</em>, <em>Home</em> and <em>Connection</em>.</p>
+
+    <p class="ko">예를 들어 학생들에게 ‘힐링’과 ‘치유’라는 주제를 제시했을 때, 저는 그것이 어떤 모습이어야 하는지를 미리 정의하지 않습니다. 오히려 학생들이 자신의 경험과 기억을 돌아보고, 리서치와 대화를 통해 각자가 생각하는 치유의 의미를 발견하도록 합니다.</p>
+    <p class="en">When I hand students the theme of healing, for instance, I do not define in advance what it should look like. I ask them instead to look back at their own experience and memory and, through research and conversation, to find what healing means to each of them.</p>
+
+    <p class="ko">어떤 학생은 빛과 공간을 통해 이를 표현하고, 어떤 학생은 자연의 움직임을 가상환경으로 재구성하며, 또 다른 학생은 센서와 소리, 관객의 신체적 참여를 통해 치유를 이야기합니다.</p>
+    <p class="en">One student expresses it through light and space; another rebuilds the movement of nature inside a virtual environment; another speaks about healing through sensors, sound and the audience’s own bodily participation.</p>
+
+    <p class="ko">같은 하나의 단어에서 출발했음에도 학생들은 서로 전혀 다른 해석과 방법론을 제안합니다. 그리고 저는 바로 이 순간이 교육에서 가장 흥미로운 순간이라고 생각합니다. 학생이 주어진 문제에 대한 ‘정답’을 찾는 것이 아니라, <b>자신만의 질문과 방법을 만들어가기 시작하는 순간</b>이기 때문입니다.</p>
+    <p class="en">From a single word, students arrive at completely different readings and methods. That, I think, is the most interesting moment in teaching — the moment a student stops looking for the ‘right answer’ to a given problem and <b>starts building their own question and their own method</b>.</p>
+
+    <p class="ko">더욱 중요한 것은 이러한 과정이 학생 개인의 작업에서 끝나지 않는다는 점입니다.</p>
+    <p class="en">More importantly, the process does not end with the individual student’s work.</p>
+
+    <p class="ko">학생들이 만든 작품이 전시되고 관객과 만나면서, 그들이 탐구했던 감정과 질문은 다시 다른 사람에게 전달됩니다. 관객이 작품 앞에서 잠시 멈추거나, 자신의 경험을 떠올리거나, 위로나 공감을 느끼는 모습을 학생들이 직접 목격하게 됩니다.</p>
+    <p class="en">When their work is exhibited and meets an audience, the feelings and questions they explored are passed on to someone else. Students watch a visitor pause in front of the work, recall their own experience, or feel comforted and understood.</p>
+
+    <p class="ko">그 순간 학생들은 <b>자신이 만든 작은 경험 하나가 누군가의 감정에 영향을 줄 수 있다는 사실</b>을 발견합니다.</p>
+    <p class="en">In that moment they discover that <b>one small experience they made can affect how someone else feels</b>.</p>
+
+    <p class="ko">저 역시 예술가로서 오랫동안 개인의 경험과 상처를 어떻게 다른 사람과 연결할 수 있을 것인가, 그리고 예술과 기술을 통해 어떻게 아주 작은 형태로나마 사회에 긍정적인 영향을 만들어낼 수 있을 것인가를 고민해왔습니다.</p>
+    <p class="en">As an artist I have long asked myself how personal experience and personal injury can be connected to other people, and how art and technology can make some positive difference to society, however small.</p>
+
+    <p class="ko">저에게 교육은 이러한 질문의 또 다른 연장선에 있습니다.</p>
+    <p class="en">Teaching, for me, is another extension of those questions.</p>
+
+    <p class="ko">한 사람의 학생이 자신의 경험을 탐구하고, 그것을 작품으로 표현하며, 그 작품이 다시 다른 사람에게 전달되는 과정은 결국 하나의 작은 연결을 만들어냅니다.</p>
+    <p class="en">One student explores their own experience, gives it form as work, and that work is passed on to someone else — and in the end that makes one small connection.</p>
+
+    <div class="chain">
+      <span>Student</span><i>→</i><span>Work</span><i>→</i><span>Audience</span><i>→</i><span>Society</span>
+    </div>
+
+    <p class="ko">저는 이러한 연결이 반복되면서 <b>교육이 교실 밖의 세계에 작은 변화를 만들어낼 수 있다</b>고 믿습니다.</p>
+    <p class="en">I believe that as these connections repeat, <b>teaching can make a small change in the world outside the classroom</b>.</p>
+
+    <p class="ko">그래서 저에게 가르치는 일은 학생들에게 제가 가진 지식을 전달하는 행위만을 의미하지 않습니다.</p>
+    <p class="en">So teaching, for me, is not only the act of passing on what I know.</p>
+
+    <p class="ko">학생들이 자신이 무엇을 중요하게 생각하는 사람인지 발견하고, 기술과 예술을 이용해 자신의 질문을 표현하며, 그것을 다른 사람과 나눌 수 있도록 함께 방법을 찾아가는 일입니다.</p>
+    <p class="en">It is finding a way, together with students, for them to discover what kind of person they are and what they care about, to express their questions through technology and art, and to share that with other people.</p>
+
+    <p class="ko">동시에 저 역시 그 과정에서 학생들로부터 배우고, 제가 가지고 있던 생각을 다시 질문하며 변화합니다.</p>
+    <p class="en">And in that process I learn from my students too — I question what I thought I knew, and I change.</p>
+
+    <p class="ko">결국 제가 만들고 싶은 교실은 <b>정답을 배우는 공간이 아니라 질문을 발견하는 공간</b>, <b>기술을 배우는 공간이 아니라 기술을 통해 자신의 생각을 실험하는 공간</b>, 그리고 무엇보다도 <b>서로의 경험을 통해 조금씩 변화할 수 있는 공간</b>입니다.</p>
+    <p class="en">The classroom I want to make is <b>not a place where answers are learned but where questions are found</b>; <b>not a place where technology is learned but where technology is used to test one’s own thinking</b>; and above all <b>a place where we can each change a little through one another’s experience</b>.</p>
+
+    <p class="ko">처음에는 청년들을 이해하기 위해 시작했던 교육이었지만, 지금 저는 가르치는 행위 자체가 제가 오래도록 찾고 있던 하나의 실천이라는 것을 깨닫고 있습니다.</p>
+    <p class="en">I began teaching in order to understand young people, but I am now realising that the act of teaching is itself the practice I had long been looking for.</p>
+
+    <p class="ko">예술가로서 작품을 통해 세상에 작은 긍정적인 영향을 만들고자 했던 것처럼, 교육자로서 저는 학생들이 자신의 질문과 창작을 통해 또 다른 사람에게 긍정적인 영향을 만들어낼 수 있도록 돕고 싶습니다.</p>
+    <p class="en">Just as I wanted, as an artist, to make some small positive difference to the world through my work, as a teacher I want to help students make a positive difference to someone else through their own questions and their own making.</p>
+
+    <p class="ko">그리고 어쩌면 그것이 제가 생각하는 교육의 가장 중요한 역할입니다.</p>
+    <p class="en">And perhaps that is the most important role education can play.</p>
+
+    <blockquote class="pull">
+      <p>Teaching is not simply about transferring knowledge.<br>It is about creating a space where one person’s question can become another person’s possibility.</p>
+    </blockquote>
+
+  </section>
+
+</div><!-- /u-statement -->
+
 
 <div class="uni" id="u-skku" role="tabpanel" aria-labelledby="u-tab-skku" hidden>
 
@@ -2951,12 +3101,14 @@ setTimeout(function () {
   var unitabs = Array.prototype.slice.call(document.querySelectorAll('.unitab'));
   var unis = unitabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
   var tablists = Array.prototype.slice.call(document.querySelectorAll('.tablist[data-uni]'));
+  var tabbar = document.querySelector('.tabbar');
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
   var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
 
   window.addEventListener('error', function () {
     unis.forEach(function (u) { if (u) u.hidden = false; });
     tablists.forEach(function (l) { l.hidden = false; });
+    if (tabbar) tabbar.hidden = false;
     panels.forEach(function (p) { if (p) p.hidden = false; });
   });
 
@@ -2997,7 +3149,13 @@ setTimeout(function () {
     tablists.forEach(function (l) { l.hidden = l.getAttribute('data-uni') !== uniId; });
 
     var group = tabsOf(uniId);
-    if (!group.length) return;
+    if (tabbar) tabbar.hidden = !group.length;
+    if (!group.length) {
+      /* a section with no course tabs (the teaching statement) owns no hash */
+      try { if (history.replaceState) history.replaceState(null, '', location.pathname + location.search); } catch (err) {}
+      if (focus) unitabs[u].focus();
+      return;
+    }
     var ci = courseIndex;
     if (ci === undefined || ci === null) ci = lastCourse[uniId] || 0;
     if (ci >= group.length) ci = 0;
