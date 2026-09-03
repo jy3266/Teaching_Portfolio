@@ -3038,9 +3038,11 @@
 </dialog>
 
 <script>
-/* safety net: if the tab script never runs, reveal every panel instead of a blank page */
+/* safety net: if the tab script never runs, reveal every panel instead of a blank page.
+   The signal is a selected university tab — the teaching statement has no course tabs,
+   so a selected .tab would report a failure that never happened. */
 setTimeout(function () {
-  if (!document.querySelector('.tab[aria-selected="true"]')) {
+  if (!document.querySelector('.unitab[aria-selected="true"]')) {
     var ps = document.querySelectorAll('.panel, .uni, .tablist[data-uni]');
     for (var i = 0; i < ps.length; i++) ps[i].hidden = false;
   }
