@@ -36,10 +36,11 @@
     --display: "Gowun Batang", "Nanum Myeongjo", Georgia, serif;
     --body: "IBM Plex Sans KR", "Malgun Gothic", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
-    /* column width matched to the course site (Junoh_Yu_Time_Class): text fills the column */
-    --measure: 100%;
-    --measure-2: 100%;
-    --shell: min(58rem, 100% - 3rem);
+    /* --shell is the page frame (nav bars, masthead, footer); --measure is the reading
+       column, kept at the course site’s width and centred inside the wider frame. */
+    --measure: min(58rem, 100%);
+    --measure-2: min(58rem, 100%);
+    --shell: min(84rem, 100% - 3rem);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -100,7 +101,10 @@
   .wrap { width: var(--shell); margin: 0 auto; }
 
   /* ── masthead ───────────────────────────── */
-  .masthead { padding: clamp(2rem,4.5vw,3.5rem) 0 1.5rem; display: flex; flex-direction: column; gap: 1.1rem; }
+  .masthead {
+    max-width: var(--measure); margin-inline: auto;
+    padding: clamp(2rem,4.5vw,3.5rem) 0 1.5rem; display: flex; flex-direction: column; gap: 1.1rem;
+  }
 
   .eyebrow {
     font-family: var(--mono); font-size: .71rem; letter-spacing: .18em;
@@ -149,7 +153,7 @@
     width: var(--shell); margin: 0 auto;
     display: flex; align-items: stretch; gap: 1rem;
   }
-  .unilist { display: flex; gap: .35rem; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: thin; }
+  .unilist { display: flex; gap: .35rem; flex: 1; min-width: 0; overflow-x: auto; overflow-y: hidden; }
 
   .unitab {
     appearance: none; background: none; border: 0; cursor: pointer;
@@ -176,7 +180,11 @@
     width: var(--shell); margin: 0 auto;
     display: flex; align-items: stretch; gap: 1rem;
   }
-  .tablist { display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: thin; flex: 1; min-width: 0; }
+  .tablist { display: flex; gap: .2rem; overflow-x: auto; overflow-y: hidden; flex: 1; min-width: 0; }
+
+  /* the tab strips scroll if they have to, but never show a scrollbar */
+  .unilist, .tablist { scrollbar-width: none; -ms-overflow-style: none; }
+  .unilist::-webkit-scrollbar, .tablist::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
   .tab {
     appearance: none; background: none; border: 0; cursor: pointer;
@@ -207,6 +215,8 @@
   .langbtn svg { flex: none; }
 
   /* ── university header ──────────────────── */
+  .uni { max-width: var(--measure); margin-inline: auto; }
+
   .uni-head {
     padding: clamp(1.6rem,3.4vw,2.4rem) 0 0;
     display: flex; flex-direction: column; gap: .55rem;
@@ -455,6 +465,7 @@
   .note p { margin: 0; color: var(--ink-2); font-size: clamp(.89rem, .86rem + .09vw, .96rem); }
 
   footer {
+    max-width: var(--measure); margin-inline: auto; width: 100%;
     border-top: 1px solid var(--rule); padding: 1.25rem 0 3.5rem;
     font-family: var(--mono); font-size: .71rem; letter-spacing: .07em; color: var(--ink-3);
     display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; justify-content: space-between;
