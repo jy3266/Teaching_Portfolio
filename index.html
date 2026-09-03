@@ -36,10 +36,10 @@
     --display: "Gowun Batang", "Nanum Myeongjo", Georgia, serif;
     --body: "IBM Plex Sans KR", "Malgun Gothic", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
-    /* text runs the full width of the shell; the shell is what scales with the screen */
-    --measure: 100%;          /* lede / section intros — full width of the shell */
-    --measure-2: min(100%, 88ch); /* detail prose — kept to a reading measure */
-    --shell: min(100%, 1560px);
+    /* column width matched to the course site (Junoh_Yu_Time_Class): text fills the column */
+    --measure: 100%;
+    --measure-2: 100%;
+    --shell: min(58rem, 100% - 3rem);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -97,7 +97,7 @@
   :root[data-lang="en"] .ko { display: none !important; }
   :root[data-lang="en"] body { word-break: normal; overflow-wrap: break-word; }
 
-  .wrap { max-width: var(--shell); margin: 0 auto; padding: 0 clamp(1.1rem, 3.5vw, 3rem); }
+  .wrap { width: var(--shell); margin: 0 auto; }
 
   /* ── masthead ───────────────────────────── */
   .masthead { padding: clamp(2rem,4.5vw,3.5rem) 0 1.5rem; display: flex; flex-direction: column; gap: 1.1rem; }
@@ -146,7 +146,7 @@
 
   .unibar { border-bottom: 1px solid var(--rule-2); }
   .unirow {
-    max-width: var(--shell); margin: 0 auto; padding: 0 clamp(1.1rem,3.5vw,3rem);
+    width: var(--shell); margin: 0 auto;
     display: flex; align-items: stretch; gap: 1rem;
   }
   .unilist { display: flex; gap: .35rem; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: thin; }
@@ -173,7 +173,7 @@
     border-bottom: 1px solid var(--rule);
   }
   .tabrow {
-    max-width: var(--shell); margin: 0 auto; padding: 0 clamp(1.1rem,3.5vw,3rem);
+    width: var(--shell); margin: 0 auto;
     display: flex; align-items: stretch; gap: 1rem;
   }
   .tablist { display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: thin; flex: 1; min-width: 0; }
@@ -271,6 +271,8 @@
   .facts div { padding: .95rem 1.35rem .95rem 0; border-bottom: 1px solid var(--rule); }
   .facts dt { font-family: var(--mono); font-size: .68rem; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 .1rem; }
   .facts dd { margin: 0; font-size: clamp(.92rem, .89rem + .1vw, 1rem); color: var(--ink); line-height: 1.55; }
+  .facts dd a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-line); }
+  .facts dd a:hover, .facts dd a:focus-visible { border-bottom-color: var(--accent); }
 
   h3.block {
     font-family: var(--mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
@@ -327,9 +329,6 @@
   .people { font-size: clamp(.88rem, .85rem + .09vw, .95rem); color: var(--ink-3); margin: 0; }
   .note-in { font-size: clamp(.87rem, .84rem + .09vw, .94rem); color: var(--ink-3); margin: 0; max-width: var(--measure-2); }
   .note-in b { color: var(--accent); font-weight: 500; }
-
-  /* very wide screens: a little more room, but the column stays a readable measure */
-  @media (min-width: 1900px) { :root { --shell: min(100%, 1720px); } }
 
   .blurb {
     margin: -.35rem 0 0; font-size: clamp(.95rem, .89rem + .16vw, 1.07rem); line-height: 1.76; color: var(--ink-2);
@@ -420,7 +419,6 @@
   .chip.img::before { content: "MOV"; }
   .chip.yt::before { content: "YT"; }
   .chip.clip::before { content: "MP4"; }
-  .chip.web::before { content: "WEB"; }
 
   .live {
     display: inline-flex; align-items: center; gap: .45rem; align-self: flex-start; margin: 0;
@@ -1735,22 +1733,10 @@
     <p class="en"><b>The course is still running, so no outcome record has been added to this archive yet.</b> The sixteen-week schedule, the assignment briefs and the reference works all live on the course site linked below.</p>
     <dl class="facts">
       <div><dt><span class="ko">학기</span><span class="en">Term</span></dt><dd><span class="ko">2026학년도 2학기 · 16주</span><span class="en">Fall 2026 · 16 weeks</span></dd></div>
-      <div><dt><span class="ko">과목코드</span><span class="en">Course code</span></dt><dd>FTM4030</dd></div>
+      <div><dt><span class="ko">수업 사이트</span><span class="en">Course site</span></dt><dd><a href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop.html" target="_blank" rel="noopener"><span class="ko">워크숍 웹사이트</span><span class="en">Workshop website</span></a></dd></div>
       <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Unreal Engine · Arduino · Fusion 360 · TouchDesigner · MadMapper</dd></div>
       <div><dt><span class="ko">과제</span><span class="en">Assignments</span></dt><dd><span class="ko">중간 Time Machine · 기말 Immersive Time</span><span class="en">Midterm — Time Machine · Final — Immersive Time</span></dd></div>
     </dl>
-  </div>
-
-  <div>
-    <h3 class="block"><span class="ko">수업 사이트</span><span class="en">Course site</span></h3>
-    <p class="note-in"><span class="ko">아래 링크는 새 창에서 수업 사이트로 열립니다.</span><span class="en">The links below open the course site in a new tab.</span></p>
-    <div class="files">
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html#workshop" target="_blank" rel="noopener"><span class="ko">워크숍 소개</span><span class="en">Workshop overview</span></a>
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop-syllabus.html" target="_blank" rel="noopener"><span class="ko">워크숍 실러버스 — 16주 일정</span><span class="en">Workshop syllabus — 16 weeks</span></a>
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop-assignments.html" target="_blank" rel="noopener"><span class="ko">워크숍 과제</span><span class="en">Workshop assignments</span></a>
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop-references.html" target="_blank" rel="noopener"><span class="ko">레퍼런스 작품 23선</span><span class="en">Reference works — 23 pieces</span></a>
-      <a class="chip dir" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html" target="_blank" rel="noopener"><span class="ko">수업 사이트 홈</span><span class="en">Course site home</span></a>
-    </div>
   </div>
 
 </section>
@@ -2317,21 +2303,9 @@
     <dl class="facts">
       <div><dt><span class="ko">일정</span><span class="en">Schedule</span></dt><dd><span class="ko">16주 · 3개 Act 구성</span><span class="en">16 weeks in three acts</span></dd></div>
       <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Arduino · Shapr3D · Fusion 360 · TouchDesigner · MadMapper</dd></div>
+      <div><dt><span class="ko">수업 사이트</span><span class="en">Course site</span></dt><dd><a href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio.html" target="_blank" rel="noopener"><span class="ko">웹사이트</span><span class="en">Website</span></a></dd></div>
       <div><dt><span class="ko">과제</span><span class="en">Assignments</span></dt><dd><span class="ko">프로토타입 2개 · 중간 Time Machine · 기말 Time or HOME</span><span class="en">Two prototypes · Midterm — Time Machine · Final — Time or HOME</span></dd></div>
-      <div><dt><span class="ko">발표</span><span class="en">Review</span></dt><dd><span class="ko">기말 — 외부 심사위원 시연</span><span class="en">Final — demonstration to an external panel</span></dd></div>
     </dl>
-  </div>
-
-  <div>
-    <h3 class="block"><span class="ko">수업 사이트</span><span class="en">Course site</span></h3>
-    <p class="note-in"><span class="ko">아래 링크는 새 창에서 수업 사이트로 열립니다.</span><span class="en">The links below open the course site in a new tab.</span></p>
-    <div class="files">
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html#studio" target="_blank" rel="noopener"><span class="ko">수업 소개</span><span class="en">Studio overview</span></a>
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio-syllabus.html" target="_blank" rel="noopener"><span class="ko">수업 계획서 — 16주 일정</span><span class="en">Studio syllabus — 16 weeks</span></a>
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio-assignments.html" target="_blank" rel="noopener"><span class="ko">과제</span><span class="en">Studio assignments</span></a>
-      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio-references.html" target="_blank" rel="noopener"><span class="ko">레퍼런스 아카이브 28선</span><span class="en">Reference archive — 28 works</span></a>
-      <a class="chip dir" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html" target="_blank" rel="noopener"><span class="ko">수업 사이트 홈</span><span class="en">Course site home</span></a>
-    </div>
   </div>
 
 </section>
