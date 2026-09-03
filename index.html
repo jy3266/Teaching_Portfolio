@@ -381,6 +381,15 @@
   .chip.img::before { content: "MOV"; }
   .chip.yt::before { content: "YT"; }
   .chip.clip::before { content: "MP4"; }
+  .chip.web::before { content: "WEB"; }
+
+  .live {
+    display: inline-flex; align-items: center; gap: .45rem; align-self: flex-start; margin: 0;
+    font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-line);
+    border-radius: 2px; padding: .24rem .58rem;
+  }
+  .live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; }
 
   /* ── exhibition ─────────────────────────── */
   .exhibit-top { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start; }
@@ -445,7 +454,7 @@
     <p class="byline">
       <b><span class="ko">유준오</span><span class="en">Junoh Yu</span></b>
       <span class="ko">성균관대학교 영상학과 · 청주대학교 디지털미디어디자인학과 · 동양대학교 웹툰애니메이션학과 · 게임학부</span><span class="en">SKKU Film, Television &amp; Multimedia · CJU Digital Media Design · DYU Webtoon &amp; Animation / Game Studies</span>
-      <i>2025 – 2026 · 3 UNIVERSITIES · 6 COURSES · 41 TEAMS · 26 REVIEWS · 1 EXHIBITION</i>
+      <i>2025 – 2026 · 3 UNIVERSITIES · 6 COURSES · 41 TEAMS · 26 REVIEWS · 1 EXHIBITION · 2 IN PROGRESS</i>
     </p>
     <p class="sitelink">
       <a href="https://jy3266.github.io/Junoh_Yu_Artist_Portfolio/" target="_blank" rel="noopener">jy3266.github.io/Junoh_Yu_Artist_Portfolio</a>
@@ -458,8 +467,8 @@
   <nav class="unibar">
     <div class="unirow">
       <div class="unilist" role="tablist" aria-label="University tabs">
-        <button class="unitab" role="tab" id="u-tab-skku" aria-controls="u-skku" aria-selected="false"><span class="ko">성균관대학교</span><span class="en">Sungkyunkwan Univ.</span> <i>3 courses · 21 teams</i></button>
-        <button class="unitab" role="tab" id="u-tab-cju" aria-controls="u-cju" aria-selected="false"><span class="ko">청주대학교</span><span class="en">Cheongju Univ.</span> <i>1 course · 20 teams</i></button>
+        <button class="unitab" role="tab" id="u-tab-skku" aria-controls="u-skku" aria-selected="false"><span class="ko">성균관대학교</span><span class="en">Sungkyunkwan Univ.</span> <i>3 courses · 21 teams · 1 in progress</i></button>
+        <button class="unitab" role="tab" id="u-tab-cju" aria-controls="u-cju" aria-selected="false"><span class="ko">청주대학교</span><span class="en">Cheongju Univ.</span> <i>1 course · 20 teams · 1 in progress</i></button>
         <button class="unitab" role="tab" id="u-tab-dyu" aria-controls="u-dyu" aria-selected="false"><span class="ko">동양대학교</span><span class="en">Dongyang Univ.</span> <i>2 courses · 26 reviews</i></button>
       </div>
       <button class="langbtn" id="lang" type="button" aria-label="Switch language">
@@ -476,10 +485,12 @@
         <button class="tab" role="tab" id="tab-immersive" aria-controls="p-immersive" aria-selected="false"><span class="ko">몰입형 내러티브 &amp; 인터랙션</span><span class="en">Immersive Narrative &amp; Interaction</span> <i>9</i></button>
         <button class="tab" role="tab" id="tab-ai" aria-controls="p-ai" aria-selected="false"><span class="ko">AI 기반 인터랙티브 영상</span><span class="en">AI-Driven Interactive Video</span> <i>7</i></button>
         <button class="tab" role="tab" id="tab-nima" aria-controls="p-nima" aria-selected="false"><span class="ko">1st N.I.M.A 전시</span><span class="en">1st N.I.M.A</span> <i>13</i></button>
+        <button class="tab" role="tab" id="tab-workshop" aria-controls="p-workshop" aria-selected="false"><span class="ko">언리얼 기반 실감 콘텐츠 제작 워크숍</span><span class="en">Unreal Immersive Content Workshop</span> <i><span class="ko">진행중</span><span class="en">NOW</span></i></button>
       </div>
       <div class="tablist" role="tablist" aria-label="Course tabs — Cheongju University" data-uni="u-cju" hidden>
         <button class="tab" role="tab" id="tab-cju-q1" aria-controls="p-cju-q1" aria-selected="false"><span class="ko">인터랙션 디자인 — 1분기</span><span class="en">Interaction Design — Q1</span> <i>9</i></button>
         <button class="tab" role="tab" id="tab-cju-q2" aria-controls="p-cju-q2" aria-selected="false"><span class="ko">인터랙션 디자인 — 2분기</span><span class="en">Interaction Design — Q2</span> <i>11</i></button>
+        <button class="tab" role="tab" id="tab-cju-studio" aria-controls="p-cju-studio" aria-selected="false"><span class="ko">디지털 조형 실습</span><span class="en">Digital Form Studio</span> <i><span class="ko">진행중</span><span class="en">NOW</span></i></button>
       </div>
       <div class="tablist" role="tablist" aria-label="Course tabs — Dongyang University" data-uni="u-dyu" hidden>
         <button class="tab" role="tab" id="tab-dyu-anim" aria-controls="p-dyu-anim" aria-selected="false"><span class="ko">애니메이션 스튜디오</span><span class="en">Animation Studio</span> <i>8</i></button>
@@ -1560,6 +1571,40 @@
   </div>
 </section>
 
+<!-- ══════════ 언리얼 워크숍 (진행 중) ══════════ -->
+<section class="panel" id="p-workshop" role="tabpanel" aria-labelledby="tab-workshop" tabindex="-1" hidden>
+
+  <div class="lede">
+    <p class="live"><span class="ko">진행 중인 수업</span><span class="en">Course in progress</span></p>
+    <h2><span class="ko">언리얼 기반 실감 콘텐츠 제작 워크숍</span><span class="en">Unreal Immersive Content Workshop</span></h2>
+    <p class="ko"><b>시간(Time)</b>을 재료로 삼아, AI 협업 도구와 피지컬 컴퓨팅, 실시간 미디어, 그리고 언리얼 엔진을 하나의 제작 파이프라인으로 잇는 스튜디오형 워크숍입니다. 한 학기 동안 학생들은 자신만의 시간 개념을 먼저 <b>장치(Device)</b>로, 그다음 <b>공간(Space)</b>으로 번역합니다.</p>
+    <p class="en">A studio workshop that takes <b>time</b> as its raw material and strings AI collaboration, physical computing, real-time media and Unreal Engine into a single production pipeline. Over one semester students translate their own idea of time first into a <b>device</b>, then into a <b>space</b>.</p>
+    <p class="ko">중간 과제 <b>Time Machine</b>은 Arduino · Fusion 360 · TouchDesigner · MadMapper로 만드는 물리 장치이고, 기말 과제 <b>Immersive Time</b>은 관객의 손과 몸이 개입하는 언리얼 엔진 기반의 설치입니다. AI가 생성 · 빌드 · 렌더링을 수행하는 동안 필연적으로 발생하는 기다림의 시간을 크리틱의 시간으로 쓰는 것이 이 수업의 운영 원칙입니다.</p>
+    <p class="en">The midterm, <b>Time Machine</b>, is a physical mechanism built with Arduino, Fusion 360, TouchDesigner and MadMapper. The final, <b>Immersive Time</b>, is an installation in Unreal Engine that the audience's hands and body enter. While the AI generates, builds and renders, waiting is unavoidable — the studio uses that waiting as critique time.</p>
+    <p class="ko"><b>현재 진행 중인 수업이므로 결과물 기록은 아직 이 아카이브에 올리지 않았습니다.</b> 16주 일정 · 과제 · 레퍼런스 등 자세한 내용은 아래 수업 사이트에서 볼 수 있습니다.</p>
+    <p class="en"><b>The course is still running, so no outcome record has been added to this archive yet.</b> The sixteen-week schedule, the assignment briefs and the reference works all live on the course site linked below.</p>
+    <dl class="facts">
+      <div><dt><span class="ko">학기</span><span class="en">Term</span></dt><dd><span class="ko">2026학년도 2학기 · 16주</span><span class="en">Fall 2026 · 16 weeks</span></dd></div>
+      <div><dt><span class="ko">과목코드</span><span class="en">Course code</span></dt><dd>FTM4030</dd></div>
+      <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Unreal Engine · Arduino · Fusion 360 · TouchDesigner · MadMapper</dd></div>
+      <div><dt><span class="ko">과제</span><span class="en">Assignments</span></dt><dd><span class="ko">중간 Time Machine · 기말 Immersive Time</span><span class="en">Midterm — Time Machine · Final — Immersive Time</span></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">수업 사이트</span><span class="en">Course site</span></h3>
+    <p class="note-in"><span class="ko">아래 링크는 새 창에서 수업 사이트로 열립니다.</span><span class="en">The links below open the course site in a new tab.</span></p>
+    <div class="files">
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html#workshop" target="_blank" rel="noopener"><span class="ko">워크숍 소개</span><span class="en">Workshop overview</span></a>
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop-syllabus.html" target="_blank" rel="noopener"><span class="ko">워크숍 실러버스 — 16주 일정</span><span class="en">Workshop syllabus — 16 weeks</span></a>
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop-assignments.html" target="_blank" rel="noopener"><span class="ko">워크숍 과제</span><span class="en">Workshop assignments</span></a>
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop-references.html" target="_blank" rel="noopener"><span class="ko">레퍼런스 작품 23선</span><span class="en">Reference works — 23 pieces</span></a>
+      <a class="chip dir" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html" target="_blank" rel="noopener"><span class="ko">수업 사이트 홈</span><span class="en">Course site home</span></a>
+    </div>
+  </div>
+
+</section>
+
 <section class="uni-foot">
   <h3 class="block"><span class="ko">교육 성과 및 교육적 의의</span><span class="en">Outcomes and significance</span></h3>
   <p class="ko">성균관대학교에서 운영한 세 과목과 전시는 <b>아이디어 구상 – 디지털 제작 – 피지컬 인터랙션 – 공간 설치 – 관객 시연 – 비평과 기록</b>으로 이어지는 통합 교육과정을 구축했다는 점에서 의미가 있습니다. 학생들은 소프트웨어 기능을 개별적으로 학습하는 데 그치지 않고, 각 기술을 자신의 주제와 서사에 맞게 선택하고 연결하는 방법을 익혔습니다.</p>
@@ -2102,6 +2147,40 @@
         <p class="ko">발표 자료 표지에는 학번이 함께 적혀 있으나, 이 페이지에는 이름만 옮겼습니다. 원본 파일에는 학번과 얼굴이 담겨 있으므로 외부 공유 전 동의를 확인해 주세요.</p>
         <p class="en">The decks carry student ID numbers on their covers; only names are reproduced here. The source files still contain IDs and faces — confirm consent before sharing them outward.</p>
       </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════ 디지털 조형 실습 (진행 중) ══════════ -->
+<section class="panel" id="p-cju-studio" role="tabpanel" aria-labelledby="tab-cju-studio" tabindex="-1" hidden>
+
+  <div class="lede">
+    <p class="live"><span class="ko">진행 중인 수업</span><span class="en">Course in progress</span></p>
+    <h2><span class="ko">디지털 조형 실습</span><span class="en">Digital Form Studio</span></h2>
+    <p class="ko"><b>시간(Time)</b>이라는 같은 재료를 다른 파이프라인으로 통과시키는 실습 수업입니다. 여기서는 개념이 먼저 <b>물리 장치</b>가 되고, 그다음 <b>키네틱 설치</b>가 됩니다. Arduino와 센서, 움직이는 구조물을 위한 Shapr3D · Fusion 360, 그리고 센서 데이터를 빛과 영상으로 실어 나르는 TouchDesigner · MadMapper를 사용합니다.</p>
+    <p class="en">A companion studio that takes the same material — <b>time</b> — down a different pipeline. Here the idea becomes a <b>physical device</b> first and a <b>kinetic installation</b> second: Arduino and sensors, Shapr3D and Fusion 360 for the moving structure, and TouchDesigner and MadMapper carrying the sensor data out into light and image.</p>
+    <p class="ko">중간 과제 <b>Time Machine</b>은 속도 · 반복 · 지연 · 멈춤이라는 네 개의 설계 변수 중 하나를 중심으로 만드는 작동 장치입니다. 기말 과제 <b>Time or HOME</b>은 관객의 입력이 공간에 최소 2종의 변화를 만드는 설치이며, 외부 심사위원 앞에서 실제로 전시 가능한 형태로 시연합니다.</p>
+    <p class="en">The midterm, <b>Time Machine</b>, is a working device built around one of four design variables — speed, repetition, delay, interruption. The final, <b>Time or HOME</b>, is an installation where the audience's own input drives at least two kinds of change in the space, presented to outside critics as something that could actually be exhibited.</p>
+    <p class="ko"><b>현재 진행 중인 수업이므로 결과물 기록은 아직 이 아카이브에 올리지 않았습니다.</b> 16주 일정 · 과제 · 레퍼런스 등 자세한 내용은 아래 수업 사이트에서 볼 수 있습니다.</p>
+    <p class="en"><b>The course is still running, so no outcome record has been added to this archive yet.</b> The sixteen-week schedule, the assignment briefs and the reference archive all live on the course site linked below.</p>
+    <dl class="facts">
+      <div><dt><span class="ko">일정</span><span class="en">Schedule</span></dt><dd><span class="ko">16주 · 3개 Act 구성</span><span class="en">16 weeks in three acts</span></dd></div>
+      <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Arduino · Shapr3D · Fusion 360 · TouchDesigner · MadMapper</dd></div>
+      <div><dt><span class="ko">과제</span><span class="en">Assignments</span></dt><dd><span class="ko">프로토타입 2개 · 중간 Time Machine · 기말 Time or HOME</span><span class="en">Two prototypes · Midterm — Time Machine · Final — Time or HOME</span></dd></div>
+      <div><dt><span class="ko">발표</span><span class="en">Review</span></dt><dd><span class="ko">기말 — 외부 심사위원 시연</span><span class="en">Final — demonstration to an external panel</span></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">수업 사이트</span><span class="en">Course site</span></h3>
+    <p class="note-in"><span class="ko">아래 링크는 새 창에서 수업 사이트로 열립니다.</span><span class="en">The links below open the course site in a new tab.</span></p>
+    <div class="files">
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html#studio" target="_blank" rel="noopener"><span class="ko">수업 소개</span><span class="en">Studio overview</span></a>
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio-syllabus.html" target="_blank" rel="noopener"><span class="ko">수업 계획서 — 16주 일정</span><span class="en">Studio syllabus — 16 weeks</span></a>
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio-assignments.html" target="_blank" rel="noopener"><span class="ko">과제</span><span class="en">Studio assignments</span></a>
+      <a class="chip web" href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio-references.html" target="_blank" rel="noopener"><span class="ko">레퍼런스 아카이브 28선</span><span class="en">Reference archive — 28 works</span></a>
+      <a class="chip dir" href="https://jy3266.github.io/Junoh_Yu_Time_Class/index.html" target="_blank" rel="noopener"><span class="ko">수업 사이트 홈</span><span class="en">Course site home</span></a>
     </div>
   </div>
 
