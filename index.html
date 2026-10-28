@@ -430,6 +430,10 @@
   .chip.img::before { content: "MOV"; }
   .chip.yt::before { content: "YT"; }
   .chip.clip::before { content: "MP4"; }
+  .chip.pdf::before { content: "PDF"; }
+  .chip.web::before { content: "WEB"; }
+  .chip.file::before { content: "FILE"; }
+  .work-head .sub { flex-basis: 100%; margin: .1rem 0 0; color: var(--ink-2); font-size: .9rem; line-height: 1.6; }
 
   .live {
     display: inline-flex; align-items: center; gap: .45rem; align-self: flex-start; margin: 0;
@@ -503,7 +507,7 @@
     <p class="byline">
       <b><span class="ko">유준오</span><span class="en">Junoh Yu</span></b>
       <span class="ko">성균관대학교 영상학과 · 청주대학교 디지털미디어디자인학과 · 동양대학교 게임학부</span><span class="en">SKKU Film, Television &amp; Multimedia · CJU Digital Media Design · DYU Game Studies</span>
-      <i>2025 – 2026 · 3 UNIVERSITIES · 6 COURSES · 41 TEAMS · 26 REVIEWS · 1 EXHIBITION · 2 IN PROGRESS</i>
+      <i>2025 – 2026 · 3 UNIVERSITIES · 6 COURSES · 41 TEAMS · 26 REVIEWS · 1 EXHIBITION · 4 IN PROGRESS</i>
     </p>
     <p class="sitelink">
       <a href="https://jy3266.github.io/Junoh_Yu_Artist_Portfolio/" target="_blank" rel="noopener">jy3266.github.io/Junoh_Yu_Artist_Portfolio</a>
@@ -517,9 +521,9 @@
     <div class="unirow">
       <div class="unilist" role="tablist" aria-label="University tabs">
         <button class="unitab" role="tab" id="u-tab-statement" aria-controls="u-statement" aria-selected="false"><span class="ko">교육 철학</span><span class="en">Teaching Statement</span></button>
-        <button class="unitab" role="tab" id="u-tab-skku" aria-controls="u-skku" aria-selected="false"><span class="ko">성균관대학교</span><span class="en">Sungkyunkwan Univ.</span> <i>3 courses · 21 teams · 1 in progress</i></button>
+        <button class="unitab" role="tab" id="u-tab-skku" aria-controls="u-skku" aria-selected="false"><span class="ko">성균관대학교</span><span class="en">Sungkyunkwan Univ.</span> <i>3 courses · 21 teams · 2 in progress</i></button>
         <button class="unitab" role="tab" id="u-tab-cju" aria-controls="u-cju" aria-selected="false"><span class="ko">청주대학교</span><span class="en">Cheongju Univ.</span> <i>1 course · 20 teams · 1 in progress</i></button>
-        <button class="unitab" role="tab" id="u-tab-dyu" aria-controls="u-dyu" aria-selected="false"><span class="ko">동양대학교</span><span class="en">Dongyang Univ.</span> <i>2 courses · 26 reviews</i></button>
+        <button class="unitab" role="tab" id="u-tab-dyu" aria-controls="u-dyu" aria-selected="false"><span class="ko">동양대학교</span><span class="en">Dongyang Univ.</span> <i>2 courses · 26 reviews · 1 in progress</i></button>
       </div>
       <button class="langbtn" id="lang" type="button" aria-label="Switch language">
         <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1a6 6 0 100 12A6 6 0 007 1zM1.4 7h11.2M7 1.2c1.5 1.6 2.3 3.6 2.3 5.8S8.5 11.2 7 12.8C5.5 11.2 4.7 9.2 4.7 7S5.5 2.8 7 1.2z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -536,6 +540,7 @@
         <button class="tab" role="tab" id="tab-ai" aria-controls="p-ai" aria-selected="false"><span class="ko">AI 기반 인터랙티브 영상</span><span class="en">AI-Driven Interactive Video</span> <i>7</i></button>
         <button class="tab" role="tab" id="tab-nima" aria-controls="p-nima" aria-selected="false"><span class="ko">1st N.I.M.A 전시</span><span class="en">1st N.I.M.A</span> <i>13</i></button>
         <button class="tab" role="tab" id="tab-workshop" aria-controls="p-workshop" aria-selected="false"><span class="ko">언리얼 기반 실감 콘텐츠 제작 워크숍</span><span class="en">Unreal Immersive Content Workshop</span> <i><span class="ko">진행중</span><span class="en">NOW</span></i></button>
+        <button class="tab" role="tab" id="tab-aivideo" aria-controls="p-aivideo" aria-selected="false"><span class="ko">AI 기반 영상 제작 워크숍</span><span class="en">AI Video Production Workshop</span> <i><span class="ko">진행중</span><span class="en">NOW</span></i></button>
       </div>
       <div class="tablist" role="tablist" aria-label="Course tabs — Cheongju University" data-uni="u-cju" hidden>
         <button class="tab" role="tab" id="tab-cju-q1" aria-controls="p-cju-q1" aria-selected="false"><span class="ko">인터랙션 디자인 — 1분기</span><span class="en">Interaction Design — Q1</span> <i>9</i></button>
@@ -544,7 +549,8 @@
       </div>
       <div class="tablist" role="tablist" aria-label="Course tabs — Dongyang University" data-uni="u-dyu" hidden>
         <button class="tab" role="tab" id="tab-dyu-anim" aria-controls="p-dyu-anim" aria-selected="false"><span class="ko">애니메이션 스튜디오</span><span class="en">Animation Studio</span> <i>8</i></button>
-        <button class="tab" role="tab" id="tab-dyu-ld" aria-controls="p-dyu-ld" aria-selected="false"><span class="ko">레벨 디자인</span><span class="en">Level Design</span> <i>18</i></button>
+        <button class="tab" role="tab" id="tab-dyu-ld" aria-controls="p-dyu-ld" aria-selected="false"><span class="ko">레벨 디자인 2025</span><span class="en">Level Design 2025</span> <i>18</i></button>
+        <button class="tab" role="tab" id="tab-dyu-ld26" aria-controls="p-dyu-ld26" aria-selected="false"><span class="ko">레벨 디자인 2026</span><span class="en">Level Design 2026</span> <i><span class="ko">진행중</span><span class="en">NOW</span></i></button>
       </div>
     </div>
   </nav>
@@ -1741,14 +1747,592 @@
     <p class="en">A studio workshop that takes <b>time</b> as its raw material and strings AI collaboration, physical computing, real-time media and Unreal Engine into a single production pipeline. Over one semester students translate their own idea of time first into a <b>device</b>, then into a <b>space</b>.</p>
     <p class="ko">중간 과제 <b>Time Machine</b>은 Arduino · Fusion 360 · TouchDesigner · MadMapper로 만드는 물리 장치이고, 기말 과제 <b>Immersive Time</b>은 관객의 손과 몸이 개입하는 언리얼 엔진 기반의 설치입니다. AI가 생성 · 빌드 · 렌더링을 수행하는 동안 필연적으로 발생하는 기다림의 시간을 크리틱의 시간으로 쓰는 것이 이 수업의 운영 원칙입니다.</p>
     <p class="en">The midterm, <b>Time Machine</b>, is a physical mechanism built with Arduino, Fusion 360, TouchDesigner and MadMapper. The final, <b>Immersive Time</b>, is an installation in Unreal Engine that the audience's hands and body enter. While the AI generates, builds and renders, waiting is unavoidable — the studio uses that waiting as critique time.</p>
-    <p class="ko"><b>현재 진행 중인 수업이므로 결과물 기록은 아직 이 아카이브에 올리지 않았습니다.</b> 16주 일정 · 과제 · 레퍼런스 등 자세한 내용은 아래 수업 사이트에서 볼 수 있습니다.</p>
-    <p class="en"><b>The course is still running, so no outcome record has been added to this archive yet.</b> The sixteen-week schedule, the assignment briefs and the reference works all live on the course site linked below.</p>
+    <p class="ko"><b>현재 진행 중인 수업으로, 8주차 중간발표(10.19)까지의 기록을 올렸습니다.</b> 4주차 미니 프로젝트는 각자의 시간 개념을 채팅창만으로(Ver.1), 그리고 API · 서브에이전트 · MCP · 스킬을 서로 연결해(Ver.2) 두 번 구현하는 개인 습작이고, 중간 과제 Time Machine은 팀이 그중 하나의 개념을 관객 입력에 반응하는 물리 장치로 옮긴 결과입니다. 16주 일정 · 과제 · 레퍼런스는 아래 수업 사이트에서 볼 수 있습니다.</p>
+    <p class="en"><b>The course is still running; this archive now covers it up to the week-8 midterm review (19 Oct).</b> The week-4 mini project is an individual study that builds one’s own idea of time twice — once from a chat window alone (Ver.1), once with the API, subagents, MCP and skills wired together (Ver.2). The midterm, Time Machine, is what each team made when it carried one of those ideas into a physical device that answers the audience. The schedule, briefs and references are on the course site below.</p>
     <dl class="facts">
       <div><dt><span class="ko">학기</span><span class="en">Term</span></dt><dd><span class="ko">2026학년도 2학기 · 16주</span><span class="en">Fall 2026 · 16 weeks</span></dd></div>
       <div><dt><span class="ko">수업 사이트</span><span class="en">Course site</span></dt><dd><a href="https://jy3266.github.io/Junoh_Yu_Time_Class/workshop.html" target="_blank" rel="noopener"><span class="ko">워크숍 웹사이트</span><span class="en">Workshop website</span></a></dd></div>
       <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Unreal Engine · Arduino · Fusion 360 · TouchDesigner · MadMapper</dd></div>
       <div><dt><span class="ko">과제</span><span class="en">Assignments</span></dt><dd><span class="ko">중간 Time Machine · 기말 Immersive Time</span><span class="en">Midterm — Time Machine · Final — Immersive Time</span></dd></div>
+      <div><dt><span class="ko">기록</span><span class="en">Recorded so far</span></dt><dd><span class="ko">4주차 미니 프로젝트 7건 · 중간발표 7팀 (2026.10.19)</span><span class="en">7 week-4 mini projects · 7 midterm teams (19 Oct 2026)</span></dd></div>
+      <div><dt><span class="ko">자료 원본</span><span class="en">Source files</span></dt><dd><a href="https://drive.google.com/drive/folders/1SQ4WTzyImEYkMwYHVxbFiZgwW_EHjkhl" target="_blank" rel="noopener">Google Drive</a></dd></div>
     </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">중간발표 · Time Machine · 2026.10.19</span><span class="en">Midterm — Time Machine · 19 Oct 2026</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 01</span>
+          <h4><span class="ko">서행</span><span class="en">Seohaeng — Slow Down</span></h4>
+          <p class="people">김영서 · 최준원 · 박성주<span class="en"> — Kim Youngseo, Choi Junwon, Park Seongju</span></p>
+          <p class="ko sub">속도를 줄여야만 보이는 시간 — 관객의 움직임이 느려질 때 반응하는 장치</p>
+          <p class="en sub">Time that only shows when you slow down — a device that answers when the visitor’s movement slows</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1gTW0ryrmcDd1PeqkhUHg56J2HwoHWg60/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-uw-mid-01-1.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1GlbicD2rLLHjNIHb65P6XYjsLaZRehEd/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mid-01-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 02</span>
+          <h4><span class="ko">기억이 머무는 자리</span><span class="en">Where Memory Stays</span></h4>
+          <p class="people">김재권 · 박호윤<span class="en"> — Kim Jaekwon, Park Hoyoon</span></p>
+          <p class="ko sub">빈집에 쌓인 시간과 생활의 흔적을 관람객의 움직임으로 되살리는 인터랙티브 공간</p>
+          <p class="en sub">An interactive space in which the visitor’s movement brings back the time and traces of life left in an empty house</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/19qF78QN9pWiaZxMR5lowwW7wi49Mx91I/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mid-02-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 03</span>
+          <h4><span class="ko">The Time We Hold — 시간의 손길 아래</span><span class="en">The Time We Hold</span></h4>
+          <p class="people">윤서영 · 박민준 · 왕심염<span class="en"> — Yoon Seoyoung, Park Minjun, Wang Xinyan</span></p>
+          <p class="ko sub">설계 변수 ‘멈춤’. 세 원판이 저마다의 빠르기로 돌고, 금속판에 손을 올린 관객이 그중 하나의 시간을 대신 받아낸다 — 손은 둘, 원판은 셋</p>
+          <p class="en sub">Design variable: interruption. Three discs turn at their own speeds; a hand on the metal plate takes one disc’s time on itself — two hands, three discs</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1hOf4mMSgVTPFZY_8yVb5L-uMDeuls56j/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mid-03-1.jpg" alt="One-page document" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">1p 문서</span><span class="en">One-page document</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1YjBNvcdbYSPdMnvNt1gSbUczTV1Q7NJj/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-uw-mid-03-2.jpg" alt="Demo" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">데모</span><span class="en">Demo</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip file" href="https://drive.google.com/file/d/1OCuZr1vU9FVderUKXu6KqBIVKNZbnT7I/view" target="_blank" rel="noopener"><span class="ko">피치</span><span class="en">Pitch</span></a>
+          <a class="chip file" href="https://drive.google.com/file/d/1P5zihB2WfS-BfRe_sPkJ3CuR-dmJ0rNJ/view" target="_blank" rel="noopener"><span class="ko">테스트 로그</span><span class="en">Test log</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 04</span>
+          <h4><span class="ko">모래 한 스쿱, 시간 — Sand of Time</span><span class="en">Sand of Time</span></h4>
+          <p class="people">윤이나 · 전유진 · 장화경<span class="en"> — Yoon Ina, Jeon Yujin, Jang Hwakyung</span></p>
+          <p class="ko sub">“같은 시간을 살아도 같은 무게로 살지 않는다.” 스쿱으로 떠서 흘린 모래의 양이 화면 속 존재의 크기와 수명이 된다</p>
+          <p class="en sub">“We live the same time, but not with the same weight.” The sand a visitor scoops and pours becomes the size and lifespan of a creature on screen</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/173FCjOntgSMERcLPC5d57DBlCblezung/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mid-04-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 05</span>
+          <h4><span class="ko">시간의 단면</span><span class="en">A Cross-section of Time</span></h4>
+          <p class="people">이영범 · 주커이 · 김다영<span class="en"> — Lee Youngbeom, Zhu Keyi, Kim Dayoung</span></p>
+          <p class="ko sub">3분 영상 · 초당 24프레임. 관객이 중요하다고 고른 순간마다 프레임이 쌓여 하나의 단면이 된다 — 프레임의 퇴적과 기억의 압축</p>
+          <p class="en sub">A three-minute film at 24 fps; each moment the visitor marks as important is stacked into a cross-section — frames sedimented, memory compressed</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1Ntii8VLY5GT3Npg2SZVHVyvM3ylFJ3Lm/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-uw-mid-05-1.jpg" alt="Raw footage" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작동 영상</span><span class="en">Raw footage</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1O18Pujl-9NOSDs40toNFlik-0Bq3uc70/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mid-05-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/141hPZOcNa-Mpjlg9niLAKJ9HoUgVI4lm" target="_blank" rel="noopener"><span class="ko">TouchDesigner · Arduino 소스</span><span class="en">TouchDesigner &amp; Arduino source</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 06</span>
+          <h4>Your Type</h4>
+          <p class="people">한민택 · 홍준서<span class="en"> — Han Mintaek, Hong Junseo</span></p>
+          <p class="ko sub">QR로 접속해 참여하는 인터랙티브 인사 장치</p>
+          <p class="en sub">An interactive greeting device the audience joins through a QR code</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1_NTtPT9oJI6C9EaIPO0G5XSnQDughC7Z/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mid-06-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://your-type-greetings.sweetwasp128.chatgpt.site" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b>Your Type</b></span>
+            <span class="mmeta"><b><span class="ko">웹 체험</span><span class="en">Live site</span></b><em>Web</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 07</span>
+          <h4><span class="ko">머무는 동안</span><span class="en">While You Stay</span></h4>
+          <p class="people">황민협<span class="en"> — Hwang Minhyub</span></p>
+          <p class="ko sub">4면 투사 공간. 빈백에 머무는 시간이 길어질수록 작은 변화가 공간 전체로 번지는, 흘러가는 순간을 바라보는 휴식의 시간</p>
+          <p class="en sub">A four-wall projection room: the longer you stay in the beanbag, the further a small change spreads through the space — a rest spent watching time pass</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1iiasE8xE5KXwK0YS4Uq1_hw7qz22v74-/view" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b><span class="ko">머무는 동안</span><span class="en">While You Stay</span></b></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">4주차 미니 프로젝트 · 시간 개념 프로토타입</span><span class="en">Week 4 — time-concept prototypes</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 01</span>
+          <h4>Weather OOTD</h4>
+          <p class="people">김영서<span class="en"> — Kim Youngseo</span></p>
+          <p class="ko sub">날씨와 그날의 옷차림을 잇는 시간 개념 프로토타입</p>
+          <p class="en sub">A time-concept prototype linking the day’s weather to what to wear</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1hwluJEs8W85paf1uIuKDiRXX2g-YhC4X/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-01-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip file" href="https://drive.google.com/file/d/1L-pdEXQd7HolB6LBZJrJlZdHdxoRkqxB/view" target="_blank" rel="noopener"><span class="ko">포트폴리오</span><span class="en">Portfolio</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1dn4yEwXsvtpNmwrlc3qbTw_lW2IQ6igD" target="_blank" rel="noopener"><span class="ko">전체 자료</span><span class="en">All files</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 02</span>
+          <h4><span class="ko">Living CMF 레퍼런스 리서치 툴</span><span class="en">Living CMF Reference Research Tool</span></h4>
+          <p class="people">김재권 · 박호윤<span class="en"> — Kim Jaekwon, Park Hoyoon</span></p>
+          <p class="ko sub">리빙 디자인 CMF 개발 초기의 이미지 리서치를 텍스트 검색 대신 색 · 소재 · 마감 기준으로 정리하는 도구</p>
+          <p class="en sub">A tool that sorts early-stage living-design CMF research by colour, material and finish instead of by text search</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1GwKx5ifjDG6LrksyqzrHu5EkIgZ0oMf0/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-02-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1ZRq9_lIeRvv4l4kxoaFDnx3HXK2eC9wy/view" target="_blank" rel="noopener"><span class="ko">김재권 포트폴리오</span><span class="en">Portfolio — Kim Jaekwon</span></a>
+          <a class="chip pdf" href="https://drive.google.com/file/d/1s6Y_FlCl5jenzor6EWL2y3GnP7yGSZkh/view" target="_blank" rel="noopener"><span class="ko">박호윤 프로젝트</span><span class="en">Project — Park Hoyoon</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 03</span>
+          <h4><span class="ko">D-day — 나에게 남은 시간</span><span class="en">D-day — The Time I Have Left</span></h4>
+          <p class="people">윤서영 · 박민준 · 왕심염<span class="en"> — Yoon Seoyoung, Park Minjun, Wang Xinyan</span></p>
+          <p class="ko sub">남은 시간 · 남은 하루 · 남은 한 해를 한눈에 보여 주는 개인용 카운트다운</p>
+          <p class="en sub">A personal countdown that shows the time left in the hour, the day and the year at a glance</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/14OdhHtgVXlCgvL5ZhT4ZI8As2Zo7kaP4/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-03-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 04</span>
+          <h4>Sand of Time · DayToon</h4>
+          <p class="people">윤이나 · 전유진 · 장화경<span class="en"> — Yoon Ina, Jeon Yujin, Jang Hwakyung</span></p>
+          <p class="ko sub">하루를 웹툰 컷으로 남기는 DayToon에서 출발해, 중간 과제의 모래 장치로 이어진 습작</p>
+          <p class="en sub">Studies that began with DayToon — a day kept as webtoon panels — and led into the midterm’s sand device</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1iRYOoZlqxtVdQwjppjGWI8DY90VXVmo9/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-04-1.jpg" alt="Sand of Time deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">Sand of Time 발표</span><span class="en">Sand of Time deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip file" href="https://drive.google.com/file/d/1-1llRR6mOYCZFrIVaGRG7Zv7yUQe4eg9/view" target="_blank" rel="noopener">DayToon</a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1U99CDJ1B7u_IfZRoSt6-cu25LslXJNMQ" target="_blank" rel="noopener"><span class="ko">전체 자료</span><span class="en">All files</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 05</span>
+          <h4><span class="ko">시간을 인식하는 방법</span><span class="en">Ways of Perceiving Time</span></h4>
+          <p class="people">주커이 · 김동희<span class="en"> — Zhu Keyi, Kim Donghee</span></p>
+          <p class="ko sub">Perceived Time Lab과 Conical Calendar — 체감 시간과 달력을 다시 그리는 두 개의 웹 프로토타입</p>
+          <p class="en sub">Perceived Time Lab and Conical Calendar — two web prototypes that redraw felt time and the calendar</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1F4tXa5aCBB_94OUDI-1f4htegINkpFLb/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-05-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/1rKw95HoTBNeI4MmUObzcxOwUb6CLrn5d/view" target="_blank" rel="noopener"><span class="ko">발표 원본</span><span class="en">Source deck</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1XrPpJOVjrPp5_TJ2rvZaXBVHwML-34vD" target="_blank" rel="noopener"><span class="ko">전체 자료</span><span class="en">All files</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 06</span>
+          <h4><span class="ko">시간 — 몰입</span><span class="en">Time — Immersion</span></h4>
+          <p class="people">최준원<span class="en"> — Choi Junwon</span></p>
+          <p class="ko sub">“시간”을 주제로 한 개인 발표와 GitHub 웹사이트</p>
+          <p class="en sub">A solo presentation on time, published as a GitHub website</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1V6wNz6P4WZnPxuaJuyECcRqa6TREou8w/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-06-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip doc" href="https://drive.google.com/file/d/1s9eyD2myjvb1n34AJWt-IuQFnJ3m5JDA/view" target="_blank" rel="noopener"><span class="ko">웹사이트 링크</span><span class="en">Website link</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · 07</span>
+          <h4>Harmony of Seconds</h4>
+          <p class="people">한민택 · 홍준서<span class="en"> — Han Mintaek, Hong Junseo</span></p>
+          <p class="ko sub">사람마다 다른 ‘1초’를 버튼 박자로 기록하고, 서로의 리듬을 들으며 공동의 박자를 만드는 참여형 작품</p>
+          <p class="en sub">Each visitor taps out what one second feels like; listening to each other’s rhythm, they arrive at a shared beat</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1avQmihCy8QigVMrKZ0SnZlUp8vAoEjOo/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-uw-mini-07-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/1AmzgyGAPXVsmsTi33IOj1945VMEuaeH7/view" target="_blank" rel="noopener"><span class="ko">발표 원본</span><span class="en">Source deck</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="panel" id="p-aivideo" role="tabpanel" aria-labelledby="tab-aivideo" tabindex="-1" hidden>
+
+  <div class="lede">
+    <p class="live"><span class="ko">진행 중인 수업</span><span class="en">Course in progress</span></p>
+    <h2><span class="ko">AI 기반 영상 제작 워크숍</span><span class="en">AI Video Production Workshop</span></h2>
+    <p class="ko">생성형 AI를 영상 한 편을 뽑아내는 도구가 아니라, <b>매일 쌓이는 제작 파이프라인</b>으로 다루는 워크숍입니다. 학기 전반부의 중심은 <b>30 Days Project</b> — 팀이 하나의 세계관과 시각 기준을 정한 뒤, 9월 21일부터 10월 18일까지 팀원 각자가 매일 하나의 에셋 · 클립 · 인터랙션을 만들어 개인 GitHub 웹 아카이브에 인증합니다. 중간발표에서는 이 30일의 조각을 모아 팀 단편 영상이나 인터랙티브 월드로 조립합니다.</p>
+    <p class="en">A workshop that treats generative AI not as a machine for producing one film but as <b>a production pipeline that accumulates daily</b>. The first half of the semester turns on the <b>30 Days Project</b>: each team fixes one world and one visual standard, and from 21 September to 18 October every member makes one asset, clip or interaction a day and logs it in a personal GitHub web archive. At the midterm the thirty days of fragments are assembled into a team short or an interactive world.</p>
+    <p class="ko">4주차 미니 프로젝트에서는 Claude 등으로 PRD를 쓰고 직접 작동하는 작은 도구 · 웹 앱 · 게임을 만들어 보았고, 그 경험이 30일 프로젝트의 제작 방식으로 이어졌습니다. 중간발표 결과물은 로그라인 · 캐릭터 시트 · 키프레임 · 샷리스트를 갖춘 2분 안팎의 단편부터, 1인칭 인터랙티브 월드와 트레일러, 데스크톱 펫 같은 화면 밖으로 나오는 영상까지 형식이 갈립니다. 「비가 그치기 전까지」 팀은 회상 장면의 전환에서 <b>AI가 약한 지점</b>이 드러나자 회상을 빼고 하루를 순서대로 따라가도록 구조 자체를 고친 과정을 발표에 담았습니다.</p>
+    <p class="en">In the week-4 mini project students wrote PRDs with Claude and other tools and built small working tools, web apps and games — the habits that then carried into the thirty-day project. Midterm outcomes range from shorts of about two minutes, complete with logline, character sheets, keyframes and shot list, to first-person interactive worlds with trailers and films that climb out of the screen as desktop pets. The <i>Until the Rain Stops</i> team showed how flashback transitions exposed <b>where the AI was weak</b>, and how they rebuilt the film to follow the day in order instead.</p>
+    <p class="ko"><b>현재 진행 중인 수업으로, 중간발표(10.19)까지의 기록입니다.</b></p>
+    <p class="en"><b>The course is still running; this is the record up to the midterm review (19 Oct).</b></p>
+    <dl class="facts">
+      <div><dt><span class="ko">학기</span><span class="en">Term</span></dt><dd><span class="ko">2026학년도 2학기</span><span class="en">Fall 2026</span></dd></div>
+      <div><dt><span class="ko">30 Days Project</span><span class="en">30 Days Project</span></dt><dd><span class="ko">2026.9.21 – 10.18 · 매일 개인 인증</span><span class="en">21 Sep – 18 Oct 2026 · a daily individual log</span></dd></div>
+      <div><dt><span class="ko">중간발표</span><span class="en">Midterm review</span></dt><dd><span class="ko">2026.10.19 · 10개 팀</span><span class="en">19 Oct 2026 · 10 teams</span></dd></div>
+      <div><dt><span class="ko">주요 도구</span><span class="en">Tools seen</span></dt><dd>Claude · Higgsfield · GitHub Pages · Unreal Engine · MadMapper</dd></div>
+      <div><dt><span class="ko">자료 원본</span><span class="en">Source files</span></dt><dd><a href="https://drive.google.com/drive/folders/1OgRMfJt46Y_aBZFccKpa4JG0xd2mw0Xc" target="_blank" rel="noopener">Google Drive</a></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">중간발표 · 30 Days Project · 2026.10.19</span><span class="en">Midterm — 30 Days Project · 19 Oct 2026</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 01</span>
+          <h4>Generated World</h4>
+          <p class="people">홍준서 · 정희성 · 유주영<span class="en"> — Hong Junseo, Jung Heeseong, Yoo Jooyoung</span></p>
+          <p class="ko sub">30일 동안 생성한 세계를 하나의 웹 아카이브로 엮은 중간 프로젝트</p>
+          <p class="en sub">A midterm that strings thirty days of generated worlds into one web archive</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1-jP0TyK4ZQTziHJBBGCn2MVWa-RwqBx_/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-01-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://tiifosia.github.io/Mid_project/" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b>Generated World</b></span>
+            <span class="mmeta"><b><span class="ko">웹 아카이브</span><span class="en">Web archive</span></b><em>Web</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/17xMaRgwns3ZWDe8EEw89OsOAobXeXFBQ/view" target="_blank" rel="noopener"><span class="ko">4주차 미니 프로젝트</span><span class="en">Week-4 mini project</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 03</span>
+          <h4><span class="ko">동심의 세계</span><span class="en">The World of Childhood</span></h4>
+          <p class="people">이조안 · 서은진 · 김예림<span class="en"> — Lee Joan, Seo Eunjin, Kim Yerim</span></p>
+          <p class="ko sub">“어린 시절은 왜 행복했을까?” 지친 청춘이 죽어버린 동심의 섬을 되살리는 1인칭 인터랙티브 월드와 게임플레이 트레일러. 매일 다른 그림체로 쌓은 30일의 도시 조각이 출발점</p>
+          <p class="en sub">“Why was childhood happy?” A first-person world in which a worn-out young adult revives an island of childhood, with a gameplay trailer — grown from thirty days of city fragments, each in a different style</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1aauMDvIUMiiFON9b-iiUNUoVg43wI5tp/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-av-mid-02-1.jpg" alt="Trailer" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">트레일러 영상</span><span class="en">Trailer</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1qmX_fNjTev3s422fwyaG05rX0D_G6vru/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-02-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/10iDD8wQWsHnE91ic30W8aJILnWeP57vn/view" target="_blank" rel="noopener"><span class="ko">미니 — 공동 창작 도시 프로젝트</span><span class="en">Mini — co-created city</span></a>
+          <a class="chip web" href="https://city-project-archive.vercel.app/" target="_blank" rel="noopener"><span class="ko">30 Days 아카이브</span><span class="en">30 Days archive</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 04</span>
+          <h4>Take the Wheel</h4>
+          <p class="people">여율하 · 이서중 · 김현우<span class="en"> — Yeo Yulha, Lee Seojung, Kim Hyunwoo</span></p>
+          <p class="ko sub">인터랙티브 힐링 여정. Glitchhikers와 「드라이브 마이 카」를 레퍼런스로 한 3막 구조의 인터랙티브 영상. 게임 개발 · 영상 기획 · 시나리오/에셋으로 역할을 나눴다</p>
+          <p class="en sub">An interactive healing journey: a three-act piece referencing Glitchhikers and Drive My Car, split into game development, film direction, and script and assets</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1rQc9Rpd_TkOUaIP16g-nsHFUa0QrPfag/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-03-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1zNHNoiqFCTnACma5WH7ngQkjj1JhUfMw/view" target="_blank" rel="noopener"><span class="ko">미니 — AI 공감 다이어리</span><span class="en">Mini — AI empathy diary</span></a>
+          <a class="chip web" href="https://30days-project-tau.vercel.app/wheel" target="_blank" rel="noopener"><span class="ko">30 Days 아카이브</span><span class="en">30 Days archive</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 05</span>
+          <h4><span class="ko">비가 그치기 전까지</span><span class="en">Until the Rain Stops</span></h4>
+          <p class="people">정지원 · 서지오 · 최아원<span class="en"> — Jung Jiwon, Seo Jio, Choi Ahwon</span></p>
+          <p class="ko sub">보고서 실수로 혼난 신입 사원이 낯선 할머니의 작은 우산 아래에서 다시 고개를 드는 2분 단편. 회상 구조에서 AI의 약점이 드러나자, 회상을 빼고 하루를 순서대로 따라가도록 고쳤다</p>
+          <p class="en sub">A two-minute short: a new hire scolded over a report looks up again under a stranger’s small umbrella. When flashbacks exposed the AI’s weak spots, the team cut them and told the day in order</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/15b8KKlR5KO5Njy2_9pgPz1TdT6KaZWp3/view" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b><span class="ko">비가 그치기 전까지</span><span class="en">Until the Rain Stops</span></b></span>
+            <span class="mmeta"><b><span class="ko">최종 영상</span><span class="en">Final film</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1qK732mtHKjgDHX0aaWZsgq4OFVyElgy7/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-04-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip file" href="https://drive.google.com/file/d/1bjTotL9GJJ0q-hBDIhEhqdGPfCF1TjJ2/view" target="_blank" rel="noopener"><span class="ko">캐릭터 시트</span><span class="en">Character sheets</span></a>
+          <a class="chip file" href="https://drive.google.com/file/d/1dKd7ihoS8yV-2Odr7wMl4UU4ZH4e6dmx/view" target="_blank" rel="noopener"><span class="ko">키프레임</span><span class="en">Keyframes</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 06</span>
+          <h4><span class="ko">여러분을 초대합니다</span><span class="en">You Are Invited</span></h4>
+          <p class="people">김태희 · 박성준 · 유현지 · 유혜인<span class="en"> — Kim Taehee, Park Seongjun, Yoo Hyunji, Yoo Hyein</span></p>
+          <p class="ko sub">AI 영상 특유의 어색함에서 비롯되는 기괴함을 소재로 삼은 단편</p>
+          <p class="en sub">A short that takes the uncanny awkwardness peculiar to AI video as its material</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1WtLidXEMqb1GojyKsEdegbTK22vf0T4i/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-av-mid-05-1.jpg" alt="Mid-term film" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">중간발표 영상</span><span class="en">Mid-term film</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1P_-CdvKKC8UMh81DTiFHicrtqgC5MEsb/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-05-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/17ALOxK9IXDNUMTpAojeXyjXR5_5NBgQs/view" target="_blank" rel="noopener"><span class="ko">4주차 미니 프로젝트</span><span class="en">Week-4 mini project</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 07</span>
+          <h4>Lost and (Found)</h4>
+          <p class="people">오세령 · 우민선 · 조단비 · 팜뚜안끼엣<span class="en"> — Oh Seryung, Woo Minseon, Cho Danbi, Pham Tuan Kiet</span></p>
+          <p class="ko sub">잃어버린 수집품을 따라 잊고 지낸 꿈을 찾아가는 인터랙티브 AI 영상</p>
+          <p class="en sub">An interactive AI film that follows lost keepsakes back to a dream long forgotten</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://docs.google.com/presentation/d/1i3BtHSuPAxj_QzraQ_V_8f7izI9bv2CADDhhT1wXa8M/edit" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-06-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>Slides</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip doc" href="https://docs.google.com/document/d/1GNdduEuMRlznsXVniaZoS63OXoFrbCjQ4gZnyN6j5DI/edit" target="_blank" rel="noopener"><span class="ko">시연 링크</span><span class="en">Demo link</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1-kmQ4etBKfd3Z6JToVRPdXX0fSitVOhy" target="_blank" rel="noopener"><span class="ko">개인 포트폴리오</span><span class="en">Portfolios</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 08</span>
+          <h4><span class="ko">드림 딜리버리</span><span class="en">Dream Delivery</span></h4>
+          <p class="people">강민주 · 변지민 · 이혜령 · 황정걸<span class="en"> — Kang Minju, Byun Jimin, Lee Hyeryung, Hwang Jeonggeol</span></p>
+          <p class="ko sub">꿈을 배달하는 이야기의 AI 단편</p>
+          <p class="en sub">An AI short about delivering dreams</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1o5Sqe0R3BI6mRRC3s7hOsUYH4cJPTL5o/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-av-mid-07-1.jpg" alt="Final film" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">최종 영상</span><span class="en">Final film</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1IXzThJjqlvPLXonlrgnF7uDSI8hHf98o/view" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b><span class="ko">드림 딜리버리</span><span class="en">Dream Delivery</span></b></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Deck</span></b><em>File</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/1QZtcN71fqLzWC7roPKiHg0vw-QbEyoqJ/view" target="_blank" rel="noopener"><span class="ko">4주차 미니 · 개인 포트폴리오</span><span class="en">Week-4 mini &amp; portfolios</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 09</span>
+          <h4><span class="ko">귤이 — 화면 위에서, 늘 곁에</span><span class="en">Gyuri — On Screen, Always Near</span></h4>
+          <p class="people">김이진 · 오현수 · 이화잉 · 장건<span class="en"> — Kim Yijin, Oh Hyunsu, Li Huaying, Zhang Jian</span></p>
+          <p class="ko sub">밤샘 과제하는 주인을 쉬게 하려고 화면 속 주황색 아기 고양이가 장난을 키운다. 대사 없이 빗소리 · 타자 소리 · 골골송으로 — 다섯 장면 30컷 120초. Claude · Higgsfield · MadMapper</p>
+          <p class="en sub">To make its owner rest from an all-nighter, an orange kitten on the screen escalates its mischief. No dialogue — rain, typing, purring. Five scenes, 30 cuts, 120 s, made with Claude, Higgsfield and MadMapper</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1AdCeA1a36gkYXGYOBuyeH85xJuWVVEp7/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-08-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1AHtaHPn2fcocqmOfqaBjUuKlIj9_tsZY/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-av-mid-08-2.jpg" alt="Process clip" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">제작 과정 클립</span><span class="en">Process clip</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1ODHMhRBIGfiKGHf0M276s_XTkY8kRHlI/view" target="_blank" rel="noopener"><span class="ko">30 Days 팀 실행 계획서</span><span class="en">30 Days team plan</span></a>
+          <a class="chip pdf" href="https://drive.google.com/file/d/1wXdiOFCnYIvbrKxNkNgGl7vJLyib9OrR/view" target="_blank" rel="noopener"><span class="ko">미니 — AI 고양이 데스크톱 펫</span><span class="en">Mini — AI desktop cat</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 10</span>
+          <h4>A Dozen Heady Distractions</h4>
+          <p class="people">이유민 · 이청하 · 최도준<span class="en"> — Lee Yumin, Lee Chungha, Choi Dojun</span></p>
+          <p class="ko sub">잡생각과 초조함으로 하루를 망친 주인공이 자책하던 밤, ADHD의 산만함 속에 숨은 잠재력을 발견한다</p>
+          <p class="en sub">After a day wrecked by stray thoughts and nerves, the protagonist finds, that night, the potential hidden inside ADHD distraction</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1PzeCiP6MVg4-CtOW92xtWa2wP2uZ6a0j/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-av-mid-09-1.jpg" alt="Short film" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">단편 영상</span><span class="en">Short film</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1z1d5heiiB6goy0Jy4-FTQR-d_XN_AUql/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-09-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Team 11</span>
+          <h4><span class="ko">토닥이 프로젝트</span><span class="en">Todak — A Pat on the Back</span></h4>
+          <p class="people">김나연 · 박진혁 · 박채민 · 정윤근<span class="en"> — Kim Nayeon, Park Jinhyuk, Park Chaemin, Jung Yungeun</span></p>
+          <p class="ko sub">대학생 토끼 ‘토닥이’의 일상 속 작은 사건으로 공감과 치유를 전하는 프로젝트 — 프롬프트 제작 도구와 인터랙티브 웹 게임</p>
+          <p class="en sub">Small everyday incidents in the life of Todak, a rabbit at university, carrying empathy and comfort — a prompt-building tool and an interactive web game</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1XGDcxqJr3JWZbUz3Wah0Sp2UsAbhDNqi/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-mid-10-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1rdYUOmqSW-kpVYISvqoWlUDJeouruNyl/view" target="_blank" rel="noopener"><span class="ko">중간 사전 발표</span><span class="en">Pre-crit deck</span></a>
+          <a class="chip doc" href="https://docs.google.com/document/d/1fXBK45hWvWH-jMfHrhYNaJ4bB-fqzMTAfVnO1Fm1OgA/edit" target="_blank" rel="noopener"><span class="ko">작업물 링크</span><span class="en">Work links</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">4주차 미니 프로젝트 · 개인</span><span class="en">Week 4 — individual mini projects</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · Solo</span>
+          <h4><span class="ko">안미룬이</span><span class="en">Anmirun-i — No More Putting Off</span></h4>
+          <p class="people">김나연<span class="en"> — Kim Nayeon</span></p>
+          <p class="ko sub">마감일을 적으면 일주일 전 → 3일 전 → 하루 전 → n시간 전에 독촉 팝업을 띄우는 앱. Claude로 PRD를 쓰고 세 단계로 나눠 실행</p>
+          <p class="en sub">An app that nags with pop-ups a week, three days, a day and n hours before a deadline — PRD written with Claude, built in three stages</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1O-oG5wSVCqEmiHGXlPRf9rZWlGrqpmdg/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-solo-01-1.jpg" alt="Mini-project deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 프로젝트 발표</span><span class="en">Mini-project deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">W4 · Solo</span>
+          <h4>ShotBrief</h4>
+          <p class="people">이청하 · 최도준<span class="en"> — Lee Chungha, Choi Dojun</span></p>
+          <p class="ko sub">AI 영상 생성 프롬프트를 샷 단위로 정리하는 도구 — PRD 작성부터 디자인 · 기능 점검까지</p>
+          <p class="en sub">A tool that organises AI-video prompts shot by shot — from PRD to design and function checks</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1-cdun0yXh8dXD4jS0JJeTmR2FKewTKBx/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/skku-av-solo-02-1.jpg" alt="Demo" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">데모</span><span class="en">Demo</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1lwPkSpaE4oI9fYqOZcQlYlQI2OmdGG1i/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/skku-av-solo-02-2.jpg" alt="Deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">발표 자료</span><span class="en">Deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+    </div>
   </div>
 
 </section>
@@ -2310,14 +2894,342 @@
     <p class="en">A companion studio that takes the same material — <b>time</b> — down a different pipeline. Here the idea becomes a <b>physical device</b> first and a <b>kinetic installation</b> second: Arduino and sensors, Shapr3D and Fusion 360 for the moving structure, and TouchDesigner and MadMapper carrying the sensor data out into light and image.</p>
     <p class="ko">중간 과제 <b>Time Machine</b>은 속도 · 반복 · 지연 · 멈춤이라는 네 개의 설계 변수 중 하나를 중심으로 만드는 작동 장치입니다. 기말 과제 <b>Time or HOME</b>은 관객의 입력이 공간에 최소 2종의 변화를 만드는 설치이며, 외부 심사위원 앞에서 실제로 전시 가능한 형태로 시연합니다.</p>
     <p class="en">The midterm, <b>Time Machine</b>, is a working device built around one of four design variables — speed, repetition, delay, interruption. The final, <b>Time or HOME</b>, is an installation where the audience's own input drives at least two kinds of change in the space, presented to outside critics as something that could actually be exhibited.</p>
-    <p class="ko"><b>현재 진행 중인 수업이므로 결과물 기록은 아직 이 아카이브에 올리지 않았습니다.</b> 16주 일정 · 과제 · 레퍼런스 등 자세한 내용은 아래 수업 사이트에서 볼 수 있습니다.</p>
-    <p class="en"><b>The course is still running, so no outcome record has been added to this archive yet.</b> The sixteen-week schedule, the assignment briefs and the reference archive all live on the course site linked below.</p>
+    <p class="ko"><b>현재 진행 중인 수업으로, 8주차 중간발표(10.21)까지의 기록을 올렸습니다.</b> 오전 · 오후 두 반 14개 팀이 대부분 미니 프로젝트에서 만든 웹사이트를 출발점으로 삼아, 중간 과제에서 Arduino 센서와 TouchDesigner를 붙여 손으로 만지는 장치로 확장했습니다. 각 팀 카드 아래에 미니 프로젝트 자료를 함께 연결했습니다.</p>
+    <p class="en"><b>The course is still running; this archive now covers it up to the week-8 midterm review (21 Oct).</b> Most of the fourteen teams across the morning and afternoon sections started from the website they built for the mini project, then extended it at the midterm into something you touch — Arduino sensors and TouchDesigner bolted on. Each team card links its mini-project files as well.</p>
     <dl class="facts">
       <div><dt><span class="ko">일정</span><span class="en">Schedule</span></dt><dd><span class="ko">16주 · 3개 Act 구성</span><span class="en">16 weeks in three acts</span></dd></div>
       <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Arduino · Shapr3D · Fusion 360 · TouchDesigner · MadMapper</dd></div>
       <div><dt><span class="ko">수업 사이트</span><span class="en">Course site</span></dt><dd><a href="https://jy3266.github.io/Junoh_Yu_Time_Class/studio.html" target="_blank" rel="noopener"><span class="ko">웹사이트</span><span class="en">Website</span></a></dd></div>
       <div><dt><span class="ko">과제</span><span class="en">Assignments</span></dt><dd><span class="ko">프로토타입 2개 · 중간 Time Machine · 기말 Time or HOME</span><span class="en">Two prototypes · Midterm — Time Machine · Final — Time or HOME</span></dd></div>
+      <div><dt><span class="ko">기록</span><span class="en">Recorded so far</span></dt><dd><span class="ko">중간발표 오전반 8팀 · 오후반 6팀 (2026.10.21)</span><span class="en">Midterm — 8 morning teams, 6 afternoon teams (21 Oct 2026)</span></dd></div>
+      <div><dt><span class="ko">자료 원본</span><span class="en">Source files</span></dt><dd><a href="https://drive.google.com/drive/folders/1o34b7hBTXuozfqNXZ08OfAp3Xit0j43e" target="_blank" rel="noopener">Google Drive</a></dd></div>
     </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">중간발표 · 오전반 · 8팀</span><span class="en">Midterm — morning section · 8 teams</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 01</span>
+          <h4><span class="ko">AFTERLIGHT — 아직 도착 중인 시간</span><span class="en">AFTERLIGHT — Time Still Arriving</span></h4>
+          <p class="people">이수예 · 이예본<span class="en"> — Lee Suye, Lee Yebon</span></p>
+          <p class="ko sub">별빛은 오래전에 출발해 이제야 닿은, 이미 지나간 시간. 기록하는 웹에서 시간이 도착하는 전시로 — 웹사이트 · Arduino · 영수증 출력</p>
+          <p class="en sub">Starlight is time already past, only now arriving. From a website that records to an exhibition where time arrives — web, Arduino and a printed receipt</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1jH3eXQTca-nGOeenq0w61Sb8tVrF4Raq/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-am-01-1.jpg" alt="Build video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">구현 영상</span><span class="en">Build video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1clAELrWbsFAASIxssaJis3tEgqrhpZ9D/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-am-01-2.jpg" alt="Build video — our universe" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">구현 영상 — 우리의 우주</span><span class="en">Build video — our universe</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/10BvWU2EDnJxqP_mnTOlvuhTvUwc28UJX/view" target="_blank" rel="noopener"><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1op4c_sZhMYN99BW8DrxM14smz2mqccgs" target="_blank" rel="noopener"><span class="ko">미니 프로젝트</span><span class="en">Mini project</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 02</span>
+          <h4><span class="ko">시간의 해변</span><span class="en">The Beach of Time</span></h4>
+          <p class="people">윤하영 · 홍윤지<span class="en"> — Yoon Hayoung, Hong Yunji</span></p>
+          <p class="ko sub">흘려보낸 시간을 분실물처럼 접수하던 웹사이트 ‘시간보관소’(Lost &amp; Found: Time)를 확장해, 흘려보낸 시간이 파도를 타고 닿는 해변으로</p>
+          <p class="en sub">Extending the website “Lost &amp; Found: Time”, which logged wasted time like lost property, into a beach where that time washes up on the waves</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1nO-n-m9tZa4SkyK-m65A_FYV8fGKkm22/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-am-02-1.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/11lQs7esdbr0RAOMPfF2nYbMjThWHmmSW/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-02-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1oQx-iTe_ItbsDspZ-S5RucmKsvhMC6DJ/view" target="_blank" rel="noopener"><span class="ko">미니 — Lost &amp; Found: Time</span><span class="en">Mini — Lost &amp; Found: Time</span></a>
+          <a class="chip clip" href="https://drive.google.com/file/d/1e0dlGkuBhfrkQdEvRERWTyEYfQ92jZ8o/view" target="_blank" rel="noopener"><span class="ko">미니 웹사이트 실행</span><span class="en">Mini website run</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 03</span>
+          <h4><span class="ko">INTERSECTION — 서로 다른 시간의 흐름</span><span class="en">INTERSECTION</span></h4>
+          <p class="people">이현수 · 한선빈<span class="en"> — Lee Hyunsu, Han Seonbin</span></p>
+          <p class="ko sub">같은 1초를 살아도 사람마다 흐름은 다르다. 센서 위 손의 움직임이 선이 되어 24초에 걸쳐 멀어지고, 서로 만난 뒤 남는 변화를 본다 — Arduino × TouchDesigner</p>
+          <p class="en sub">The same second flows differently for everyone. A hand over the sensor draws a line that recedes over 24 seconds; the piece watches what remains when lines meet — Arduino × TouchDesigner</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1dkVG1ldxD5GWQQ4RXUipTrsKYnONl1ps/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-03-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1ebni1LvFr8DSDYJYRCq_OP9I-rYwa5y6/view" target="_blank" rel="noopener"><span class="ko">미니 — Memory Search</span><span class="en">Mini — Memory Search</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1-qc_kzHBPSDLVguc_aWkUDYYAm6hD8SR" target="_blank" rel="noopener"><span class="ko">소스</span><span class="en">Source</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 04</span>
+          <h4><span class="ko">기억의 유영</span><span class="en">Drifting Memories</span></h4>
+          <p class="people">이효은 · 이시온 · 김다솜<span class="en"> — Lee Hyoeun, Lee Sion, Kim Dasom</span></p>
+          <p class="ko sub">잊히는 기억도 어딘가에서 계속 헤엄친다. 퍼즐 조각에 가두던 기억을 자유롭게 헤엄치는 금붕어로 바꾼 웹 작업</p>
+          <p class="en sub">Forgotten memories keep swimming somewhere. Memories once locked in puzzle pieces become goldfish swimming freely</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1xDFwUBwwDKW8KqkCUH3WzQiW1FBafDyB/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-am-04-1.jpg" alt="Build video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">구현 영상</span><span class="en">Build video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/10H4Fbu8EX3gJ5Us1UMXHD9oZLtk2amwm/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-04-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1DdE9PQLi2ab0pooz5U0EOg8CKrEQItEP" target="_blank" rel="noopener"><span class="ko">미니 프로젝트</span><span class="en">Mini project</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 05</span>
+          <h4><span class="ko">바람에 맡긴 시간</span><span class="en">Time, Left to the Wind</span></h4>
+          <p class="people">오예나 · 정예음<span class="en"> — Oh Yena, Jung Yeeum</span></p>
+          <p class="ko sub">되돌릴 수 없는 시간을 바람에 맡기다. QR로 입장하고, 손으로 바람을 일으켜 기억을 날려 보내는 인터랙티브 설치 — 거리 센서 · TouchDesigner</p>
+          <p class="en sub">Handing irreversible time to the wind: enter by QR, raise a wind with your hand and send a memory off — distance sensor and TouchDesigner</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1xgqQvafniXozIeOaGmEEPZOy4q85f2Lu/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-05-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1BEtT3hLajuGGPeYGo0ANe3wo8kvIwKvF" target="_blank" rel="noopener"><span class="ko">소스</span><span class="en">Source</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 06</span>
+          <h4><span class="ko">꽃길 탐험</span><span class="en">Flower Path</span></h4>
+          <p class="people">김민서 · 박시후 · 이윤지<span class="en"> — Kim Minseo, Park Sihu, Lee Yunji</span></p>
+          <p class="ko sub">나타났다 숨는 꽃과 열매의 자리를 기억해 다시 찾는 치매 예방 기억력 웹 게임. 카드 뒤집기 게임을 발전시켜 아두이노 조이스틱 · Web Audio로 확장</p>
+          <p class="en sub">A memory game for dementia prevention: remember where flowers and fruit appear, then find them again. A card-flip game grown into an Arduino-joystick, Web Audio piece</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1wY7osC4g2XIl7LOL6iOFbzbqTR9mw1qd/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-am-06-1.jpg" alt="Build video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">실현 영상</span><span class="en">Build video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1cm7Al9QKNkwG7E4I6keme5aBC_0q8Hvg/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-06-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 07</span>
+          <h4>RE : TRACE</h4>
+          <p class="people">김채윤 · 최진화<span class="en"> — Kim Chaeyun, Choi Jinhwa</span></p>
+          <p class="ko sub">Arduino와 TouchDesigner로 지나간 흔적을 다시 따라가는 장치</p>
+          <p class="en sub">A device that retraces past marks, built in Arduino and TouchDesigner</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1GpA0sPdY3PWGOQf2HFA-QDpOIbopWufC/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-07-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1lMmgHrEJnK_-vFr41deLSJFN-3kMEQfS" target="_blank" rel="noopener"><span class="ko">소스</span><span class="en">Source</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">AM · 08</span>
+          <h4>Boogi · vintage-site</h4>
+          <p class="people">김민구 · 이재현 · 김에스더 · 원희진<span class="en"> — Kim Mingu, Lee Jaehyun, Kim Esther, Won Heejin</span></p>
+          <p class="ko sub">미니 프로젝트 ‘남는 시간에 뭐하지?’ — 장소 · 예산 · 기분에 맞춰 남는 시간을 짜 주는 웹사이트 — 에서 중간 과제 vintage-site로</p>
+          <p class="en sub">From the mini project “What to do with spare time?” — a site that plans spare time by place, budget and mood — to the midterm vintage-site</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1Ymq_l2dkLqi_vB1tJ6Z0T6Qeyn2v4RXI/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-am-08-1.jpg" alt="Build video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">실현 영상</span><span class="en">Build video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1BgLNHmH5YIDlfRh-36hHX12O-a-O4G9R/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-am-08-2.jpg" alt="Mini — Boogi" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">미니 — Boogi</span><span class="en">Mini — Boogi</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1JdqZlS6CNMfPpIoWzohYZR9-8cCHswtX" target="_blank" rel="noopener">vintage-site</a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1YfBfNFO2wp8cdgW-vyO1uy8YjaOxVOMQ" target="_blank" rel="noopener"><span class="ko">포트폴리오</span><span class="en">Portfolios</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">중간발표 · 오후반 · 6팀</span><span class="en">Midterm — afternoon section · 6 teams</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">PM · 01</span>
+          <h4><span class="ko">Nostalgia — 시간을 다시 듣다</span><span class="en">Nostalgia — Hearing Time Again</span></h4>
+          <p class="people">국하영 · 박정연<span class="en"> — Kook Hayoung, Park Jeongyeon</span></p>
+          <p class="ko sub">다섯 질문으로 기억을 적으면 답 하나가 레코드 한 조각이 되고, 완성된 기억의 BGM은 노트북이 아닌 책상 위 아두이노 스피커에서 울린다</p>
+          <p class="en sub">Answer five questions and each answer becomes a slice of a record; the memory’s soundtrack plays not from the laptop but from an Arduino speaker on the desk</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/177A10WcdVqjPJG1n40S-6wt7BI93D-W6/view" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b><span class="ko">Nostalgia — 시간을 다시 듣다</span><span class="en">Nostalgia — Hearing Time Again</span></b></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1j2aIh3_yIoO8ESojUdJkTxcYtFnNVBBs/view" target="_blank" rel="noopener"><span class="ko">미니 — 그 시간의 사운드트랙</span><span class="en">Mini — the soundtrack of that time</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1bX_cjq_VXVfelx-c43hwYJSexLq6j9N8" target="_blank" rel="noopener"><span class="ko">웹 · 소스</span><span class="en">Web &amp; source</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">PM · 02</span>
+          <h4><span class="ko">기억의 악보 — Score of Memory</span><span class="en">Score of Memory</span></h4>
+          <p class="people">이윤지 · 서유정 · 김윤아<span class="en"> — Lee Yunji, Seo Yujeong, Kim Yuna</span></p>
+          <p class="ko sub">5초 동안 말한 기억이 17색 구슬 하나와 6–9초짜리 가사 없는 노래가 된다. 목소리는 들려주지 않고 ‘느낌’만 음악으로 — 트레이에 구슬을 놓으면 모두의 노래가 함께 울린다</p>
+          <p class="en sub">Five seconds of a spoken memory becomes one of seventeen coloured beads and a wordless 6–9 s song; the voice itself is never played. Set the beads in the tray and everyone’s songs sound together</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/19oTUMyRbXDM-UeD5suoFU0L5uuKlrBU6/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-pm-02-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1w7KFrZh8CAnvYvJAVInF0I8LswTrgFvG/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-pm-02-2.jpg" alt="Mini — Pieces of Memory screen capture" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">미니 — 기억의 조각 화면 기록</span><span class="en">Mini — Pieces of Memory screen capture</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/11YCbw3c5LhCIDk5Is0eJf5ua_kpnuV_k/view" target="_blank" rel="noopener"><span class="ko">미니 — 기억의 조각</span><span class="en">Mini — Pieces of Memory</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">PM · 03</span>
+          <h4>Time in Bloom</h4>
+          <p class="people">김민주 · 김은새 · 송유은<span class="en"> — Kim Minju, Kim Eunsae, Song Yueun</span></p>
+          <p class="ko sub">같은 1분도 누군가에게는 짧고 누군가에게는 길다. 1분을 가늠한 체감 시간의 차이가 서로 다른 민들레로 기록되어 하나의 정원으로 피어난다 — 꽃 · 음악 · 진동</p>
+          <p class="en sub">One minute is short for some and long for others. Each guess at a minute is recorded as a different dandelion, and the guesses bloom together into one garden — flower, music, vibration</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1EhaGSu7Kw_tM6TDyEsVFDpaaWcyyPRHp/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-pm-03-1.jpg" alt="Work video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">작품 영상</span><span class="en">Work video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1H2cCXBwIuwscBWPJESaXm_koJ1Tv_lXm/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-pm-03-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1KvbyGOEyOhhqMvSB-zOHpcDO2szaFPH9/view" target="_blank" rel="noopener"><span class="ko">미니 프로젝트</span><span class="en">Mini project</span></a>
+          <a class="chip web" href="https://eunsaegim-dot.github.io/time-garden/" target="_blank" rel="noopener"><span class="ko">Time Garden 웹</span><span class="en">Time Garden site</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">PM · 04</span>
+          <h4><span class="ko">JAR OF TODAY — 오늘의 병</span><span class="en">Jar of Today</span></h4>
+          <p class="people">김시은 · 나소이<span class="en"> — Kim Sieun, Na Soi</span></p>
+          <p class="ko sub">미니 프로젝트 ‘추억 서랍’(당신의 추억을 다시 열어보는 서랍)에서 이어진, 하루를 병에 담는 아두이노 · TouchDesigner 장치</p>
+          <p class="en sub">Grown from the mini project “Drawer of Memories”, an Arduino and TouchDesigner device that bottles a day</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1lCX2kLH88Qie6dSDx6VgN8rmAWtPamsx/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-pm-04-1.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1sVXjn_x2LGT7bC6JwZIPrppzq6RntR4v/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-pm-04-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1IA6G2NGIhCiEznLLY8d389n8nalGwHJW/view" target="_blank" rel="noopener"><span class="ko">미니 — 추억 서랍</span><span class="en">Mini — Drawer of Memories</span></a>
+          <a class="chip web" href="https://drawerof.netlify.app" target="_blank" rel="noopener"><span class="ko">추억 서랍 웹</span><span class="en">Drawer site</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">PM · 05</span>
+          <h4><span class="ko">시간을 감아 주는 오르골 공방</span><span class="en">The Music-box Workshop That Winds Time</span></h4>
+          <p class="people">김은서 · 조한슬<span class="en"> — Kim Eunseo, Cho Hanseul</span></p>
+          <p class="ko sub">공방 할아버지가 기억에 대해 묻고, 답에 따라 오르골의 모양과 음악이 달라진다. 2차에서는 완성한 오르골 캐릭터가 기차를 타고 여행하고, 아두이노 거리 센서가 움직임을 감지한다</p>
+          <p class="en sub">An old craftsman asks about your memories and the music box’s shape and tune follow your answers; in the second round the finished character rides a train, with an Arduino distance sensor tracking movement</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/17kli2U01bZzMndH19wo-X2-fa2DFyyhw/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-pm-05-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/16KHQOBCxXy3P71oOJqqdvSLnsNgcNLnl/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/cju-fs-pm-05-2.jpg" alt="Mini — screen capture" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">미니 — 시간 공방 화면 기록</span><span class="en">Mini — screen capture</span></b><em>Video</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1qoNTHR2sYg5NPzU_M_mq34FrZuxC2HyL/view" target="_blank" rel="noopener"><span class="ko">미니 — 시간 공방 사이트</span><span class="en">Mini — the workshop site</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1E3ktgy2QYjLJvCvkQTWrAcR6ItrzxRgG" target="_blank" rel="noopener"><span class="ko">소스</span><span class="en">Source</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">PM · 06</span>
+          <h4>Tick &amp; Track</h4>
+          <p class="people">조성윤 · 유동건<span class="en"> — Cho Seongyun, Yoo Donggeon</span></p>
+          <p class="ko sub">“나이는 과거의 시간, 심박수는 현재의 시간.” 손목 위 갤럭시 워치의 심박이 나의 청소년기 노래를 골라 준다 — 손가락 센서 · 네오픽셀 버전을 거친 세 번째 판</p>
+          <p class="en sub">“Age is past time; heart rate is present time.” A Galaxy Watch reading your pulse picks a song from your teenage years — the third version, after finger-sensor and NeoPixel builds</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1XORXQ27L9TDw5_LqMmvHHKirbuoIfeiT/view" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b>Tick &amp; Track</b></span>
+            <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/11aARv5jyMT5N49oWRW48NEw9txGXv2NQ/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/cju-fs-pm-06-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/1cENoJjR7w43vvL8goya8G5XWBd2Yz68J/view" target="_blank" rel="noopener"><span class="ko">미니 프로젝트</span><span class="en">Mini project</span></a>
+          <a class="chip clip" href="https://drive.google.com/file/d/1u0872ex5xK3C6HYEKoQ1Zf5rj1KT7TKq/view" target="_blank" rel="noopener"><span class="ko">컴퓨터 시연</span><span class="en">Screen demo</span></a>
+        </div>
+      </article>
+
+    </div>
   </div>
 
 </section>
@@ -3030,6 +3942,248 @@
     <a class="chip yt" href="https://www.youtube.com/playlist?list=PLLG0aNCZuShE" target="_blank" rel="noopener"><span class="ko">레벨 디자인 — 발표 재생목록 ②</span><span class="en">Level Design — presentations, playlist 2</span></a>
   </div>
 
+
+</section>
+
+<!-- ══════════ 동양대 · 레벨 디자인 2026 ══════════ -->
+<section class="panel" id="p-dyu-ld26" role="tabpanel" aria-labelledby="tab-dyu-ld26" tabindex="-1" hidden>
+
+  <div class="lede">
+    <p class="live"><span class="ko">진행 중인 수업</span><span class="en">Course in progress</span></p>
+    <h2><span class="ko">레벨 디자인 — 2026</span><span class="en">Level Design — 2026</span></h2>
+    <p class="ko">2025년 「레벨 디자인」의 두 번째 해입니다. 올해 중간 과제는 대부분 <b>2–3인 팀</b>으로 진행되었고, 열 개 팀이 기획서 한 장을 실제로 걸어 다닐 수 있는 레벨로 옮긴 결과를 발표했습니다. 시간에 쫓기는 사람을 위한 우주, 감각을 잃고 되찾는 계단, 4년 산 자취방을 비우는 하루처럼 작은 개인적 경험에서 출발한 작업이 많고, 잠입 탈출 · 러너처럼 장르 문법 위에서 공간 배치를 검증한 작업도 있습니다.</p>
+    <p class="en">The second year of <i>Level Design</i>. This year’s midterm was run mostly in <b>teams of two or three</b>, and ten teams presented a page of design turned into a level you can actually walk. Many began from a small personal experience — a universe for someone chased by time, a stairwell where the senses fade and return, the day you empty the flat you lived in for four years — while others tested spatial layout on top of a genre’s grammar, in a stealth escape or a runner.</p>
+    <p class="ko">눈에 띄는 변화는 <b>제작 방식</b>입니다. 「잔류」와 「DINO RUN」 팀은 Python 스크립트로 블록아웃 · 조명 · 플레이테스트를 자동화하고, 버전마다 백업과 검증 로그를 남겼습니다. Twinmotion에서 공간을 잡고 Datasmith로 언리얼에 넘겨 인터랙션을 붙이는 파이프라인도 자리를 잡았습니다. 플레이 영상과 함께 <b>프로젝트 파일 · 빌드 · 스크립트까지</b> 원본 그대로 연결해 두었습니다.</p>
+    <p class="en">The visible change is <b>how the work gets made</b>. The <i>Remanence</i> and <i>Dino Run</i> teams automated blockout, lighting and playtesting with Python scripts, keeping backups and verification logs for every version. A pipeline of laying out space in Twinmotion, moving it to Unreal through Datasmith and adding interaction there has settled in. Alongside the play-throughs, the <b>project files, builds and scripts</b> are linked as they were submitted.</p>
+    <p class="ko"><b>현재 진행 중인 수업으로, 중간발표(10.20)까지의 기록입니다.</b></p>
+    <p class="en"><b>The course is still running; this is the record up to the midterm review (20 Oct).</b></p>
+    <dl class="facts">
+      <div><dt><span class="ko">학기</span><span class="en">Term</span></dt><dd><span class="ko">2026학년도 2학기</span><span class="en">Fall 2026</span></dd></div>
+      <div><dt><span class="ko">중간발표</span><span class="en">Midterm review</span></dt><dd><span class="ko">2026.10.20 · 10개 팀 · 23명</span><span class="en">20 Oct 2026 · 10 teams · 23 students</span></dd></div>
+      <div><dt><span class="ko">핵심 툴</span><span class="en">Core tools</span></dt><dd>Unreal Engine 5.4 · Twinmotion · Datasmith · Python</dd></div>
+      <div><dt><span class="ko">자료 원본</span><span class="en">Source files</span></dt><dd><a href="https://drive.google.com/drive/folders/1q4SgEFrmZoARbkazyYSILHe9DcbLDRzK" target="_blank" rel="noopener">Google Drive</a></dd></div>
+    </dl>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">중간발표 · 2026.10.20 · 10팀</span><span class="en">Midterm review · 20 Oct 2026 · 10 teams</span></h3>
+    <div class="works">
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 01</span>
+          <h4><span class="ko">시간이 멈추는 곳 — Event Horizon</span><span class="en">Where Time Stops — Event Horizon</span></h4>
+          <p class="people">강민우 · 박우림<span class="en"> — Kang Minwoo, Park Woorim</span></p>
+          <p class="ko sub">시간에 쫓기는 사람에게 가장 큰 휴식은 시간이 멈추는 곳. 중력에 의한 시간 지연에서 착안해, 무서운 블랙홀을 안기는 우주로 바꾼 레벨</p>
+          <p class="en sub">For someone chased by time, the deepest rest is a place where time stops. Taking gravitational time dilation as its cue, the level turns a frightening black hole into a universe that holds you</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1qb9aqMep8g1iYLF2JnvlJAtCzYC58vRQ/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-01-1.jpg" alt="Play-through" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">플레이 영상</span><span class="en">Play-through</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1iqCLJR9KjxWjWZswURszLyCedg6WC7P-/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-01-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1Ci_nJCI-3QAxkjiY2I3D6EbNQGW4ynef" target="_blank" rel="noopener"><span class="ko">빌드 포함 전체 자료</span><span class="en">All files incl. build</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 02</span>
+          <h4>The Meaninglessness of War</h4>
+          <p class="people">강민정 · 김은아<span class="en"> — Kang Minjeong, Kim Euna</span></p>
+          <p class="ko sub">전쟁의 무의미함을 숲과 폐허를 지나는 동선으로 옮긴 레벨</p>
+          <p class="en sub">A level that carries the futility of war along a path through forest and ruin</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1yaM48Ds5LGJ8QislOkQ3MFUFrqyyDJ4l/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-02-1.jpg" alt="Play-through" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">플레이 영상</span><span class="en">Play-through</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1l-iV8ohZgJRQF1rmn5rQ1uh02pNHx2CM/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-02-2.jpg" alt="Level design overview" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">레벨 디자인 개요</span><span class="en">Level design overview</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip pdf" href="https://drive.google.com/file/d/1BqI9WwE_fnV0aH2GM2G4AMf8bBvgODzt/view" target="_blank" rel="noopener"><span class="ko">기획서</span><span class="en">Design document</span></a>
+          <a class="chip pdf" href="https://drive.google.com/file/d/1baBQFxPtYKa0PKf_PDHzIKwbPMLdqYvX/view" target="_blank" rel="noopener"><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 03</span>
+          <h4><span class="ko">잔류 — Remanence</span><span class="en">Remanence</span></h4>
+          <p class="people">김규담 · 박상민 · 서민규<span class="en"> — Kim Gyudam, Park Sangmin, Seo Mingyu</span></p>
+          <p class="ko sub">기억과 감각의 흔적을 따라 걷는 미디어아트 체험. 마지막 정류장 → 계단(색과 소리가 사라짐) → 잔향의 공간(청각 · 색채 회복) → 경계. 파이썬 자동화로 블록아웃을 여덟 번 고쳐 쌓았다 — UE 5.4</p>
+          <p class="en sub">A media-art walk along traces of memory and sense: the last stop → a stairwell where colour and sound drain away → a room of echoes where hearing and colour return → the threshold. Rebuilt eight times through Python-scripted blockouts in UE 5.4</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1xSuWEr1kSKBKgjhPPJcLpoagHULelrRg/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-03-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip ppt" href="https://drive.google.com/file/d/1ry2HMvryF4NA-8_ZVgkAvEhECoEnBDoU/view" target="_blank" rel="noopener"><span class="ko">발표 원본</span><span class="en">Source deck</span></a>
+          <a class="chip dir" href="https://drive.google.com/drive/folders/15iAD2cpThr2xjdlu2zxXw8eir_dd0WUE" target="_blank" rel="noopener"><span class="ko">언리얼 프로젝트</span><span class="en">Unreal project</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 04</span>
+          <h4>Lost Color</h4>
+          <p class="people">김대현<span class="en"> — Kim Daehyun</span></p>
+          <p class="ko sub">타인의 기대 속에서 잊은 자신을 찾아가는 여정. 무채색 도시 복도 → 어린 시절의 방 → 호수와 숲으로, 빛 · 색 · 공간의 변화로 감정을 전한다</p>
+          <p class="en sub">A journey back to a self lost to other people’s expectations — from a colourless city corridor to a childhood room to a lake and forest, told through changes in light, colour and space</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1Y_hW59ZEvtocAad6naKNnL_bOZ6_omEq/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-04-1.jpg" alt="Play-through" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">플레이 영상</span><span class="en">Play-through</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1W_lTERd-OsUbxKRuSPrd3xfYeW3qdKPR/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-04-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 05</span>
+          <h4><span class="ko">나이트 시프트</span><span class="en">Night Shift</span></h4>
+          <p class="people">김영훈 · 이태훈 · 홍민웅<span class="en"> — Kim Younghoon, Lee Taehoon, Hong Minwoong</span></p>
+          <p class="ko sub">감시 카메라를 피해 카드키를 모아 창고를 빠져나오는 3D 잠입 탈출 레벨. 기획서 한 장을 창고 1동 · 4개 구역의 레벨 하나로 옮기고, 구역마다 통과 방식이 다르게 설계했다 — UE 5.4.4</p>
+          <p class="en sub">A 3D stealth-escape level: dodge the cameras, collect key cards, get out of the warehouse. One page of design became one building in four zones, each crossed a different way — UE 5.4.4</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1koQZ5LGQQK5FY0pQfb9Nr7LqyMjgHHaP/view" target="_blank" rel="noopener">
+            <span class="mthumb blank"><b><span class="ko">나이트 시프트</span><span class="en">Night Shift</span></b></span>
+            <span class="mmeta"><b><span class="ko">플레이 영상</span><span class="en">Play-through</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1EYeKjrCdfl90g2XXVk3vtkqspoK_leqO/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-05-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 06</span>
+          <h4><span class="ko">금의환향</span><span class="en">Homecoming</span></h4>
+          <p class="people">김유찬 · 이재현<span class="en"> — Kim Yuchan, Lee Jaehyun</span></p>
+          <p class="ko sub">졸업 후 4년을 산 자취방을 비우는 하루. 청소하고 짐을 싸며 곳곳의 추억을 감상하는 1인칭 청소 · 정리 내러티브 게임 — 한국식 빌라</p>
+          <p class="en sub">The day you empty the flat you lived in for four years: a first-person cleaning-and-packing narrative game set in a Korean villa, with memories tucked into every corner</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1M8mlgYuJ2LnD02LklbeHBN6hl1iYIJxo/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-06-1.jpg" alt="Editor play-through" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">에디터 플레이 영상</span><span class="en">Editor play-through</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/18lI1nmPuBOMZycaPX2UJ9G554RxQCgu9/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-06-2.jpg" alt="Progress deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">개발 현황 발표</span><span class="en">Progress deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 07</span>
+          <h4><span class="ko">HalfSpan — 반 뼘</span><span class="en">HalfSpan</span></h4>
+          <p class="people">유경무 · 강우진 · 이지강<span class="en"> — Yoo Kyungmoo, Kang Woojin, Lee Jigang</span></p>
+          <p class="ko sub">바다와 등대를 마주한 비 오는 밤의 실내 쉼터. 창을 열수록 빗소리가 커지고, 비가 그치면 소파에 앉아 등대를 바라본다 — 안내 UI 없이. Twinmotion → Datasmith → UE 5.4</p>
+          <p class="en sub">An indoor shelter on a rainy night, facing the sea and a lighthouse. The wider you open the window the louder the rain; when it stops, sit on the sofa and watch the beam — no guiding UI. Twinmotion → Datasmith → UE 5.4</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1hBjPMNdrwqT4bDkwsJFOlxoKEByPdc0V/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-07-1.jpg" alt="Lighthouse beam" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">등대 빔 회전</span><span class="en">Lighthouse beam</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1lTyIOpGeQOMWchdc-CWpikRL50E7bRn9/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-07-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PPTX</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/11fXx8pp1F1rC3A1mWLmUrwcQJvXkhUdm" target="_blank" rel="noopener"><span class="ko">빌드 포함 전체 자료</span><span class="en">All files incl. build</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 08</span>
+          <h4><span class="ko">DINO RUN</span><span class="en">Dino Run</span></h4>
+          <p class="people">최원빈 · 심범경 · 최현호<span class="en"> — Choi Wonbin, Shim Beomkyung, Choi Hyunho</span></p>
+          <p class="ko sub">변하는 자연 속에서 길을 찾아 나아가는 공룡 러너. 숲에서 빙하기까지 바이옴이 바뀌고, 기획 의도에 맞춰 시점 연출을 확장했다</p>
+          <p class="en sub">A dinosaur runner finding its way through changing nature, from forest to ice age, with the camera direction extended to fit the design intent</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1HOqgwGxtT1RvDdaSy8G1hSUemmIylAo3/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-08-1.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip dir" href="https://drive.google.com/drive/folders/1QX0yjbyS9nmo_6BkFacTURNh1jFdql2c" target="_blank" rel="noopener"><span class="ko">언리얼 프로젝트</span><span class="en">Unreal project</span></a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 09</span>
+          <h4><span class="ko">구름 위의 쉼터</span><span class="en">A Shelter Above the Clouds</span></h4>
+          <p class="people">최원영<span class="en"> — Choi Wonyoung</span></p>
+          <p class="ko sub">자연 힐링을 주제로 한 공중섬 레벨. 물길을 기준으로 초원과 건물을 나누고 붉은 다리로 잇고, 높이 솟은 나무집을 중심에 두었다 — Twinmotion</p>
+          <p class="en sub">A floating-island level about healing in nature: a stream divides meadow from buildings, a red bridge joins them, and a tall treehouse anchors the centre — Twinmotion</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1p9adwpkJSeazsilz44LfCDqAf3bWZxHG/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-09-1.jpg" alt="Play-through" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">플레이 영상</span><span class="en">Play-through</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/16_8DJXSvkU3zirlyLzqScXhG4eLgdDiT/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-09-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-head">
+          <span class="tag">Mid · 10</span>
+          <h4><span class="ko">세계수의 잔광</span><span class="en">Afterglow of the World Tree</span></h4>
+          <p class="people">최지연 · 박건호 · 김수현<span class="en"> — Choi Jiyeon, Park Geonho, Kim Suhyun</span></p>
+          <p class="ko sub">북적이는 도시를 벗어나 숲속 세계수에게 위로받고, 돌아온 도시가 세계수의 잔광으로 아름답게 보이게 되는 여정. 버스에서 내려 빛을 따라 걷는 세 개의 공간</p>
+          <p class="en sub">Leaving the crowded city, being comforted by a world tree in the forest, and returning to find the city lit by its afterglow — three spaces walked by following the light from a bus stop</p>
+        </div>
+        <div class="media">
+          <a class="mcard" href="https://drive.google.com/file/d/1-Msv_DU335oFWZKjCPR6EwNjspbsudwi/view" target="_blank" rel="noopener">
+            <span class="mthumb"><img src="assets/img/dyu-ld26-10-1.jpg" alt="Presentation — Park Geonho" loading="lazy"><span class="play"><span></span></span></span>
+            <span class="mmeta"><b><span class="ko">박건호 발표 영상</span><span class="en">Presentation — Park Geonho</span></b><em>Video</em></span>
+          </a>
+          <a class="mcard" href="https://drive.google.com/file/d/1r5o40UzyGg0VZKwl1ok6G4dKj7bOJj8p/view" target="_blank" rel="noopener">
+            <span class="mthumb pdf"><img src="assets/img/dyu-ld26-10-2.jpg" alt="Mid-term deck" loading="lazy"></span>
+            <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
+          </a>
+        </div>
+        <div class="files">
+          <a class="chip clip" href="https://drive.google.com/file/d/12om-8pOaXlEZWa3_57SO0hzyqeufLkYw/view" target="_blank" rel="noopener"><span class="ko">김수현 발표 영상</span><span class="en">Presentation — Kim Suhyun</span></a>
+          <a class="chip file" href="https://drive.google.com/file/d/1yg2emG-BPiehXMDzTUQTECTEEekbHlY5/view" target="_blank" rel="noopener"><span class="ko">최지연 발표 영상</span><span class="en">Presentation — Choi Jiyeon</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 
 </section>
 
