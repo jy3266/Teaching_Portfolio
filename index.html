@@ -448,6 +448,14 @@
   @media (min-width: 860px) { .exhibit-top { grid-template-columns: minmax(0,330px) minmax(0,1fr); gap: 3rem; } }
   .poster { border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; box-shadow: var(--shadow); cursor: zoom-in; appearance: none; padding: 0; background: none; width: 100%; }
   .poster img { width: 100%; }
+  /* graduation exhibition grid (CJU) */
+  .gx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: .8rem; }
+  .mthumb.sq img { aspect-ratio: 1/1; object-fit: cover; }
+  .mmeta .gx-people { font-size: .8rem; color: var(--ink-2); }
+  .mmeta .gx-desc { font-size: .8rem; color: var(--ink-3); line-height: 1.55; }
+  .mmeta .gx-from { margin-top: .25rem; text-transform: none; letter-spacing: .04em; }
+  .gx-quote { margin: 0; padding: .8rem 1rem; border-left: 2px solid var(--accent); background: var(--accent-soft); font-size: .93rem; color: var(--ink-2); }
+  .gx-quote cite { display: block; margin-top: .3rem; font-style: normal; font-size: .78rem; color: var(--ink-3); }
 
   .pieces { display: flex; flex-direction: column; gap: 2.75rem; }
   .piece { display: flex; flex-direction: column; gap: .9rem; }
@@ -522,7 +530,7 @@
       <div class="unilist" role="tablist" aria-label="University tabs">
         <button class="unitab" role="tab" id="u-tab-statement" aria-controls="u-statement" aria-selected="false"><span class="ko">교육 철학</span><span class="en">Teaching Statement</span></button>
         <button class="unitab" role="tab" id="u-tab-skku" aria-controls="u-skku" aria-selected="false"><span class="ko">성균관대학교</span><span class="en">Sungkyunkwan Univ.</span> <i>3 courses · 21 teams · 2 in progress</i></button>
-        <button class="unitab" role="tab" id="u-tab-cju" aria-controls="u-cju" aria-selected="false"><span class="ko">청주대학교</span><span class="en">Cheongju Univ.</span> <i>1 course · 20 teams · 1 in progress</i></button>
+        <button class="unitab" role="tab" id="u-tab-cju" aria-controls="u-cju" aria-selected="false"><span class="ko">청주대학교</span><span class="en">Cheongju Univ.</span> <i>1 course · 20 teams · grad show · 1 in progress</i></button>
         <button class="unitab" role="tab" id="u-tab-dyu" aria-controls="u-dyu" aria-selected="false"><span class="ko">동양대학교</span><span class="en">Dongyang Univ.</span> <i>2 courses · 26 reviews · 1 in progress</i></button>
       </div>
       <button class="langbtn" id="lang" type="button" aria-label="Switch language">
@@ -545,6 +553,7 @@
       <div class="tablist" role="tablist" aria-label="Course tabs — Cheongju University" data-uni="u-cju" hidden>
         <button class="tab" role="tab" id="tab-cju-q1" aria-controls="p-cju-q1" aria-selected="false"><span class="ko">인터랙션 디자인 — 1분기</span><span class="en">Interaction Design — Q1</span> <i>9</i></button>
         <button class="tab" role="tab" id="tab-cju-q2" aria-controls="p-cju-q2" aria-selected="false"><span class="ko">인터랙션 디자인 — 2분기</span><span class="en">Interaction Design — Q2</span> <i>11</i></button>
+        <button class="tab" role="tab" id="tab-cju-gx" aria-controls="p-cju-gx" aria-selected="false"><span class="ko">제5회 졸업전시 공( )명</span><span class="en">5th Graduation Show</span> <i>20</i></button>
         <button class="tab" role="tab" id="tab-cju-studio" aria-controls="p-cju-studio" aria-selected="false"><span class="ko">디지털 조형 실습</span><span class="en">Digital Form Studio</span> <i><span class="ko">진행중</span><span class="en">NOW</span></i></button>
       </div>
       <div class="tablist" role="tablist" aria-label="Course tabs — Dongyang University" data-uni="u-dyu" hidden>
@@ -2351,10 +2360,12 @@
 
   <header class="uni-head">
     <h2><span class="ko">청주대학교 디지털미디어디자인학과</span><span class="en">Cheongju University · Digital Media Design</span></h2>
-    <p class="ko"><b>인터랙션 디자인</b> 수업의 기록입니다. 학생들은 <b>제5회 DMD 졸업전시</b>에 출품할 프로젝트를 인터랙션 관점에서 발전시켰고, 2025년 10월 22일 중간발표에서 리서치 · 문제정의 · 인터랙션 시나리오 · 구현 프로토타입을 함께 제시했습니다. 아래 자료는 발표 자료와 구현 영상을 분기별로 정리한 것입니다.</p>
-    <p class="en">A record of the <b>Interaction Design</b> course. Students developed the projects they would show at the <b>5th DMD Graduation Exhibition</b>, reframed through interaction — presenting research, problem definition, interaction scenario and a working prototype at the mid-term review on 22 October 2025. What follows collects those decks and build videos, quarter by quarter.</p>
+    <p class="ko">4학년 졸업작품을 지도한 <b>인터랙션 디자인</b> 수업의 기록입니다. 학생들은 <b>제5회 졸업전시회 「공( )명」</b>에 출품할 프로젝트를 인터랙션 관점에서 발전시켰고, 2025년 10월 22일 중간발표에서 리서치 · 문제정의 · 인터랙션 시나리오 · 구현 프로토타입을 제시한 뒤, 12월 12–15일 청주 동부창고 6동에서 열린 전시에서 <b>20개 팀 모두가 완성작을 관객 앞에 선보였습니다.</b></p>
+    <p class="en">A record of <b>Interaction Design</b>, one of the courses supervising the fourth-year graduation projects. Students developed the work they would show at the <b>5th Graduation Exhibition, 「공( )명 · Resonance」</b>, reframed through interaction: research, problem definition, interaction scenario and a working prototype at the mid-term review on 22 October 2025 — and then, on 12–15 December at Dongbu Changgo Building 6 in Cheongju, <b>all twenty teams showed the finished work to the public.</b></p>
+    <p class="ko">1 · 2분기 탭에는 중간발표 자료와 구현 영상을, <b>「제5회 졸업전시」</b> 탭에는 최종 출품작과 전시 정보를 정리했습니다. 각 팀 카드에서 중간발표와 최종작이 서로 연결됩니다.</p>
+    <p class="en">The Q1 and Q2 tabs hold the mid-term decks and build videos; the <b>5th Graduation Show</b> tab holds the finished works and the exhibition itself. Every team card links its mid-term to its final piece.</p>
     <p class="byline">
-      <i>2025.10.22 MID-TERM REVIEW · 2 QUARTERS · 20 TEAMS · 44 STUDENTS</i>
+      <i>2025.10.22 MID-TERM REVIEW → 2025.12.12–15 GRADUATION EXHIBITION · 20 TEAMS · 45 STUDENTS</i>
     </p>
   </header>
 
@@ -2395,6 +2406,9 @@
             <span class="mmeta"><b><span class="ko">프로토타입 시연</span><span class="en">Prototype test</span></b><em>Video</em></span>
           </a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project9.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — Umpha</span><span class="en">Graduation show — Umpha</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2410,6 +2424,9 @@
             <span class="mthumb pdf"><img src="assets/img/203-maeumdam-cover.png" alt="Mid-term deck cover" loading="lazy"></span>
             <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project4.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 마음담音</span><span class="en">Graduation show — 마음담音</span></a>
         </div>
       </article>
 
@@ -2434,6 +2451,9 @@
         <div class="files">
           <a class="chip" href="https://drive.google.com/file/d/1DkYpSlUbRws_ylpIV0ZMDso5fQbvxxVs/view" target="_blank" rel="noopener"><span class="ko">발표 자료 수정본</span><span class="en">Revised deck</span></a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project15.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — Focusty</span><span class="en">Graduation show — Focusty</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2449,6 +2469,9 @@
             <span class="mthumb blank"><b>SLEEPISM</b></span>
             <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project6.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — SLEEPISM</span><span class="en">Graduation show — SLEEPISM</span></a>
         </div>
       </article>
 
@@ -2470,6 +2493,9 @@
             <span class="mmeta"><b><span class="ko">게임 플레이 영상</span><span class="en">Gameplay video</span></b><em>Video</em></span>
           </a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project7.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 지지와 우리몸 대소동</span><span class="en">Graduation show — 지지와 우리몸 대소동</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2488,6 +2514,9 @@
             <span class="mthumb blank"><b>comma, Light</b></span>
             <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project16.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — comma ,</span><span class="en">Graduation show — comma ,</span></a>
         </div>
       </article>
 
@@ -2511,6 +2540,9 @@
         </div>
         <div class="files">
           <a class="chip dir" href="https://drive.google.com/drive/folders/17SG6-iAXz00ZoIhPKh6U475HD9uLZBuz" target="_blank" rel="noopener"><span class="ko">전체 자료</span><span class="en">All files</span></a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project11.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — LG TWINS’ K-CHEERLAND!</span><span class="en">Graduation show — LG TWINS’ K-CHEERLAND!</span></a>
         </div>
       </article>
 
@@ -2539,6 +2571,9 @@
           <a class="chip img" href="https://drive.google.com/file/d/1Ck4dAf4oDH76lGKkdK_1CIkl5n064DVU/view" target="_blank" rel="noopener"><span class="ko">전시 도면 TOP VIEW</span><span class="en">Floor plan — top view</span></a>
           <a class="chip dir" href="https://drive.google.com/drive/folders/17bm1-sa9X2z1wghVrm9gQzr6pyRyigaQ" target="_blank" rel="noopener"><span class="ko">전체 자료</span><span class="en">All files</span></a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project3.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 다다다 한글마을</span><span class="en">Graduation show — 다다다 한글마을</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2554,6 +2589,9 @@
             <span class="mthumb pdf"><img src="assets/img/215-hua-cover.png" alt="Mid-term deck cover" loading="lazy"></span>
             <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project22.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 陣界 (진계)</span><span class="en">Graduation show — 陣界 (진계)</span></a>
         </div>
       </article>
 
@@ -2577,7 +2615,7 @@
     <p class="en">Mid-term reviews from the eleven teams of Quarter 2. The brief held, but the subject matter leaned hard toward <b>social memory and ethics</b> — the Jeju 4·3 massacre, confirmation bias, online cruelty, death and mourning, a vanishing craft — each translated into an installation, a device, a VR piece or a service.</p>
     <dl class="facts">
       <div><dt><span class="ko">발표</span><span class="en">Review</span></dt><dd><span class="ko">2025.10.22 중간발표</span><span class="en">Mid-term review, 22 Oct 2025</span></dd></div>
-      <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">1–3인 1팀 · 11개 팀 · 24명</span><span class="en">Teams of 1–3 · 11 teams · 24 students</span></dd></div>
+      <div><dt><span class="ko">편성</span><span class="en">Format</span></dt><dd><span class="ko">1–3인 1팀 · 11개 팀 · 25명</span><span class="en">Teams of 1–3 · 11 teams · 25 students</span></dd></div>
       <div><dt><span class="ko">연계</span><span class="en">Linked to</span></dt><dd><span class="ko">제5회 DMD 졸업전시</span><span class="en">5th DMD Graduation Exhibition</span></dd></div>
       <div><dt><span class="ko">주요 도구</span><span class="en">Tools seen</span></dt><dd>Unity · TouchDesigner · ComfyUI · Arduino</dd></div>
     </dl>
@@ -2608,6 +2646,9 @@
             <span class="mmeta"><b><span class="ko">기록 영상</span><span class="en">Recording</span></b><em>Video</em></span>
           </a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project13.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — The Gaze</span><span class="en">Graduation show — The Gaze</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2626,6 +2667,9 @@
             <span class="mthumb blank"><b>MOONY</b></span>
             <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project10.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — Moony</span><span class="en">Graduation show — Moony</span></a>
         </div>
       </article>
 
@@ -2649,6 +2693,9 @@
             <span class="mthumb"><img src="assets/img/236-re43-vr-footage.jpg" alt="VR footage" loading="lazy"><span class="play"><span></span></span></span>
             <span class="mmeta"><b><span class="ko">VR 영상</span><span class="en">VR footage</span></b><em>Video</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project17.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — RE:4·3</span><span class="en">Graduation show — RE:4·3</span></a>
         </div>
       </article>
 
@@ -2674,6 +2721,9 @@
             <span class="mmeta"><b><span class="ko">짧은 클립</span><span class="en">Short clip</span></b><em>Video</em></span>
           </a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project21.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 願:솟다</span><span class="en">Graduation show — 願:솟다</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2693,13 +2743,16 @@
             <span class="mmeta"><b><span class="ko">중간발표 자료</span><span class="en">Mid-term deck</span></b><em>PDF</em></span>
           </a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project2.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 가온결</span><span class="en">Graduation show — 가온결</span></a>
+        </div>
       </article>
 
       <article class="work">
         <div class="work-head">
           <span class="tag">Q2 · 06</span>
           <h4><span class="ko">D49 · 디지털 저승국</span><span class="en">D49 · The Digital Underworld</span></h4>
-          <p class="people">민유진<span class="en"> — Min Yujin</span><span class="ko"> · 팀 ‘맹구와 나’ <i style="font-style:normal;color:var(--ink-3)">· 전체 명단 미기재</i></span><span class="en"> · Team “Maenggu and I” <i style="font-style:normal;color:var(--ink-3)">· full roster not stated</i></span></p>
+          <p class="people">민유진 · 박미소<span class="en"> — Min Yujin, Park Miso</span><span class="ko"> · 팀 ‘맹구와 나’</span><span class="en"> · Team “Maenggu and I”</span></p>
           <p class="ko" style="margin:.35rem 0 0;color:var(--ink-2);font-size:.9rem">죄의식이 사라진 디지털 공간에, 49일의 심판 구조를 다시 세우는 인터랙티브 부스</p>
           <p class="en" style="margin:.35rem 0 0;color:var(--ink-2);font-size:.9rem">An interactive booth that rebuilds the 49-day judgement for a digital world without guilt</p>
         </div>
@@ -2715,6 +2768,9 @@
             <span class="mthumb"><img src="assets/img/241-d49-screen-recording.jpg" alt="Screen recording" loading="lazy"><span class="play"><span></span></span></span>
             <span class="mmeta"><b><span class="ko">화면 기록 (10.22)</span><span class="en">Screen recording (22 Oct)</span></b><em>Video</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project5.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — D49</span><span class="en">Graduation show — D49</span></a>
         </div>
       </article>
 
@@ -2738,6 +2794,9 @@
             <span class="mthumb"><img src="assets/img/227-zero-demo.jpg" alt="Demo video" loading="lazy"><span class="play"><span></span></span></span>
             <span class="mmeta"><b><span class="ko">시연 영상</span><span class="en">Demo video</span></b><em>Video</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project20.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — NotZero</span><span class="en">Graduation show — NotZero</span></a>
         </div>
       </article>
 
@@ -2774,6 +2833,9 @@
             <span class="mmeta"><b><span class="ko">프로토타입 테스트 (10.20)</span><span class="en">Prototype test (20 Oct)</span></b><em>Video</em></span>
           </a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project18.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — FLOMO</span><span class="en">Graduation show — FLOMO</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2800,6 +2862,9 @@
         <div class="files">
           <a class="chip dir" href="https://drive.google.com/drive/folders/1IvPYWIdAh_x9E6QIrttHCB0PHCrQVL6A" target="_blank" rel="noopener"><span class="ko">전체 자료 (구현 영상 5건 · 배경 이미지)</span><span class="en">All files (5 build clips · background)</span></a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project19.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — BIAS PROJECT : 각자의 시점</span><span class="en">Graduation show — BIAS PROJECT : 각자의 시점</span></a>
+        </div>
       </article>
 
       <article class="work">
@@ -2822,6 +2887,9 @@
             <span class="mthumb"><img src="assets/img/232-najeon-video.jpg" alt="Mid-term video" loading="lazy"><span class="play"><span></span></span></span>
             <span class="mmeta"><b><span class="ko">중간발표 영상</span><span class="en">Mid-term video</span></b><em>Video</em></span>
           </a>
+        </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project12.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — 나전 H:ourstory</span><span class="en">Graduation show — 나전 H:ourstory</span></a>
         </div>
       </article>
 
@@ -2849,6 +2917,9 @@
         <div class="files">
           <a class="chip dir" href="https://drive.google.com/drive/folders/1LTlOHMzxh87g-klkgv_AFtaQPhaI2J3L" target="_blank" rel="noopener"><span class="ko">전체 자료 (박스 영상 4건)</span><span class="en">All files (4 box clips)</span></a>
         </div>
+        <div class="files">
+          <a class="chip web" href="https://silly-d.github.io/cjudmd2025/project/project1.html" target="_blank" rel="noopener"><span class="ko">졸업전시 최종작 — DYING IS FOR YOU!</span><span class="en">Graduation show — DYING IS FOR YOU!</span></a>
+        </div>
       </article>
 
     </div>
@@ -2867,7 +2938,7 @@
       <div class="note">
         <h4><span class="ko">확인이 필요한 항목</span><span class="en">Still to confirm</span></h4>
         <ul>
-          <li><span class="ko">Q2 · 06 ‘맹구와 나’ 팀 — 발표 자료에 팀원 명단이 없어, 확인된 이름 한 명만 적었습니다.</span><span class="en">Q2 · 06 — the deck carries no member list, so only the one confirmed name is shown.</span></li>
+          <li><span class="ko">Q2 · 06 ‘맹구와 나’ 팀 — 발표 자료에 팀원 명단이 없었으나, 졸업전시 공식 사이트에서 민유진 · 박미소 2인 팀으로 확인했습니다.</span><span class="en">Q2 · 06 — the deck carried no member list; the graduation-show website confirms a two-person team, Min Yujin and Park Miso.</span></li>
           <li><span class="ko">참고 이미지 1건은 아직 어느 팀 자료인지 확정되지 않았습니다.</span><span class="en">One reference image remains unattributed.</span></li>
           <li><span class="ko">팀 구성과 인원수는 발표 자료 표지에 적힌 이름을 기준으로 하되, 이후 확인된 내용을 반영했습니다.</span><span class="en">Teams and headcounts follow the names printed on each deck's cover, updated with what was confirmed since.</span></li>
         </ul>
@@ -2876,6 +2947,153 @@
         <h4><span class="ko">개인정보</span><span class="en">Personal data</span></h4>
         <p class="ko">발표 자료 표지에는 학번이 함께 적혀 있으나, 이 페이지에는 이름만 옮겼습니다. 원본 파일에는 학번과 얼굴이 담겨 있으므로 외부 공유 전 동의를 확인해 주세요.</p>
         <p class="en">The decks carry student ID numbers on their covers; only names are reproduced here. The source files still contain IDs and faces — confirm consent before sharing them outward.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════ 청주대 제5회 졸업전시 공( )명 ══════════ -->
+<section class="panel" id="p-cju-gx" role="tabpanel" aria-labelledby="tab-cju-gx" tabindex="-1" hidden>
+
+  <div class="exhibit-top">
+    <button class="poster" type="button" aria-label="Enlarge exhibition poster">
+      <img src="assets/img/cju-gx-poster.jpg" alt="공( )명 — 청주대학교 디지털미디어디자인학과 제5회 졸업전시회 포스터">
+    </button>
+    <div class="lede">
+      <h2><span class="ko">제5회 졸업전시회 「공( )명」</span><span class="en">5th Graduation Exhibition — 「공( )명 · Resonance」</span></h2>
+      <p class="ko">인터랙션 디자인 수업의 20개 팀이 중간발표 이후 두 달 가까이 더 다듬어 출품한 <b>청주대학교 디지털미디어디자인학과 제5회 졸업전시회</b>입니다. 부제는 <b>“작은 떨림이 모여 큰 울림으로”</b>. 포스터의 돌아가는 원은 학생 한 사람 한 사람의 작은 떨림을, 흔들리며 흐려지는 선은 서로 다른 움직임을 뜻하며, 그 떨림이 모여 하나의 공명이 됩니다. 제목 가운데의 빈 괄호는 아직 채워지지 않은 가능성을 담는 자리입니다.</p>
+      <p class="en">The <b>5th Graduation Exhibition of the Department of Digital Media Design, Cheongju University</b>, where the twenty Interaction Design teams showed the work they had kept refining for nearly two months after the mid-term. Its subtitle: <b>“small tremors gathering into one great resonance.”</b> On the poster each spinning ring is one student’s small tremor and the blurred, shaking lines are their different movements, joining into a single resonance; the empty brackets in the title — 공( )명 — hold the possibilities not yet filled in.</p>
+      <p class="ko">졸업작품은 <b>서비스경험디자인 · 인터랙션디자인 · 인터페이스디자인 · 고급프로그래밍</b> 네 과목의 지도를 함께 받아 완성되었고, 유준오는 그중 인터랙션디자인을 맡아 각 작품의 입력 · 반응 구조와 관객 시나리오를 지도했습니다. 전시의 디스플레이 · 기획 · 편집 · 멀티미디어 · 홍보 · 포스터는 학생 <b>졸업전시위원회</b>가 여섯 부서로 나누어 직접 운영했습니다.</p>
+      <p class="en">The graduation projects were supervised jointly across four courses — <b>Service Experience Design, Interaction Design, Interface Design and Advanced Programming</b>. Junoh Yu led Interaction Design, working with each team on its input-and-response structure and audience scenario. The students’ own <b>graduation committee</b>, in six departments, ran display, planning, editorial, multimedia, publicity and the poster.</p>
+      <p class="gx-quote ko">“우리 디미디 학생들, 마지막까지 최선을 다해줘서 고마워요. 너무나 수고 많았어요 :)”<cite>— 유준오 · 인터랙션디자인, 전시 웹사이트 교수진 인사말</cite></p>
+      <p class="gx-quote en">“To all our DMD students — thank you for giving it everything right to the end. You worked so hard :)”<cite>— Junoh Yu · Interaction Design, faculty note on the exhibition website</cite></p>
+      <dl class="facts">
+        <div><dt><span class="ko">전시</span><span class="en">Dates</span></dt><dd><span class="ko">2025.12.12 (금) – 12.15 (월)</span><span class="en">Fri 12 – Mon 15 December 2025</span></dd></div>
+        <div><dt><span class="ko">오프닝</span><span class="en">Opening</span></dt><dd><span class="ko">2025.12.12 (금) 17:00 – 18:00</span><span class="en">Fri 12 December, 17:00 – 18:00</span></dd></div>
+        <div><dt><span class="ko">장소</span><span class="en">Venue</span></dt><dd><span class="ko">동부창고 6동<br>충북 청주시 덕벌로 30</span><span class="en">Dongbu Changgo, Building 6<br>30 Deokbeol-ro, Cheongju, Chungbuk</span></dd></div>
+        <div><dt><span class="ko">주최</span><span class="en">Organised by</span></dt><dd><span class="ko">청주대학교 디지털미디어디자인학과</span><span class="en">Cheongju University,<br>Dept. of Digital Media Design</span></dd></div>
+        <div><dt><span class="ko">지도 과목</span><span class="en">Supervising courses</span></dt><dd><span class="ko">서비스경험디자인 (장성복) · 인터랙션디자인 (유준오) · 인터페이스디자인 (이정선) · 고급프로그래밍 (정수봉)</span><span class="en">Service Experience Design (Jang Sungbok) · Interaction Design (Junoh Yu) · Interface Design (Lee Jungsun) · Advanced Programming (Jung Soobong)</span></dd></div>
+        <div><dt><span class="ko">규모</span><span class="en">Scale</span></dt><dd><span class="ko">참여 디자이너 48명 · 이 수업 출신 20점 (45명)</span><span class="en">48 designers · 20 works from this course (45 students)</span></dd></div>
+      </dl>
+      <div class="files">
+        <a class="chip web" href="https://silly-d.github.io/cjudmd2025/" target="_blank" rel="noopener"><span class="ko">전시 공식 웹사이트</span><span class="en">Exhibition website</span></a>
+        <a class="chip web" href="https://indd.adobe.com/view/5749a1d9-1fc3-4055-aea8-13508477998d" target="_blank" rel="noopener"><span class="ko">2025 전시 도록</span><span class="en">2025 catalogue</span></a>
+        <a class="chip web" href="https://www.instagram.com/cjudmd_2025/" target="_blank" rel="noopener">Instagram @cjudmd_2025</a>
+        <a class="chip yt" href="https://youtube.com/channel/UC5275bIPKnUuTG0onFeFsLw" target="_blank" rel="noopener"><span class="ko">학과 유튜브 · 졸업전시 준비 기록</span><span class="en">Department YouTube · making-of</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">출품작 — 1분기 출신 9점</span><span class="en">Finished works — 9 from Quarter 1</span></h3>
+    <p class="note-in"><span class="ko">카드를 누르면 전시 공식 사이트의 작품 페이지가 열립니다. 카드 맨 아래 회색 글씨는 중간발표 때의 팀 번호와 제목입니다.</span><span class="en">Each card opens the work’s page on the exhibition website. The grey line at the bottom gives the team’s mid-term number and title.</span></p>
+    <div class="gx-grid">
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project9.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-umpha.jpg" alt="Umpha — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>Umpha</b><span class="gx-people">김현진 · 최서윤</span><span class="gx-desc ko">청각장애 무용수를 위한 음악 다감각화 프로젝트</span><span class="gx-desc en">Making music multisensory for deaf dancers</span><em class="gx-from">Q1 · 01 ← Umpha</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project4.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-maeumdam.jpg" alt="마음담音 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>마음담音</b><span class="gx-people">고현희 · 황서진 · 황지원</span><span class="gx-desc ko">감정 표현을 돕는 자기주장훈련법 기반 미디어 콘텐츠</span><span class="gx-desc en">Media content built on assertiveness training, to help people put feelings into words</span><em class="gx-from">Q1 · 02 ← 마음담</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project15.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-focusty.jpg" alt="Focusty — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>Focusty</b><span class="gx-people">김보미 · 임희원</span><span class="gx-desc ko">자발적인 학습 루틴 형성을 위한 IoT 타이머 기반 학습 보조 제품</span><span class="gx-desc en">An IoT timer that helps students build a study routine of their own accord</span><em class="gx-from">Q1 · 03 ← FOCU:STY</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project6.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-sleepism.jpg" alt="SLEEPISM — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>SLEEPISM</b><span class="gx-people">이현서 · 조서영 · 최희선</span><span class="gx-desc ko">잠을 통해 자기 효능감을 회복하고 실패를 신성하게 받아들이는 패러디 종교 미디어 아트</span><span class="gx-desc en">A parody-religion media artwork: regain self-efficacy through sleep, and treat failure as sacred</span><em class="gx-from">Q1 · 04 ← SLEEPISM</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project7.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-jiji.jpg" alt="지지와 우리몸 대소동 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>지지와 우리몸 대소동</b><span class="gx-people">김윤주 · 김지수</span><span class="gx-desc ko">초등학생을 위한 장내 미생물 3D 학습 게임</span><span class="gx-desc en">A 3D learning game about gut microbes, for primary-school children</span><em class="gx-from">Q1 · 05 ← 지지와 우리 몸 대소동</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project16.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-comma.jpg" alt="comma , — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>comma ,</b><span class="gx-people">김민정 · 김선정 · 노채린</span><span class="gx-desc ko">고인은 자신의 기록을 남기고, 추모객은 그 기억을 통해 연결되는 디지털 추모 서비스</span><span class="gx-desc en">A digital memorial: the departed leave their records, and mourners connect through that memory</span><em class="gx-from">Q1 · 06 ← comma, Light</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project11.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-kcheerland.jpg" alt="LG TWINS’ K-CHEERLAND! — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>LG TWINS’ K-CHEERLAND!</b><span class="gx-people">이소현</span><span class="gx-desc ko">K-야구를 처음 직관하는 외국인을 위한 응원 체험존</span><span class="gx-desc en">A cheering-experience zone for visitors seeing Korean baseball live for the first time</span><em class="gx-from">Q1 · 07 ← LG TWINS’ K-CHEERLAND</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project3.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-dadada.jpg" alt="다다다 한글마을 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>다다다 한글마을</b><span class="gx-people">이새연 · 박기연 · 이채현</span><span class="gx-desc ko">다문화 아동의 한글 습득을 돕는 인터랙티브 학습 게임</span><span class="gx-desc en">An interactive learning game that helps multicultural children acquire Hangul</span><em class="gx-from">Q1 · 08 ← 다다다 한글마을</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project22.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-jingye.jpg" alt="陣界 (진계) — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>陣界 (진계)</b><span class="gx-people">왕뢰이저</span><span class="gx-desc ko">중간발표 「華」에서 발전한 실내 디자인 교육 프로젝트</span><span class="gx-desc en">An interior-design learning project, developed from the mid-term 「華」</span><em class="gx-from">Q1 · 09 ← 華 (화)</em></span>
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">출품작 — 2분기 출신 11점</span><span class="en">Finished works — 11 from Quarter 2</span></h3>
+    <div class="gx-grid">
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project13.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-gaze.jpg" alt="The Gaze — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>The Gaze</b><span class="gx-people">김도희 · 반상우 · 정예원</span><span class="gx-desc ko">프로아나를 심화시키는 시선에 대한 관객 참여형 설치미술</span><span class="gx-desc en">An audience-participation installation on the gaze that drives pro-ana culture deeper</span><em class="gx-from">Q2 · 01 ← The Gaze</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project10.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-moony.jpg" alt="Moony — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>Moony</b><span class="gx-people">박순후 · 김루나</span><span class="gx-desc ko">초등학교 저학년을 위한 달 학습 프로젝트</span><span class="gx-desc en">Learning about the moon, for younger primary pupils</span><em class="gx-from">Q2 · 02 ← MOONY</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project17.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-re43.jpg" alt="RE:4·3 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>RE:4·3</b><span class="gx-people">곽초은 · 김현지 · 유은비</span><span class="gx-desc ko">감정의 공감을 통해 제주 4·3의 진실을 온전히 마주하는 전시</span><span class="gx-desc en">An exhibition that faces the truth of Jeju 4·3 through emotional empathy</span><em class="gx-from">Q2 · 03 ← RE: 4·3</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project21.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-sotda.jpg" alt="願:솟다 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>願:솟다</b><span class="gx-people">박지수 · 양윤보</span><span class="gx-desc ko">전통 소원 구조물 ‘솟대’를 현대적으로 재해석한 인터랙티브 전시</span><span class="gx-desc en">An interactive exhibition reinterpreting the sotdae, the traditional wish-pole</span><em class="gx-from">Q2 · 04 ← W.R.P — Wind Rising Point</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project2.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-gaonkyeol.jpg" alt="가온결 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>가온결</b><span class="gx-people">백진주 · 박서희 · 이채민</span><span class="gx-desc ko">기술과 온기로 회복을 잇는 뇌졸중 환자 맞춤형 재활 인터페이스</span><span class="gx-desc en">A rehabilitation interface for stroke patients, carrying recovery forward with technology and warmth</span><em class="gx-from">Q2 · 05 ← 가온결</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project5.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-d49.jpg" alt="D49 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>D49</b><span class="gx-people">민유진 · 박미소</span><span class="gx-desc ko">남겨진 흔적을 통해 업(業)을 심판하고 자각하게 하는 경각심의 전시</span><span class="gx-desc en">An exhibition that judges karma by the traces we leave behind — and makes us aware of it</span><em class="gx-from">Q2 · 06 ← D49 · 디지털 저승국</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project20.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-notzero.jpg" alt="NotZero — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>NotZero</b><span class="gx-people">이주연</span><span class="gx-desc ko">친환경 소비의 허상을 드러내는 인터랙티브 전시</span><span class="gx-desc en">An interactive exhibition exposing the illusion of green consumption</span><em class="gx-from">Q2 · 07 ← zero</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project18.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-flomo.jpg" alt="FLOMO — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>FLOMO</b><span class="gx-people">이연우 · 손예진</span><span class="gx-desc ko">아스퍼거 아동의 감정 인식과 표현을 위한 모션트래킹 기반 인터랙티브 감정 학습</span><span class="gx-desc en">Motion-tracked emotional learning to help children with Asperger’s recognise and express feelings</span><em class="gx-from">Q2 · 08 ← FLOMO</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project19.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-bias.jpg" alt="BIAS PROJECT : 각자의 시점 — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>BIAS PROJECT : 각자의 시점</b><span class="gx-people">서동현 · 오우진 · 권용우</span><span class="gx-desc ko">시점의 차이를 물리적으로 경험하며 고정된 관점에서 벗어나야 함을 자각하는 프로젝트</span><span class="gx-desc en">Experiencing a difference in viewpoint physically, to realise the need to step out of a fixed one</span><em class="gx-from">Q2 · 09 ← 너의 시점, 나의 시점</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project12.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-najeon.jpg" alt="나전 H:ourstory — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>나전 H:ourstory</b><span class="gx-people">윤정원 · 조범규</span><span class="gx-desc ko">잊혀 가는 나전칠기를 현대적으로 재해석한 이머시브 인터랙티브 미디어아트 전시</span><span class="gx-desc en">An immersive interactive media-art exhibition reinterpreting fading najeon lacquerware</span><em class="gx-from">Q2 · 10 ← 시간의 레이어 : 나전 Hourstory</em></span>
+      </a>
+      <a class="mcard" href="https://silly-d.github.io/cjudmd2025/project/project1.html" target="_blank" rel="noopener">
+        <span class="mthumb sq"><img src="assets/img/cju-gx-dying.jpg" alt="DYING IS FOR YOU! — exhibition key visual" loading="lazy"></span>
+        <span class="mmeta"><b>DYING IS FOR YOU!</b><span class="gx-people">조예리 · 정유민</span><span class="gx-desc ko">디지털 정보의 사후 처리 — 잘 남기는 것에 대한 고민</span><span class="gx-desc en">What becomes of our digital traces after death — on leaving them well</span><em class="gx-from">Q2 · 11 ← 원하는 죽음을 드립니다</em></span>
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="block"><span class="ko">중간발표에서 졸업전시까지</span><span class="en">From mid-term to exhibition</span></h3>
+    <div class="notes">
+      <div class="note">
+        <h4><span class="ko">제목과 초점이 바뀐 작품</span><span class="en">Works that changed title or focus</span></h4>
+        <ul>
+          <li><span class="ko"><b>원하는 죽음을 드립니다 → DYING IS FOR YOU!</b> — 온라인 혐오의 소비 구조를 다루던 작업이, ‘디지털 정보를 어떻게 잘 남길 것인가’라는 사후 처리의 문제로 초점을 옮겼습니다.</span><span class="en"><b>The Death You Ordered → DYING IS FOR YOU!</b> — from the consumption of online cruelty to the question of how our digital traces should be left behind.</span></li>
+          <li><span class="ko"><b>comma, Light → comma ,</b> — 고인이 준비한 ‘기억의 공간’이 고인과 추모객을 잇는 디지털 추모 서비스로 구체화되었습니다.</span><span class="en"><b>comma, Light → comma ,</b> — a “room of memory” became a digital memorial service connecting the departed and those who mourn them.</span></li>
+          <li><span class="ko"><b>너의 시점, 나의 시점 → BIAS PROJECT : 각자의 시점</b> — 확증편향이라는 주제를, 시점의 차이를 몸으로 겪는 구조로 정리했습니다.</span><span class="en"><b>Your Viewpoint, Mine → BIAS PROJECT</b> — confirmation bias reorganised as a difference in viewpoint you experience physically.</span></li>
+          <li><span class="ko"><b>W.R.P → 願:솟다</b> · <b>zero → NotZero</b> · <b>華 → 陣界</b> — 콘셉트를 이어 가면서 전시용 제목을 새로 지었습니다.</span><span class="en"><b>W.R.P → 願:솟다</b> · <b>zero → NotZero</b> · <b>華 → 陣界</b> — the concepts carried over under new exhibition titles.</span></li>
+        </ul>
+      </div>
+      <div class="note">
+        <h4><span class="ko">출처와 범위</span><span class="en">Sources and scope</span></h4>
+        <p class="ko">전시 정보 · 작품 설명 · 대표 이미지는 학생 졸업전시위원회가 만든 공식 웹사이트와 포스터에서 옮겼습니다. 전시에는 이 수업 밖에서 출발한 작품도 함께 출품되었으며, 이 탭에는 인터랙션 디자인 수업 20개 팀의 작품만 정리했습니다. 공식 사이트의 개인 연락처는 옮기지 않았습니다.</p>
+        <p class="en">Exhibition details, descriptions and key visuals come from the official website and poster made by the student committee. The show also included work that began outside this course; this tab covers only the twenty Interaction Design teams. Personal contact details on the official site are not reproduced.</p>
       </div>
     </div>
   </div>
